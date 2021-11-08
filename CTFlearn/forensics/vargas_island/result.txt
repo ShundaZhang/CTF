@@ -1,0 +1,7 @@
+Trailing Data Discovered... Saving
+b'\x18\\\x826\xdcS\x92~\xf5\xd2\xe4&\x95\xe3^\x8fO\xd1\x96S\x8fP\x1d\xe5z>\xcc\x06\xe8\xcae@\xfbW#\xaf\xad\xca\x06\x12\x02\x1f\x04C\x8d\xe3<\x10\xff\xd9'
+Running Module: MultiHandler
+
+Found something worth keeping!
+JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, comment: "{galFehTtoNsIsihT}nraelFTC", comment: "Q1RGbGVhcm57VGhpc0lzTm90VGhlRmxhZ0VpdGhlcn0KClRvIHNvbHZlIHRoaXMgY2hhbGxlbmdl", comment: "U2FsdGVkX19Wcz3sfFUNAmXzwY9KxTE0QQVxp5B0JU31El9KwfCeWM9xn8H45NMP", comment: "xD6kfO2UrE5SnLQ6WgESK4kvD/Y/rDJPXNU45k/pyrD7QpxdEUVHkHDHXT4f8oT6ZM+ReHaMjA9V", progressive, precision 8, 2016x672, frames 3
+

@@ -1,0 +1,51 @@
+If you are new to Assembly Language programming, this file contains tutorial information and references
+for solving the challenge.
+
+-----------------------------------------------------------------------------------------------
+Here is a nice online reference to the x64 Intel registers:
+https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture
+
+This challenge focuses on calling subroutines and functions and how the stack is used to
+preserve registers used by the subroutine or function.
+
+If you are new to Assembly language programming this video is a good place to start:
+x86_64 Linux Assembly #5 - Math Operations and the Stack
+https://www.youtube.com/watch?v=NFv7l3wQsZ4
+
+x86_64 Linux Assembly #6 - Subroutine to Print Strings
+https://www.youtube.com/watch?v=Fz7Ts9RN0o4
+
+-----------------------------------------------------------------------------------------------
+I have provided three .asm programs that illustrate how the registers can change across subroutine
+calls if the subroutine does not preserve the registers by pushing them on the stack at the start
+of the subroutine and popping them off the stack at the end of the subroutine.
+
+** Strings1.asm **
+
+The first example program is Strings1.asm and it is based on the above video #6.
+The script clStrings1.sh can be used to compile, link and run the Strings1.asm program.
+Run this and step through in the gdb debugger if that helps you understand how the subroutine works.
+
+If you want to see the opcodes for Strings1:
+objdump -D -M intel Strings1
+
+** Strings2.asm **
+
+Strings2.asm is build on Strings1.asm.  I have moved values into the rbx, rcx and rdx registers
+before the call to _printString to illustrate that _printString is changing the values of these
+registers.  After the call to _printString I check the values to see if they have changed.
+
+** Strings3.asm **
+
+This is the improved version of the _printString subroutine which preserves the values of the registers
+at the start of _printString and restores them at the end of _printString.  This allows the caller
+to leave values in the registers when _printString is called knowing that they will not be changed.
+
+Note that I did not preserve the rdi or rsi registers because these seem to be mainly used for syscall
+arguments.  This would be easy to add.
+
+-----------------------------------------------------------------------------------------------
+
+Nice info on Nasm and data and bss segments and little and big endian:
+http://courses.ics.hawaii.edu/ReviewICS312/morea/X86NASM/ics312_nasm_data_bss.pdf
+

@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Wed Feb 17 20:07:04 2021
+Invocation: foremost Nighthawk.jpg 
+Output directory: /home/szhan21/ctf/CTFlearn/forensics/nighthawk/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: Nighthawk.jpg
+Start: Wed Feb 17 20:07:04 2021
+Length: 117 KB (120221 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	     117 KB 	          0 	 
+Finish: Wed Feb 17 20:07:04 2021
+
+1 FILES EXTRACTED
+	
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Wed Feb 17 20:07:04 2021

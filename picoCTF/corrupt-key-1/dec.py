@@ -1,0 +1,14 @@
+import gmpy2
+
+n = 0xb8cb1cca99b6ac41876c18845732a5cbfc875df346ee9002ce608508b5fcf6b60a5ac7722a2d64ef74e1443a338e70a73e63a303f3ac9adf198595699f6e9f30c009d219c7d98c4ec84203610834029c79567efc08f66b4bc3f564bfb571546a06b7e48fb35bb9ccea9a2cd44349f829242078dfa64d525927bfd55d099c024f
+
+p = 0xe700568ff506bd5892af92592125e06cbe9bd45dfeafe931a333c13463023d4f0000000000000000000000000000000000000000000000000000000000000000
+
+while p < 0xe700568ff506bd5892af92592125e06cbe9bd45dfeafe931a333c13463023d4fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff:
+	p = gmpy2.next_prime(p)
+	print p
+	if n%p == 0 and gmpy2.is_prime(n/p):
+		print '========================================'
+		print p,n/p
+		break
+

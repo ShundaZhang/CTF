@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Thu Dec  3 22:48:31 2020
+Invocation: foremost Scope.jpg 
+Output directory: /home/szhan21/ctf/CTFlearn/forensics/scope/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: Scope.jpg
+Start: Thu Dec  3 22:48:31 2020
+Length: 31 KB (32000 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	      28 KB 	          0 	 
+1:	00000057.zip 	      66 KB 	      29443 	 
+Finish: Thu Dec  3 22:48:31 2020
+
+2 FILES EXTRACTED
+	
+jpg:= 1
+zip:= 1
+------------------------------------------------------------------
+
+Foremost finished at Thu Dec  3 22:48:31 2020

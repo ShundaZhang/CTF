@@ -1,0 +1,316 @@
+5245 5e32 0000 0001 signature            RE^2....
+
+e880      Entry Point 80e8
+
+02        Section Number
+0020      OffSet 2000      Put to Memory[2000:]
+9a00      Size   009a      9x16+10
+                                     4b                 K
+6579 3f20 004e 756d 6265 727a 2050 6c65  ey? .Numberz Ple
+6173 653f 2000 4d6f 7265 3f20 0059 6573  ase? .More? .Yes
+2e20 5468 6520 666c 6167 2069 7320 7468  . The flag is th
+6973 3a0a 004e 6f20 796f 7520 6661 696c  is:..No you fail
+6564 210a 000f 0108 0c0e 1a14 0b10 0319  ed!.............
+0d05 1800 1b07 1109 0416 0212 1315 0a17  ................
+06ff 0000 0000 0000 0000 0000 0000 0000  ................
+0000 0000 0000 0000 0000 0000 0000 0000  ................
+0000 0000 0000 0000 0000 0000 0000 0000  ................
+0000 0000 0000 000a 00
+
+0080     OffSet 8000
+bc01     Size   01bc      444 
+
+**8000** 
+#reg e = %bp, d = %sp, f = %ip, %sp=%bp=0xfff0
+#get input and put to 5000
+
+4b 1e    PUSH [REG]                    push %bp
+4b 5d    PUSH [REG]                    push %sp
+4f ae    POP [REG]                     pop  %bp
+50 0e 04 LOADW [8-bit OFFSET]([REG])   loadw 4(%bp)   #5000
+4f 20    POP [REG]                     pop  %0        #%0 <- 5000
+da 06 20 OUTPUTSTR [ADDR]              output [2006]  #Numberz Please?
+
+**800e**
+
+df       INPUT                         input           #read in short, and push
+22       DUP                           dup
+fc 22 80 JZ [ADDR]                     jz 8022
+69 40    STOREW ([REG])                storew (%0)     #store to 5000+<offset>
+4b a0    PUSH [REG]                    push %0
+3d 02    PUSH [8-bit VALUE]            push $2
+5e       ADD                           add             #+2
+4f c0    POP [REG]                     pop %0          #5000+2*i
+da 17 20 OUTPUTSTR [ADDR]              output [2017]   #More?
+58 0e 80 JMP [ADDR]                    jmp [800e]
+
+**8022**
+
+4b 00    PUSH [REG]                    push %0        #5000+string length
+50 0e 04 LOADW [8-bit OFFSET]([REG])   loadw 4(%bp)   #5000
+2b       SUB                           sub            #length
+4f b0    POP [REG]                     pop %0         #return value ax = length       
+4b 7e    PUSH [REG]                    push %bp
+4f 2d    POP [REG]                     pop %sp
+4f 4e    POP [REG]                     pop %bp
+7e       RET                           ret 
+
+**8031**
+
+4b 1e    PUSH [REG]		       	push %bp
+4b 5d    PUSH [REG]			push %sp
+4f ae    POP [REG]  			pop %bp
+6f 98 20 PUSH [16-bit VALUE]		push $2098    #address point to 0a00
+4f 0d    POP [REG]			pop %sp       #point stack to 2098
+8e 00 00 LOADB [ADDR]			loadb [0000]
+50 0f 06 LOADW [8-bit OFFSET]([REG])    loadw 6(%ip)  #560b
+58 47 80 JMP [ADDR]			jmp [8047]
+0b56
+
+**8047**
+
+50 0f 06 LOADW [8-bit OFFSET]([REG])    loadw 6(%ip)  #0809
+58 51 80 JMP [ADDR]			jmp [8051]
+09087815
+
+**8051**
+
+50 0f fe LOADW [8-bit OFFSET]([REG])	loadw -2(%ip)  #1578
+3d 00    PUSH [8-bit VALUE]		push $0
+4f 23    POP [REG]			pop %3
+4b 0f    PUSH [REG]			push %ip      #805a #4b/PUSH doesn't use ipcache...
+4f 84    POP [REG]			pop %4
+58 80 80 JMP [ADDR]			jmp [8080]
+5348
+6c28
+7728 
+6f42 
+4c5a 
+7f48 
+
+**806b**
+
+177c7660
+
+**806f**
+
+50 e4 13 LOADW [8-bit OFFSET]([REG])    loadw 13(%4)  #805a+13==806d (806d)==6076
+4b 74    PUSH [REG]			push %4       #8058
+3d 02    PUSH [8-bit VALUE]		push $2
+2b       SUB				sub
+4f 54    POP [REG]			pop %4        #805a-2*i
+4b 03    PUSH [REG]			push %3       #0x0
+3d 02    PUSH [8-bit VALUE]		push $2
+5e       ADD				add          
+4f d3    POP [REG]			pop %3         #2*i
+
+**8080**
+
+3d 10    PUSH [8-bit VALUE]		push $10
+4b c3    PUSH [REG]			push %3
+2b       SUB 				sub
+ff 6f 80 JP [ADDR]			jp [806f]
+44 92 80 LOADW [ADDR]			loadw [8092]  #476f
+4f 23    POP [REG]			pop %3
+6a 03    LOADW ([REG])			loadw (%3)
+58 94 80 JMP [ADDR]			jmp [8094]
+
+**8092**
+
+6f47
+
+**8094**
+
+3d 73    PUSH [8-bit VALUE]		push $73 
+22       DUP				dup
+3d 01    PUSH [8-bit VALUE]		push $1
+5e       ADD				add
+3d 08    PUSH [8-bit VALUE]		push $8
+3e       SHL 				shl
+2a       OR				or
+50 0f 06 LOADW [8-bit OFFSET]([REG])	loadw 6(%ip) #7d76 
+58 a6 80 JMP [ADDR]			jmp 80a6
+767d
+
+**80a6**
+
+4b 7e    PUSH [REG]			push %bp
+4f 2d    POP [REG]			pop %sp
+4f 4e    POP [REG]			pop %bp
+7e       RET				ret
+
+**80ad**
+#copy the input buffer from 5000 to 6000
+
+4b 1e    PUSH [REG]			push %bp
+4b 5d    PUSH [REG]                     push %sp
+4f ae    POP [REG]                      pop %bp
+3d 00    PUSH [8-bit VALUE]             push $0
+22       DUP                            dup
+4f c3    POP [REG]                      pop %3
+58 d3 80 JMP [ADDR]                     jmp [80d3]
+
+**80bb**
+
+22       DUP                            dup
+22       DUP                            dup
+50 0e 06 LOADW [8-bit OFFSET]([REG])    push 6(%bp)   #6000
+5e       ADD                            add
+4f 80    POP [REG]                      pop %0
+50 0e 08 LOADW [8-bit OFFSET]([REG])    loadw 8(%bp)  #5000
+5e       ADD                            add
+4f f4    POP [REG]                      pop %4
+51 84    LOADB ([REG])                  loadb (%4)
+67 80    STOREB ([REG])                	storeb (%0)
+3d 01    PUSH [8-bit VALUE]             push $1
+5e       ADD                            add
+22       DUP                            dup
+4f 03    POP [REG]                      pop %3
+
+**80d3**
+
+22       DUP                            dup
+50 0e 04 LOADW [8-bit OFFSET]([REG])    push 4(%bp)   #length
+2b       SUB                            sub
+fe bb 80 JN [ADDR]                      jn [80bb]
+dc       POP                            pop
+50 0e 06 LOADW [8-bit OFFSET]([REG])    loadw 6(%bp)  #6000+i
+4f c0    POP [REG]                      pop %0
+4b 7e    PUSH [REG]                     push %bp
+4f 2d    POP [REG]                      pop %sp
+4f 4e    POP [REG]                      pop %bp
+7e       RET                            ret
+
+**Entry Point 80e8**
+
+6f 00 50 PUSH [16-bit VALUE]	push $5000
+5a 00 80 CALL [ADDR]            call [8000]    #read numbers
+6f 00 60 PUSH [16-bit VALUE]    push $6000
+4b c0    PUSH [REG]             push %0        #length
+22       DUP                    dup
+4f 71    POP [REG]              pop %1         #%1 <- length
+5a ad 80 CALL [ADDR]            call [80ad]    #copy to 6000
+dc       POP                    pop
+da 00 20 OUTPUTSTR [ADDR]       output [2000]  #Key?
+df       INPUT                  input
+5a 7f 81 CALL [ADDR]            call [817f]    #6000[:] xor key++
+dc       POP                    pop
+6f 46 20 PUSH [16-bit VALUE]    push $2046     #address point to 0f 0108 0c0e 1a14 0b10 0319....
+5a 44 81 CALL [ADDR]            call [8144]    #seems no real impact...   
+dc       POP                    pop
+4f a2    POP [REG]              pop %2         #6000 -> %2
+5a 31 80 CALL [ADDR]            call [8031]    #copy some data in code into 2098~207c
+6f 7a 20 PUSH [16-bit VALUE]    push $207a     #address point to 0
+
+**8111**
+
+22       DUP                    dup
+4f 05    POP [REG]              pop %5
+51 b5    LOADB ([REG])          loadb (%5)
+22       DUP                    dup
+fc 2d 81 JZ [ADDR]              jz [812d]      #print flag!
+22       DUP                    dup
+51 c2    LOADB ([REG])          loadb (%2)     #6000[:] 
+2b       DUP                    dup
+de 3c 81 JNZ [ADDR]             jnz [813c]     #failed!
+3d 01    PUSH [8-bit VALUE]     push $1
+22       DUP                    dup
+4b 02    PUSH [REG]             push %2       
+5e       ADD                    add
+4f 32    POP [REG]              pop %2         #6000+i
+5e       ADD                    add
+58 11 81 JMP [ADDR]             jmp [8111]
+
+**812d**
+
+dc       POP                       pop
+da 1e 20 OUTPUTSTR [ADDR]          output [201e]  #Yes. The flag is:
+6a 0d    LOADW ([REG])             loadw (%sp)
+4f 02    POP [REG]                 pop %2
+dc       POP                       pop
+da 00 50 OUTPUTSTR [ADDR]          output 5000
+6d 00 00 EXIT [16-bit STATUSCODE]  exit 0
+
+**813c**
+
+da 36 20 OUTPUTSTR [ADDR]          output 2036	#No you failed! #0x2036 == 2054
+4b 42    PUSH [REG]                push (%2)
+58 3c 81 JMP [ADDR]		   jmp 813c
+
+**8144**
+
+4b 1e    PUSH [REG]			push %bp
+4b 5d    PUSH [REG]			push %sp
+4f ae    POP [REG] 			pop %bp
+3d 00	 PUSH [8-bit VALUE]		push $0
+58 67 81 JMP [ADDR]			jmp [8167]
+
+**814f**
+
+50 0e 06 LOADW [8-bit OFFSET]([REG])	push 6(%bp)  #6000
+5e       ADD				add
+51 0d    LOADB ([REG])			loadb (%sp)    #put 6000[2046[i]] to stack? but will destroy before ret?
+6f 00 4f PUSH [16-bit VALUE]		push $4f00
+50 0e fe LOADW [8-bit OFFSET]([REG])	loadw -2(%bp)  #0 index
+5e       ADD				add
+67 0d    STOREB ([REG])			storeb (%sp)     #Put 4f00[:29] with 4f00+i?
+50 0e fe LOADW [8-bit OFFSET]([REG])	loadw -2(%bp)
+3d 01    PUSH [8-bit VALUE]		push $1
+5e       ADD				add
+63 0e fe STOREW [8-bit OFFSET]([REG])	storew -2(%bp)   #i++
+
+**8167**
+
+50 0e 04 LOADW [8-bit OFFSET]([REG])	loadw 4(%bp)  #2046
+50 0e fe LOADW [8-bit OFFSET]([REG])	loadw -2(%bp)  #index
+5e       ADD				add
+51 0d    LOADB ([REG])			loadb (%sp)
+22       DUP                            dup
+3d 01    PUSH [8-bit VALUE]		push $1
+5e       ADD				add
+ff 4f 81 JP [ADDR]			jp [814f]      #0xff + 1 == 0, length == 29(1d), 0~28 and 0xff in 2046
+dc       POP				pop
+4b 7e    PUSH [REG]			push %bp
+4f 2d    POP [REG]			pop %sp
+4f 4e    POP [REG]			pop %bp
+7e       RET				ret
+
+
+**817f**
+
+4b 1e    PUSH [REG]			push %bp
+4b 5d    PUSH [REG]			push %sp
+4f ae    POP [REG] 			pop %bp
+50 0e 04 LOADW [8-bit OFFSET]([REG])	loadw 4(%bp)  #key %bp-2
+3d 00    PUSH [8-bit VALUE]             push $0       #%bp-4
+58 a4 81 JMP [ADDR]                     jmp [81a4]
+
+**818d**
+
+50 0e fe LOADW [8-bit OFFSET]([REG])	loadw -2(%bp)    #key
+7c       XOR				xor
+67 40    STOREB ([REG])                 storeb (%0)      #6000[i] xor key
+3d 01    PUSH [8-bit VALUE]             push $1
+22       DUP                            dup
+50 0e fe LOADW [8-bit OFFSET]([REG])    loadw -2(%bp)  
+5e       ADD                            add
+63 0e fe STOREW [8-bit OFFSET]([REG])   storew -2(%bp)   #key+=1
+50 0e fc LOADW [8-bit OFFSET]([REG])    loadw -4(%bp)
+5e       ADD                            add
+63 0e fc STOREW [8-bit OFFSET]([REG])   storew -4(%bp)   #i+=1
+
+**81a4**
+
+50 0e 06 LOADW [8-bit OFFSET]([REG])    loadw 6(%bp)   #6000
+50 0e fc LOADW [8-bit OFFSET]([REG])    loadw -4(%bp)  #0 index
+5e       ADD                            add  
+22       DUP                            dup
+4f 00    POP [REG]                      pop %0
+51 40    LOADB ([REG])                  loadb (%0)     #6000[:]
+22       DUP                            dup
+de 8d 81 JNZ [ADDR]                     jnz [818d]
+dc       POP                            pop
+4b 7e    PUSH [REG]                     push %bp
+4f 2d    POP [REG]                      pop %sp
+4f 4e    POP [REG]                      pop %bp
+7e       RET                            ret

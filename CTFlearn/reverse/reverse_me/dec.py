@@ -1,0 +1,41 @@
+'''
+encrypt
+58h:input
+48h:malloc_input
+l=strlen(input)
+malloc(l)
+4ch:i
+input[i]
+
+(i>>1d+i)and7-i>>1d
+40h[i and 0b111] xor input[i]
+
+shuffle
+28h:input
+18h:malloc_input
+1ch:i //i+=2
+l=strlen(input)
+l-4
+malloc(l-4)
+
+for i=0;i+=2;i<l
+malloc_input[i]=input[i+1]
+for i=1;i+=2;i<l
+malloc_input[i]=input[i-1]
+'''
+
+s = [0x57,0x42,0x4B,0x45,0xCC,0xBB,0x81,0xCC,0x71,0x7A,0x71,0x66,0xDF,0xBB,0x86,0xCD,0x64,0x6F,0x6E,0x5C,0xF2,0xAD,0x9A,0xD8,0x7E,0x6F]
+
+x = [0x01,0x03,0x03,0x07,0xDE,0xAD,0xBE,0xEF]
+
+n = len(s)
+
+for i in range(0,n,2):
+	t = s[i+1]
+	s[i+1] = s[i]
+	s[i] = t
+
+for i in range(n):
+	s[i] = s[i]^x[i&7]
+
+print ''.join([chr(i) for i in s])

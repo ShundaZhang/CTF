@@ -1,0 +1,24 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Dec  4 14:26:53 2020
+Invocation: foremost 1487397389.jpg 
+Output directory: /home/szhan21/ctf/CTFlearn/forensics/binwalk/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: 1487397389.jpg
+Start: Fri Dec  4 14:26:53 2020
+Length: 160 KB (164802 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.png 	     149 KB 	          0 	  (780 x 720)
+1:	00000299.png 	      11 KB 	     153493 	  (802 x 118)
+Finish: Fri Dec  4 14:26:53 2020
+
+2 FILES EXTRACTED
+	
+png:= 2
+------------------------------------------------------------------
+
+Foremost finished at Fri Dec  4 14:26:53 2020

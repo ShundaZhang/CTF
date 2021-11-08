@@ -1,0 +1,69 @@
+Thanks for working on my Reversing Challenge 'Rouen' v2
+
+----------------------- November 2020 ------------------------------------------------
+The original version of this challenge had multiple solutions.
+I have updated the constants and equations used to hide the flag to avoid this problem.
+The flag is still the same as in the original challenge.
+
+In this revised version of the challenge, there are still two solutions.
+However it should be obvious which one is the correct solution.
+Good Luck!
+-------------------------------------------------------------------------------------
+
+
+This is designed as a 100 point reversing challenge for CTFlearn.
+It is more difficult than my previous challenges in two ways... but you need to
+find out what those two aspects are for yourself.
+
+If you find this problem too difficult you should try my 10 point point Reversing Challenges first:
+
+Reykjavik
+Riyadh
+Rangoon
+
+
+And then try my other 20 point reversing challenges Recklinghausen and Riga.
+
+I already have thoughts on how to create a simpler challenge that uses some of the concepts from Rouen but will
+be easier to solve.
+
+I want to give a special shout out to @Rivit and @ebouteillon for sharing many of their solutions to the previous
+challenges.  If you solve this challenge I would really appreciate it if you would share your approach along with
+the tools used.  @kcbowhunter on Discord.  This helps me to learn too.
+
+Also special thanks to @ebouteillon for suggesting the city of Rouen in France as the theme for this challenge.
+It looks like a beautiful city and I would love to visit one day.
+
+-------------------------------------------------------------------
+
+When you solve this challenge, I think you should be able to see the sources used to create the challenge.
+I mean, if I solved it I would like to see the sources.
+So to see the source files used to create the challenge you have to solve the challenge first, then
+you can use the challenge flag you found to decrypt the sources.zip.enc file provided:
+
+openssl enc -d -aes-256-cbc -pbkdf2 -in sources.zip.enc -out sources.zip -k kernel
+
+where kernel is defined as CTFlearn{kernel} based on the flag you found solving the challenge.
+
+If you are not familiar with openssl:
+openssl enc -help
+shows the options available
+
+Solve the challenge, get the flag, then you can decrypt and read the sources.
+
+--------------------------------------------------------------------
+
+Please do not post this challenge to any websites.
+Please do not post the solution to this challenge to any websites.
+Please do not post the flag for this challenge to any websites (including CTFlearn.com ).
+Please do not share the source files in sources.zip with anyone or upload them to any website.
+Please do not create your own challenge from my sources.
+Thank you.
+
+-----------------------------------------------------------------------
+
+I am available on Twitter and Discord as @kcbowhunter, but I'm afraid you will have to
+do your own research / learning on Reverse Engineering.  I have provided some online
+resources in the file 'reversing' to get you started if you are wondering how to begin learning
+Reverse Engineering.
+

@@ -1,0 +1,53 @@
+Welcome to the CTFLearn.com Rabat Reversing Challenge by kcbowhunter
+
+When solving this challenge, there might be a point where it seems you need to brute force
+approximately 10^32 values to find a portion of the flag.  Don't brute force!  There is another way that
+is much easier.
+
+-----------------------------------------------------------------------------------------------------
+After you solve the challenge you can view the source files used to create the challenge
+by decrypting the sources.zip.enc file:
+
+openssl enc -d -v -aes-256-cbc -pbkdf2 -in sources.zip.enc -out sources.zip -k kernel
+
+where kernel is defined as: CTFlearn{kernel} [and you need to solve the challenge to find the real kernel :-) ]
+
+Note that if you are on a Mac you might need to install openssl.
+I'm using OpenSSL 1.1.1f 31 Mar 2020.  Some people have had problems using the LibreSSL on Mac to
+open the files I encrypted using OpenSSL.
+https://developer.apple.com/forums/thread/89051
+
+The file gencode.py in sources.zip.enc shows how I generated all the constants used in the challenge.
+If you are interested it also shows how I solved the challenge to prove to myself a solution is possible
+without using brute force techniques.
+
+I'd love to hear your feedback on Discord or on the ctflearn.com page for this challenge; please leave a comment.
+
+-----------------------------------------------------------------------------
+
+If you are new to Reversing binaries that are stripped of debug symbols, here is a great place to start learning:
+https://reverseengineering.stackexchange.com/questions/1935/how-to-handle-stripped-binaries-with-gdb-no-source-no-symbols-and-gdb-only-sho
+
+Other Resources:
+https://malwareunicorn.org/workshops/re101.html#0
+https://ghidra.re/courses/GhidraClass/Advanced/improvingDisassemblyAndDecompilation.pdf
+
+Nasm Tutorial:
+https://cs.lmu.edu/~ray/notes/nasmtutorial/
+
+Solving Reverse Engineering problems requires knowledge of Assembly Language programming.
+If you are new to assembly, here is a good web site to start learning assembly language programming: www.asmtutor.com
+This web site is for 32 bit assembly and most of my challenges are 64 bit, but asmtutor.com is a great place to start.
+
+Good Luck!
+
+-----------------------------------------------------------------------------
+
+I am available on Twitter @kcbowhunter and Discord @kcbowhunter to answer specific questions about my challenges,
+but you have to learn Reverse Engineering and Assembly Language programming on your own.
+
+-----------------------------------------------------------------------------
+
+Please do not post solutions to this challenge or any of my challenges to any website or blog or github.
+Thank you.
+

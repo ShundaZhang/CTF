@@ -1,0 +1,33 @@
+
+Welcome to the CTFLearn.com Regina Reversing Challenge by kcbowhunter
+
+After you solve the challenge you can view the source files by decrypting the sources.zip.enc file:
+
+openssl enc -d -aes-256-cbc -pbkdf2 -in sources.zip -out sources.zip.enc -k kernel
+
+where kernel is defined as: CTFlearn{kernel}
+
+I'd love to hear your feedback on Discord or on the ctflearn.com page for this challenge; please leave a comment.
+
+-----------------------------------------------------------------------------
+
+If you are new to Reversing binaries that are stripped of debug symbols, here is a great place to start learning:
+https://reverseengineering.stackexchange.com/questions/1935/how-to-handle-stripped-binaries-with-gdb-no-source-no-symbols-and-gdb-only-sho
+
+Nasm Tutorial
+https://cs.lmu.edu/~ray/notes/nasmtutorial/
+
+Solving Reverse Engineering problems requires knowledge of Assembly Language programming.
+If you are new to assembly, here is a good web site to start learning: www.asmtutor.com
+
+Good Luck!
+
+-----------------------------------------------------------------------------
+
+I am available on Twitter @kcbowhunter and Discord to answer specific questions about my challenges, but you have to learn
+Reverse Engineering and Assembly Language programming on your own.
+
+-----------------------------------------------------------------------------
+
+Please do not post solutions to this challenge or any of my challenges to any website or blog or github.
+Thank you.

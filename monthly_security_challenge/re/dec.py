@@ -1,0 +1,21 @@
+buff = [None]*7
+buff[0] = 0x90 ^ 0xa3;
+buff[1] = 0x90 ^ 0xe8;
+buff[2] = 0x90 ^ 0xa1;
+buff[3] = 0x90 ^ 0xa5;
+buff[4] = 0x90 ^ 0xa7;
+buff[5] = 0x90 ^ 0xa5;
+buff[6] = 0x90 ^ 0xed;
+
+flag2 = ''.join([chr(i) for i in buff])
+
+print flag2
+v2 = 0x90
+
+v3 = v2*0x100|v2&0xff
+print hex(v3)
+
+
+flag1 = hex(0x9090909090909090^0xcfd5c3c3ebd6c4d3)[2:-1].decode('hex')[::-1]
+
+print flag1+flag2

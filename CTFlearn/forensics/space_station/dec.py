@@ -1,0 +1,8 @@
+#openssl enc -d -aes-256-cbc -in flag.enc -out flag -iv hexbytes -K hexbytes
+
+#4889cfe83de849e858e86688875c2540c6875d25400ac6875e254048b85c2540
+#48656c6c6f204354466c6561726e2042
+
+#openssl enc -d -aes-256-cbc -in flag.enc -out flag -iv 48656c6c6f204354466c6561726e2042 -K 4889cfe83de849e858e86688875c2540c6875d25400ac6875e254048b85c2540
+
+

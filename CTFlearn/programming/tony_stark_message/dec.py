@@ -1,0 +1,47 @@
+#!/usr/bin/python3
+import base64
+import pickle
+
+hstr = [None]*100
+
+encoded_data = '110110101000111001001100011010000100101011110101100110100011001110100100011001110000100011101000001001010111011010111110001101101001000001011010110011011001110010111010011010110011001010111011011011010000001110100100001011111101010011001000011000001111110100001011111000100001101011101011110010000101111001111101001010010001001110100100000101110101001111101100011101110001111101111010101111101000010011000111110010110111111000010011111111001111111011011010000100111100111010111011100011011111100010100011110101010011111110011110100110101100010101111011111110110100010101000110110111001000011011111101110101001111110111001001100011101111011100100101010010001100001110101000011000010001110100001001011110101011101011111110000010011000000'
+
+huffman_tree = []
+
+class Node:
+	def __init__(self):
+		pass
+
+def build_htree(node, i):
+	if node == None:
+		return
+	if node.data != '\x00':
+		huffman_tree.append((''.join(hstr[:i]), node.data))
+
+	hstr[i] = '0'
+	build_htree(node.left,i+1)
+	hstr[i] = '1'
+	build_htree(node.right,i+1)
+
+if __name__ == "__main__":
+
+	with open('node_data.txt','rb') as f:
+		node = pickle.load(f)
+	build_htree(node, 0)
+	print(huffman_tree)
+
+	flag=''
+	start=''
+	for i in encoded_data:
+		start += i
+		for j in huffman_tree:
+			if start == j[0]:
+				flag += j[1]
+				start = '' #start again
+				break
+
+	print(flag)
+	#print(base64.b64decode(flag))
+	#b'Tony_Stark:_I_Build_Neat_Stuff,_Got_A_Great_Girl,_Occasionally_Save_The_World._So_flag{Why_Can\xe2\x80\x99t_I_Sleep?}'
+	#base64 -d
+	#Tony_Stark:_I_Build_Neat_Stuff,_Got_A_Great_Girl,_Occasionally_Save_The_World._So_flag{Why_Can’t_I_Sleep?}

@@ -1,0 +1,3 @@
+#https://sec.stealthcopter.com/htb-ctf-writeup-cached-web/ 
+#https://ctftime.org/writeup/26238
+#The flag seems not work anymore...

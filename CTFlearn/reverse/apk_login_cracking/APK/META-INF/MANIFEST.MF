@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Built-By: Generated-by-ADT
+Created-By: Android Gradle 3.5.0
+
+Name: AndroidManifest.xml
+SHA1-Digest: +GL6zIX0lmUoJZ2JOAKHMc68thg=
+
+Name: assets/dex/classes-v1.bin
+SHA1-Digest: UfPbgVQtLRjlFUVHUt/0nncp/l0=
+
+Name: assets/dex/classes-v2.bin
+SHA1-Digest: ytntsSO2/j5TH5jYC3P0O9MZDmY=
+
+Name: assets/libjiagu.so
+SHA1-Digest: IGlHpcu9qjKHrF0Fp0ofbBvCGOo=
+
+Name: classes.dex
+SHA1-Digest: Yvm4yhM0er0SUhavzPd+2Il4EA8=
+
+Name: r/0
+SHA1-Digest: CZCECZaoKd4/fZa61rAtEJ2gMPw=
+
+Name: r/0.aac
+SHA1-Digest: 6k/R4N4dl+2lHpJOJCWef7jxlY0=
+
+Name: r/1
+SHA1-Digest: EOLmnwDxudPvLHCiimMypIpZad0=
+
+Name: r/1.aac
+SHA1-Digest: TI/1qyoma8wMOWpj9VUP4Yy0DIo=
+
+Name: r/2.aac
+SHA1-Digest: 8CfQznt/eRM+V59eR5e4+6PtHiw=
+
+Name: r/3.aac
+SHA1-Digest: wiul9rNNPozlmnyM+gsOjT9SGTk=
+
+Name: resources.arsc
+SHA1-Digest: SpXnkEgG/DK+UI2CLDFiMN4IzcI=
+

@@ -1,0 +1,36 @@
+This is my first challenge so I would be glad to get feedbacks from you about its level of difficulty -
+whether it's OK or too easy/hard and as a result whether the score (80 points) is adequate or not.
+You can find me in Discord as Gilad (user no. 8305)
+
+The goal of this reverse engineering challenge is to demonstrate usage of intrinsics (in this case of Intel, 
+but almost every processor has its own list of intrinsics to make it more efficient to use).
+
+In the beginning of main() I declared 3 'int's and 5 __m256i variables.
+You can see that in Visual C the __m256i type is a union of basic types and in Linux it's just 32 bytes - in both cases 32-bytes aligned.
+
+List of Intel's intrinsics in the C code in the order they appear:
+_mm256_setzero_si256
+_umul128				(in Window's version - in Linux __int128 is used for multiplication)
+_lzcnt_u32				(in Window's version - in Linux __builtin_ia32_lzcnt_u32. Used consecutively twice)
+_mm256_cvtepu16_epi32
+_mm256_mullo_epi16
+_mm256_mulhi_epi16
+_mm256_slli_epi32
+_mm256_or_si256
+_mm_popcnt_u64
+_mm256_xor_si256
+_mm256_set1_epi64x
+_mm256_and_si256
+_mm256_adds_epi8
+
+You can either use the .exe file for Windows or the .so for Linux.
+I examined the decompilation result of Ghidra in both cases and the Linux version looks friendlier to deal with.
+
+The significant differences in the code for both versions are: 
+	- in the 128 bits multiplication where Windows uses _umul128 and Linux __int128 types.
+	- _lzcnt_u32 in Windows vs. __builtin_ia32_lzcnt_u32 in Linux
+
+Decrypt IntrinsicsChallenge.enc with:
+openssl enc -d -aes-256-cbc -pbkdf2 -k <flag> -in IntrinsicsChallenge.enc -out IntrinsicsChallenge.c
+
+Good luck!

@@ -1,0 +1,35 @@
+Welcome to CTFlearn Challenge "The Vault" by kcbowhunter
+
+This challenge is designed to be a little more difficult than my other jpeg / Forensics challenges.
+It is similar to NightHawk... there is no formula or recipe to follow, just some clues.
+
+For those of you who do not speak English as your native language, the poem provided as a hint:
+
+Roses are Red
+Violets are Blue
+What is in this Vault
+Is not meant for you
+
+is a hint of course, but the solution to the challenge doesn't have anything to do with colors.  This is just a common short
+format for an English language poem where the first two lines are 'Roses are Red, Violets are Blue...'.  The two lines
+after this are a big hint for the challenge.
+
+I am including two Python scripts that I wrote to help solve the challenge.  The first Jpeg1.py shows the location
+and size of all the data chunks in the jpeg file.  If you are not familiar with the jpeg file format, it might
+help to google 'jpeg file format markers'.
+
+The second Python script ExtractBytes.py is used to extract bytes from a binary file, and it's a handy script for
+extracting bytes from Jpeg files.  The script works on any binary file format, to the script it's just a binary file.
+
+If you find these scripts useful feel free to use them to solve other CTF challenges.
+
+I am available on Twitter and Discord as @kcbowhunter to help answer questions, but I won't give many hints on this
+challenge until we have the first 10 solvers on the ctflearn website.  Good Luck!
+
+--------------------------
+
+Please do not post solutions to this challenge to any website.  Thank you.
+
+
+
+

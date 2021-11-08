@@ -1,0 +1,9 @@
+b *0x00005555555558f8
+commands
+set logging file 4.txt
+set logging on
+x/2048 $r11
+set logging off
+end
+
+r CTFlearn{T12m4567890123456a8901234d6b890123}

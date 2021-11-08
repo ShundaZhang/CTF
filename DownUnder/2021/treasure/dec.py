@@ -1,0 +1,51 @@
+import sys
+import re
+from Crypto.Util.number import long_to_bytes
+from Crypto.Random import random
+import gmpy2
+FAKE_COORDS = 5754622710042474278449745314387128858128432138153608237186776198754180710586599008803960884
+p = 13318541149847924181059947781626944578116183244453569385428199356433634355570023190293317369383937332224209312035684840187128538690152423242800697049469987
+
+REAL_COORDS = 5756627544102572649201219381096443309301530404084814366157678459246004007288774904822314549
+
+#x = gmpy2.invert(REAL_COORDS,p)*FAKE_COORDS%p
+#print x
+x = 4753327999970298413083932142049273740913050690790263481945954383444241517574698373936603613196820582437155472136800536698664546132296875045013678117553381
+
+myshare = int(sys.argv[1])
+
+#m^ed%n == m
+#ed == 1 mod phi
+#phi of p (prime number) is p-1
+#z^3x%p = r => 3x = ed => x = pow(3,-1,phi) => x=pow(3,-1,p-1)
+
+r = gmpy2.invert(3, p-1)
+z = pow(x, r, p)
+
+#3 root search FAIL!!!
+'''
+z = 0
+i = 0
+while z < p:
+	m = gmpy2.iroot(x+i*p, 3)
+	if m[1] == True:
+		z = m[0]
+		print 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+		print z
+		print 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+		break
+	else:
+		z = m[0]
+		if i%10000000 == 0:
+			print i
+			print z,'=>',p
+	i += 1;
+'''
+print 'False Share:'
+print '1'
+print 'Fake Share:'
+print myshare*z%p
+print 'Real Coords:'
+print REAL_COORDS 
+
+#DUCTF{m4yb3_th3_r34L_tr34sur3_w4s_th3_fr13nDs_w3_m4d3_al0ng_Th3_W4y.......}

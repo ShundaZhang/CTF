@@ -1,0 +1,9 @@
+python3 RsaCtfTool.py -n 0xbb1fb6574953871d86e044b978954ae578994ef0795cce0e24d553522e22ecb439cb4294cb4071cb9c24fbd3fe54efe40307cd0f5088ac37e4cb82ed404863495dfd4d4908504decdf98fdf47a8dc84a04e1c738f0146f8e46b497de12a6bb7c7662d6edc6014ae1faab37a9b73e186bf2764b73620b23177c323a8fd2939337 -e 0x10001 --createpub > nx_pub.pem
+python3 RsaCtfTool.py -n 0xb27cca807e1566cc04c9a33a1d30b491b4dd181ea7363ae0770f77491695b9a876596fa5f1dea6d3733b96681d11f0e487301dfb2c5a55519dd7922a9407e22dd60d3234b278099fc138e58b3066a7ac1ba5db693dfb648f3ff174c0984ddf46f27149a2b2906b5275beb418bb8dd17fb0087c6a3f27c6d537ef507ef521102b -e 0x10001 --createpub > n1_pub.pem
+python3 RsaCtfTool.py -n 0xbc4bf4c55d907e55eeb93080ef05188ba82c75ab94f1fa096cf2bdda00dda796db5f2c0109492ff4382afed0ebe16edba67f78487dc0a986f0a46d91144e88db395116c76fe975fce71b82bd4174f7c858f8c8e4d4490470b4d668365f4c4732fa61e6fee054e02e281dd477e2b597d4895173723f0e7ccee85d2d7d32e97d35 -e 0x10001 --createpub > n2_pub.pem
+python3 RsaCtfTool.py --publickey \*.pem
+python3 RsaCtfTool.py --publickey \*.pem --private
+python3 RsaCtfTool.py --publickey \*.pem --private --output px.pem
+python3 RsaCtfTool.py --dumpkey --key multi_keys/p1.pem 
+python3 RsaCtfTool.py --dumpkey --key multi_keys/p2.pem 
+python3 RsaCtfTool.py --dumpkey --key multi_keys/p3.pem 

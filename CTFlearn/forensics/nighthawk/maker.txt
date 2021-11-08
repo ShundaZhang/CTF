@@ -1,0 +1,59 @@
+Jpeg1 - Examine Jpeg File Contents
+Read 120221 bytes from Nighthawk.jpg
+Found S0S - Start of Scan
+sosend = 31136 0x79a0
+Found S0S - Start of Scan
+sosend = 41563 0xa25b
+Found S0S - Start of Scan
+sosend = 46124 0xb42c
+Found S0S - Start of Scan
+sosend = 52200 0xcbe8
+Found S0S - Start of Scan
+sosend = 59936 0xea20
+Found S0S - Start of Scan
+sosend = 73827 0x12063
+Found S0S - Start of Scan
+sosend = 76665 0x12b79
+Found S0S - Start of Scan
+sosend = 85114 0x14c7a
+Found S0S - Start of Scan
+sosend = 93523 0x16d53
+Found S0S - Start of Scan
+sosend = 120218 0x1d59a
+Found 0xd9 - end of image
+Filename: Nighthawk.jpg
+
+ Marker			Offset			Length
+
+ 0 0xffd8 SOI   	     0 0x000000  	       0 0x0000
+ 1 0xffe0 APP0  	     2 0x000002  	      16 0x0010
+ 2 0xffe1 APP1  	    20 0x000014  	   12402 0x3072
+ 3 0xffe1 APP1  	 12424 0x003088  	    7179 0x1c0b
+ 4 0xffe2 APP2  	 19605 0x004c95  	     688 0x02b0
+ 5 0xffe3 APP3  	 20295 0x004f47  	     266 0x010a
+ 6 0xffdb DQT   	 20563 0x005053  	      67 0x0043
+ 7 0xffdb DQT   	 20632 0x005098  	      67 0x0043
+ 8 0xfffe COM   	 20701 0x0050dd  	     344 0x0158
+ 9 0xffc2 SOF2  	 21047 0x005237  	      17 0x0011
+10 0xffc4 DHT   	 21066 0x00524a  	      28 0x001c
+11 0xffc4 DHT   	 21096 0x005268  	      27 0x001b
+12 0xffda SOS   	 21125 0x005285  	   10011 0x271b
+13 0xffc4 DHT   	 31137 0x0079a1  	      46 0x002e
+14 0xffda SOS   	 31185 0x0079d1  	   10378 0x288a
+15 0xffc4 DHT   	 41564 0x00a25c  	      46 0x002e
+16 0xffda SOS   	 41612 0x00a28c  	    4512 0x11a0
+17 0xffc4 DHT   	 46125 0x00b42d  	      52 0x0034
+18 0xffda SOS   	 46179 0x00b463  	    6021 0x1785
+19 0xffc4 DHT   	 52201 0x00cbe9  	      77 0x004d
+20 0xffda SOS   	 52280 0x00cc38  	    7656 0x1de8
+21 0xffc4 DHT   	 59937 0x00ea21  	      42 0x002a
+22 0xffda SOS   	 59981 0x00ea4d  	   13846 0x3616
+23 0xffda SOS   	 73828 0x012064  	    2837 0x0b15
+24 0xffc4 DHT   	 76666 0x012b7a  	      40 0x0028
+25 0xffda SOS   	 76708 0x012ba4  	    8406 0x20d6
+26 0xffc4 DHT   	 85115 0x014c7b  	      42 0x002a
+27 0xffda SOS   	 85159 0x014ca7  	    8364 0x20ac
+28 0xffc4 DHT   	 93524 0x016d54  	      39 0x0027
+29 0xffda SOS   	 93565 0x016d7d  	   26653 0x681d
+30 0xffd9 EOI   	120219 0x01d59b  	       0 0x0000
+All Done!

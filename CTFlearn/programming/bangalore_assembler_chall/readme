@@ -1,0 +1,48 @@
+
+Welcome to the CTFLearn Bangalore Assembler Programming Challenge by kcbowhunter
+
+How to solve this challenge:
+
+The source file Bangalore.asm contains 4 subroutines:
+_Step1
+_Step2
+_Step3
+_Step4
+
+Each of these subroutines uses registers that are either not being preserved on the stack or are being
+preserved incorrectly... correct each subroutine to preserve the registers used and the flag will be
+written to the screen.  If you don't preserve the registers correctly or use the stack correctly,
+the program may crash.
+
+Good Luck!
+
+The shell script clnasm.sh can be used to compile, link and run Bangalore.asm.
+
+Note that the encrypted flag is hidden in the data contained within the Data.asm source file.
+
+-----------------------------------------------------------------------------------------------
+Tutorials
+
+This is the 3rd in a series of Introductory Assembler Programming
+Challenges.
+
+If you are new to Assembly Language programming you may want to solve
+these two challenges first:
+https://ctflearn.com/challenge/1026
+
+and AndhraPradesh challenge:
+https://ctflearn.com/challenge/1030
+
+If you are new to Assembly Language programming, I have provided a file named tutorial which contains
+references for learning more about the stack which is needed to solve this challenge.
+
+-----------------------------------------------------------------------------------------------
+
+If you would like to see the python script used to generate all the constants used to hide the
+flag, you can use this openssl command to decrypt the sources:
+
+openssl enc -d -v -aes-256-cbc -pbkdf2 -in sources.zip.enc -out sources.zip -k flag
+
+where flag is the CTFLearn{...} flag you found from solving the Bangalore challenge
+
+-----------------------------------------------------------------------------------------------

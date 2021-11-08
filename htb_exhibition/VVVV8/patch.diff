@@ -1,0 +1,65 @@
+diff --git a/src/builtins/builtins-typed-array.cc b/src/builtins/builtins-typed-array.cc
+index fdadc7a554..81b6290f6e 100644
+--- a/src/builtins/builtins-typed-array.cc
++++ b/src/builtins/builtins-typed-array.cc
+@@ -56,6 +56,8 @@ BUILTIN(TypedArrayPrototypeCopyWithin) {
+   int64_t from = 0;
+   int64_t final = len;
+ 
++  size_t element_size = array->element_size();
++
+   if (V8_LIKELY(args.length() > 1)) {
+     Handle<Object> num;
+     ASSIGN_RETURN_FAILURE_ON_EXCEPTION(
+@@ -67,11 +69,17 @@ BUILTIN(TypedArrayPrototypeCopyWithin) {
+           isolate, num, Object::ToInteger(isolate, args.at<Object>(2)));
+       from = CapRelativeIndex(num, 0, len);
+ 
+-      Handle<Object> end = args.atOrUndefined(isolate, 3);
+-      if (!end->IsUndefined(isolate)) {
+-        ASSIGN_RETURN_FAILURE_ON_EXCEPTION(isolate, num,
+-                                           Object::ToInteger(isolate, end));
++      if (args.length() > 3) {
++        ASSIGN_RETURN_FAILURE_ON_EXCEPTION(
++            isolate, num, Object::ToInteger(isolate, args.at<Object>(3)));
+         final = CapRelativeIndex(num, 0, len);
++
++        Handle<Object> type_len = args.atOrUndefined(isolate, 4);
++        if (!type_len->IsUndefined(isolate)) {
++          ASSIGN_RETURN_FAILURE_ON_EXCEPTION(isolate, num,
++                                            Object::ToUint32(isolate, type_len));
++          element_size = CapRelativeIndex(num, 0, 8);
++        }
+       }
+     }
+   }
+@@ -92,8 +100,13 @@ BUILTIN(TypedArrayPrototypeCopyWithin) {
+   DCHECK_GE(to, 0);
+   DCHECK_LT(to, len);
+   DCHECK_GE(len - count, 0);
++  DCHECK_LE(element_size, 8);
++  DCHECK_GT(element_size, 0);
++
++  if (element_size != 1 && element_size % 2 == 1) {
++    element_size = array->element_size();
++  }
+ 
+-  size_t element_size = array->element_size();
+   to = to * element_size;
+   from = from * element_size;
+   count = count * element_size;
+diff --git a/src/d8/d8.cc b/src/d8/d8.cc
+index 26ccb62c68..fc99c666f9 100644
+--- a/src/d8/d8.cc
++++ b/src/d8/d8.cc
+@@ -2316,9 +2316,8 @@ Local<Context> Shell::CreateEvaluationContext(Isolate* isolate) {
+   // This needs to be a critical section since this is not thread-safe
+   base::MutexGuard lock_guard(context_mutex_.Pointer());
+   // Initialize the global objects
+-  Local<ObjectTemplate> global_template = CreateGlobalTemplate(isolate);
+   EscapableHandleScope handle_scope(isolate);
+-  Local<Context> context = Context::New(isolate, nullptr, global_template);
++  Local<Context> context = Context::New(isolate, nullptr, ObjectTemplate::New(isolate));
+   DCHECK(!context.IsEmpty());
+   if (i::FLAG_perf_prof_annotate_wasm || i::FLAG_vtune_prof_annotate_wasm) {
+     isolate->SetWasmLoadSourceMapCallback(ReadFile);

@@ -1,0 +1,24 @@
+I can't believe it.
+
+They finally figured out that we moved Nicky's apartment 3 years ago.  Of course it was in the same building
+complex but we got her a flat on the top floor right between two microwave towers.
+
+We collected so much data from that location.
+
+But now it's all over.  Nicky is gone and Igor just ran into my office like a madman yelling
+"Jason's RSA private key is encrypted using xor with the Jason scope jpeg.  But there is also an AES
+key hidden in the jpg.  What the heck???".
+
+He was so far gone though he didn't say much more.  So it sounds like Jason encrypted his private RSA key using
+the scope jpeg as a one time pad but we don't know the offset into the jpeg where he started his
+one time pad xor operation.
+
+We need to find that flag and I bet Jason encrypted it using AES CBC 256 (if I know Jason).
+But that AES key is probably encrypted with the RSA public key.
+
+So find all these keys inside the jpg and then find that flag.
+
+
+
+
+

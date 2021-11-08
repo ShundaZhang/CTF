@@ -1,0 +1,6 @@
+openssl rsa -in pri.pem -text -noout
+openssl rsa -in pri.pem -pubout >  pub.pem
+openssl rsa -in pub.pem -text -noout
+openssl rsa -pubin -in pub.pem -text -noout
+
+openssl rsautl -encrypt -in plain.txt -inkey pub.pem -pubin -out message.enc

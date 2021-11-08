@@ -1,0 +1,1 @@
+while using a stream cipher never ever use the key more than once is the secret

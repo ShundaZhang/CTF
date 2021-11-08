@@ -1,0 +1,40 @@
+this challenge is designed to help build the skills for solving 
+my 100 point scope challenge.
+
+hidden inside this jpeg are the following:
+a* a 4096 bit rsa public / private key pair .pem file that
+has been xor'd with bytes from the jpeg to encrypt the key file.  the offset into the
+jpeg to start the xor operation is not known.
+
+b* i have provided two python scripts to do the above xor
+operation )one python script calls the other*- finding the correct
+offset into the jpeg file
+
+c* a flag encrypted with the rsa private key from part a*
+
+you can use the two python scripts as part of solving my 
+scope challenge which is worth 211 points.
+
+the concepts shown in the python scripts can also be used as a basis 
+for solving my vargasisland challenge.
+
+you will need to modify the python scripts provided.
+if you are new to python here are some good free online courses:
+https://www.w3schools.com/python/
+https://www.coursera.org/speciali_ations/python
+
+have fun!
+
+if you are struggling to find the hidden files in this jpeg-
+you may want to solve my mountainman challenge before solving this
+challenge.
+
+twitter dm's and discord dm's are open zkcbowhunter- but you need to do some work on your own first.
+i don't give out hints if you haven't done any work.
+
+if you are new to ctf and are not sure where to start then you may 
+want to try some lower point forensic challenges first:
+rubber duck
+snowboard
+pikes peak
+gandalfthewise

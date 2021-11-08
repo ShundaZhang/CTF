@@ -1,0 +1,2 @@
+eog body.ppm
+picoCTF{d0Nt_r0ll_yoUr_0wN_aES}

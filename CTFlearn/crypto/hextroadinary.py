@@ -1,0 +1,4 @@
+x=0xc4115 
+y=0x4cf8
+
+print hex(x^y)
