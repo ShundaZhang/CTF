@@ -1,3 +1,12 @@
+Name : Please, don’t share!
+Category : Crypto
+Difficulty : Hard
+Description : Our intelligence service intercepted these strange messages which we saved in the messages.txt file. Are you able to help us decipher them?
+URL : https://app.hackthebox.eu/challenge/50
+
+The first step of this challenge is identifying the technique used within these strings as Shamir’s Secret Sharing and an associated library to help us scripting this. Now we have this lets look at the files.
+
+
 source,destination,code,public
 
 10.10.1.1,10.10.1.2,23snMFFUAzBkGou7QBwYgLrYjDX5bRPRk7yjjBDzfrxDGqgrZN
