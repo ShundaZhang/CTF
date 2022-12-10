@@ -5,7 +5,7 @@ bin = '\x47\xbb\xaa\x4e\xe1\xfc\x3d\x51\x3d\xc9\x48\x3f\xf1\x48\x37\x54\xf4\x31\
 
 '''
 for i in range(256):
-	buf = xor(bin, chr(i))
+	buf = xor(bin, i)
 	with open('bin'+str(i), 'w') as f:
 		f.write(buf)
 '''

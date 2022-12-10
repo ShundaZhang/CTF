@@ -5,7 +5,7 @@ bin = '\x4c\xb0\xa1\x45\xea\xf7\x36\x5a\x36\xc2\x43\x34\xfa\x43\x9a\xbf\xb7\xbf\
 
 '''
 for i in range(256):
-	buf = xor(bin, chr(i))
+	buf = xor(bin, i)
 	#with open('bin'+str(i), 'w') as f:
 	#	f.write(buf)
 	print(str(i)+': '+buf.hex())
