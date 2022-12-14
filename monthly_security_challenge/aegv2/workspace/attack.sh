@@ -2,6 +2,7 @@ rm bin* -f && nc 10.102.60.248 443 > bin_2
 python3 dec.py
 
 #For local test: socat tcp-l:5000,reuseaddr,fork EXEC:"./bin_2",pty,stderr
+#ROP chain: ROPgadget --binary ./bin_2 --ropchain > rop.txt
 
 #Need try several times, manually stop (enter) the first command...
 
