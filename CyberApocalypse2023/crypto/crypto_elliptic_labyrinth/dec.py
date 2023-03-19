@@ -32,6 +32,7 @@ root@ubuntu-s-1vcpu-1gb-lon1-01:~# nc 165.22.116.7 30000
 import gmpy2
 from hashlib import sha256
 from Crypto.Cipher import AES
+from Crypto.Util.number import getPrime, long_to_bytes
 
 p = 0xd6de52730df8b6d50f0350de3a60b4cb18085b2dff4aaaf92717fc9032a0e4b9f5b9ee3e904b06284f1cec057f14fd6d3a1dbd6b98d5a533e68ce27415c48c8f
 
@@ -52,4 +53,8 @@ b = (y1**2 - x1**3 - a*x1)%p
 #print b
 
 
+key = sha256(long_to_bytes(pow(a, b, p))).digest()[:16]
+cipher = AES.new(key, AES.MODE_CBC, iv)
 
+print cipher.decrypt(enc)
+#HTB{d3fund_s4v3s_th3_d4y!}
