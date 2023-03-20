@@ -39,14 +39,17 @@ account_from = {
 with open('Unknown_sol_Unknown.abi','r') as f:
 	abi = json.load(f)
 contract_instance2 = w3.eth.contract(address=TargetContract, abi=abi)
-construct_txn = contract_instance2.functions.updateSensors(10).buildTransaction(
+construct_txn = contract_instance2.functions.updateSensors(10).build_transaction(
         {
                 'from': account_from['address'],
                 'nonce': w3.eth.get_transaction_count(account_from['address']),
+		'chainId': None,
+		"gasPrice": w3.to_wei(50, 'gwei'),
+		"gas": 21000,
+		"value": w3.to_wei("0", "ether"),
         }
 )
 tx_create = w3.eth.account.sign_transaction(construct_txn, account_from['private_key'])
 tx_hash = w3.eth.send_raw_transaction(tx_create.rawTransaction)
 tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
-
 

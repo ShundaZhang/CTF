@@ -2,12 +2,12 @@ from web3 import Web3
 import json
 from web3.gas_strategies.rpc import rpc_gas_price_strategy
 
-PrivateKey     =  '0x2ec9767ef1240b856c01892875a34a1eb16e363fb110ae2b6ed65b57492a32c0'
-Address        =  '0xBd8E69Dc34AAF6114105E916251d5680D0a97231'
-TargetContract =  '0xb2719a98d73A71a378194C3840Fc68C82C4E88dd'
-SetupContract  =  '0xB4535AdEFDec043D88392B8b7a60B1aDd3A260fD'
+PrivateKey     =  '0xa48cb37f71eade448744a2ba8ed2a9467c3aba15842d9085aa2a41912bde3c41'
+Address        =  '0x93528aa5b15e1c73E2Da9c4c705Ac6bf4ce92c97'
+TargetContract =  '0xe69Bd68c5eA0073a6940e25553A46065131462ae'
+SetupContract  =  '0xe66bFbcFb5332a6A63f896140b047ccE6130F753'
 
-w3 = Web3(Web3.HTTPProvider('http://209.97.134.50:31122'))
+w3 = Web3(Web3.HTTPProvider('http://165.232.98.11:31148'))
 block_number = w3.eth.block_number
 print(block_number)
 
@@ -73,3 +73,11 @@ print(f'Tx successful with hash: { tx_receipt.transactionHash.hex() }')
 
 w3.eth.send_transaction({'to': address_to, 'from': account_from["address"]})
 print("Done!!!")
+
+with open('Setup_sol_Setup.abi','r') as f:
+        abi = json.load(f)
+
+contract_instance = w3.eth.contract(address=SetupContract, abi=abi)
+number = contract_instance.functions.isSolved().call()
+
+print(f'The current number stored is: { number } ')
