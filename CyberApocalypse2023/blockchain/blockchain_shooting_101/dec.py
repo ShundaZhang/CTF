@@ -54,7 +54,7 @@ construct_txn = contract_instance2.functions.third().build_transaction(
 tx_create = w3.eth.account.sign_transaction(construct_txn, account_from['private_key'])
 tx_hash = w3.eth.send_raw_transaction(tx_create.rawTransaction)
 tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
-
+print(f'Tx successful with hash: { tx_receipt.transactionHash.hex() }')
 
 tx_create = w3.eth.account.sign_transaction(
     {
@@ -69,19 +69,7 @@ tx_create = w3.eth.account.sign_transaction(
 
 tx_hash = w3.eth.send_raw_transaction(tx_create.rawTransaction)
 tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
+print(f'Tx successful with hash: { tx_receipt.transactionHash.hex() }')
 
-'''
-tx_create = w3.eth.account.sign_transaction(
-    {
-        "nonce": w3.eth.get_transaction_count(account_from["address"]),
-        "gasPrice": w3.eth.generate_gas_price(),
-        "gas": 21000,
-        "to": address_to,
-        "value": w3.toWei("1", "ether"),
-    },
-    account_from["private_key"],
-)
-
-tx_hash = w3.eth.send_raw_transaction(tx_create.rawTransaction)
-tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
-'''
+w3.eth.send_transaction({'to': address_to, 'from': account_from["address"]})
+print("Done!!!")
