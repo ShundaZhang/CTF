@@ -35,6 +35,8 @@ account_from = {
 #tx_create = w3.eth.account.sign_transaction(construct_txn, account_from['private_key'])
 #tx_hash = w3.eth.send_raw_transaction(tx_create.rawTransaction)
 #tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
+address_to = TargetContract
+
 with open('ShootingArea_sol_ShootingArea.abi','r') as f:
 	abi = json.load(f)
 
@@ -43,14 +45,16 @@ construct_txn = contract_instance2.functions.third().build_transaction(
         {
                 'from': account_from['address'],
                 'nonce': w3.eth.get_transaction_count(account_from['address']),
+		'chainId': None,
+		"gasPrice": w3.to_wei(50, 'gwei'),
+		"gas": 21000,
+		"value": w3.to_wei("0", "ether"),
         }
 )
 tx_create = w3.eth.account.sign_transaction(construct_txn, account_from['private_key'])
 tx_hash = w3.eth.send_raw_transaction(tx_create.rawTransaction)
 tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
 
-'''
-address_to = TargetContract
 
 tx_create = w3.eth.account.sign_transaction(
     {
@@ -65,7 +69,6 @@ tx_create = w3.eth.account.sign_transaction(
 
 tx_hash = w3.eth.send_raw_transaction(tx_create.rawTransaction)
 tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
-'''
 
 '''
 tx_create = w3.eth.account.sign_transaction(
