@@ -53,11 +53,22 @@ flashlight_charge = 426
 pairs = cross_bridge(times, flashlight_charge)
 print(pairs)
 '''
+context.log_level = 'debug'
 
 ip, port = '165.232.100.46', 32100
-io = remote(ip, prot)
+io = remote(ip, port)
 
 io.sendlineafter('>', '2')
 io.recvuntil('Below are the estimates of how long each of us will take to cross the bridge and the charge left for the flashlight.')
-buf = io.recvuntil('minutes.')
-print buf
+io.recvuntil('\n')
+io.recvuntil('\n')
+buf = io.recvuntil('minutes.').split('\n')
+flash = buf[-1]
+buf = buf[:-1]
+#print buf
+times = []
+for i in buf:
+	times.append(int(i.split(' ')[4]))
+flashlight_charge = flash.split(' ')[-2]
+pairs = cross_bridge(times, flashlight_charge)
+print(pairs)
