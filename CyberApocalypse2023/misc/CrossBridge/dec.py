@@ -71,7 +71,7 @@ while True:
 	times = []
 	for i in buf:
 		times.append(int(i.split(' ')[4]))
-	flashlight_charge = flash.split(' ')[-2]
+	flashlight_charge = int(flash.split(' ')[-2])
 	pairs = cross_bridge(times, flashlight_charge)
 	#print(pairs)
 
