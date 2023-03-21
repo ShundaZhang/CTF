@@ -29,3 +29,4 @@ while True:
 			y = str(x)
 	io.sendlineafter('>', y)
 #print io.recvall()
+#HTB{d1v1d3_bY_Z3r0_3rr0r}
