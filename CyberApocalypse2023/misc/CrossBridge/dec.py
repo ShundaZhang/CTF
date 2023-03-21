@@ -59,16 +59,28 @@ ip, port = '165.232.100.46', 32100
 io = remote(ip, port)
 
 io.sendlineafter('>', '2')
-io.recvuntil('Below are the estimates of how long each of us will take to cross the bridge and the charge left for the flashlight.')
-io.recvuntil('\n')
-io.recvuntil('\n')
-buf = io.recvuntil('minutes.').split('\n')
-flash = buf[-1]
-buf = buf[:-1]
-#print buf
-times = []
-for i in buf:
-	times.append(int(i.split(' ')[4]))
-flashlight_charge = flash.split(' ')[-2]
-pairs = cross_bridge(times, flashlight_charge)
-print(pairs)
+
+while True:
+	io.recvuntil('Below are the estimates of how long each of us will take to cross the bridge and the charge left for the flashlight.')
+	io.recvuntil('\n')
+	io.recvuntil('\n')
+	buf = io.recvuntil('minutes.').split('\n')
+	flash = buf[-1]
+	buf = buf[:-1]
+	#print buf
+	times = []
+	for i in buf:
+		times.append(int(i.split(' ')[4]))
+	flashlight_charge = flash.split(' ')[-2]
+	pairs = cross_bridge(times, flashlight_charge)
+	#print(pairs)
+
+	f = ''
+	for i in pairs:
+		if len(i) == 2:
+			f += '['+str(i[0])+','+str(i[1])+'],'
+		elif len(i) == 1:
+			f += '['+str(i[0])+'],'
+
+	f = f[:-1]
+	io.sendlineafter('>', f)
