@@ -1,0 +1,3 @@
+print '556e6b6e6f776e206b6579636f6465210a'.decode('hex')
+
+print '5465726d696e616c20626c6f636b6564210a'.decode('hex')
