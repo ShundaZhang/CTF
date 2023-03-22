@@ -71,7 +71,20 @@ tx_hash = w3.eth.send_raw_transaction(tx_create.rawTransaction)
 tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
 print(f'Tx successful with hash: { tx_receipt.transactionHash.hex() }')
 
-w3.eth.send_transaction({'to': address_to, 'from': account_from["address"]})
+tx = {
+    'to': address_to,
+    'value': w3.to_wei(0.1, 'ether'),  # specify value to send with transaction (optional)
+    'gas': 1000000,  # specify gas limit (optional)
+}
+# send transaction
+tx_hash = w3.eth.sendTransaction(tx)
+
+# wait for transaction to be mined
+receipt = w3.eth.waitForTransactionReceipt(tx_hash)
+
+# check that the firstShot variable is now True
+first_shot = contract.functions.firstShot().call()
+print('firstShot:', first_shot)
 print("Done!!!")
 
 with open('Setup_sol_Setup.abi','r') as f:
