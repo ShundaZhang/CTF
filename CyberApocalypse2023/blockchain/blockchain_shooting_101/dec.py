@@ -2,12 +2,14 @@ from web3 import Web3
 import json
 from web3.gas_strategies.rpc import rpc_gas_price_strategy
 
-PrivateKey     =  '0xa48cb37f71eade448744a2ba8ed2a9467c3aba15842d9085aa2a41912bde3c41'
-Address        =  '0x93528aa5b15e1c73E2Da9c4c705Ac6bf4ce92c97'
-TargetContract =  '0xe69Bd68c5eA0073a6940e25553A46065131462ae'
-SetupContract  =  '0xe66bFbcFb5332a6A63f896140b047ccE6130F753'
+PrivateKey     =  '0xcf6ac21e576e12ba90d3be344ecb27dac394677a32a365432cc4e43eb6935a0e'
+Address        =  '0x95898C008564E5454Ef31d977A93245AC2daa5Ab'
+TargetContract =  '0x2a40E051090e2e6b1a275A77B913B21EbBaFa53e'
+SetupContract  =  '0x5B9d6208a045d368E704D5182a629a1ccc46C1f7'
 
-w3 = Web3(Web3.HTTPProvider('http://165.232.98.11:31148'))
+url = 'http://104.248.169.117:31205'
+
+w3 = Web3(Web3.HTTPProvider(url))
 block_number = w3.eth.block_number
 print(block_number)
 
@@ -73,18 +75,23 @@ print(f'Tx successful with hash: { tx_receipt.transactionHash.hex() }')
 
 tx = {
     'to': address_to,
-    'value': w3.to_wei(0.1, 'ether'),  # specify value to send with transaction (optional)
+    #'value': w3.to_wei(0.1, 'ether'),  # specify value to send with transaction (optional)
     'gas': 1000000,  # specify gas limit (optional)
 }
 # send transaction
-tx_hash = w3.eth.sendTransaction(tx)
+tx_hash = w3.eth.send_transaction(tx)
 
 # wait for transaction to be mined
-receipt = w3.eth.waitForTransactionReceipt(tx_hash)
+tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
+print(f'Tx successful with hash: { tx_receipt.transactionHash.hex() }')
 
 # check that the firstShot variable is now True
-first_shot = contract.functions.firstShot().call()
+first_shot = contract_instance2.functions.firstShot().call()
 print('firstShot:', first_shot)
+second_shot = contract_instance2.functions.secondShot().call()
+print('secondShot:', second_shot)
+third_shot = contract_instance2.functions.thirdShot().call()
+print('thirdShot:', third_shot)
 print("Done!!!")
 
 with open('Setup_sol_Setup.abi','r') as f:
