@@ -65,3 +65,4 @@ number = contract_instance.functions.isSolved().call()
 
 print(f'The current number stored is: { number } ')
 
+#FLAG=HTB{9P5_50FtW4R3_UPd4t3D}
