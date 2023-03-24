@@ -1,13 +1,13 @@
 from web3 import Web3
 import json
 
-PrivateKey     =  '0x7a95c3cc1f541769d2866fa0374b7994fa73ec120431e044fd2933d828080609'
-Address        =  '0x6AF90Cd2978a6272e2b9aF9fF23C7E1018B66357'
-TargetContract =  '0xF7D2968C2f6dE13F114CF9d2150f5A1617731B7A'
-SetupContract  =  '0xDE0ae2e793cb5c7adD4537137434bf0530a81393'
+PrivateKey     =  '0x9799a50a022d4f992c377fcd0fa2948ff86581f946ef89fc7d07ec3c8543ddaa'
+Address        =  '0x7ed38FF878CAB851C363FAAaa71C9ea75D6ff5E2'
+TargetContract =  '0x21329dEbF550D722B0959a888FD4c61569Bc0247'
+SetupContract  =  '0x6621C44dC09c948B4d0120d9842ceb724e3a4c48'
 
 
-w3 = Web3(Web3.HTTPProvider('http://142.93.38.14:32428'))
+w3 = Web3(Web3.HTTPProvider('http://178.62.9.10:32350'))
 block_number = w3.eth.block_number
 print(block_number)
 
@@ -43,13 +43,25 @@ construct_txn = contract_instance2.functions.updateSensors(10).build_transaction
         {
                 'from': account_from['address'],
                 'nonce': w3.eth.get_transaction_count(account_from['address']),
-		'chainId': None,
-		"gasPrice": w3.to_wei(50, 'gwei'),
-		"gas": 21000,
-		"value": w3.to_wei("0", "ether"),
+		'chainId': w3.eth.chain_id,
+		#"gasPrice": w3.to_wei(50, 'gwei'),
+		#"gas": 21000,
+		#"value": w3.to_wei("0", "ether"),
         }
 )
 tx_create = w3.eth.account.sign_transaction(construct_txn, account_from['private_key'])
 tx_hash = w3.eth.send_raw_transaction(tx_create.rawTransaction)
 tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
+print(f'Tx successful with hash: { tx_receipt.transactionHash.hex() }')
+
+updated = contract_instance2.functions.updated().call()
+print('updated:', updated)
+
+with open('Setup_sol_Setup.abi','r') as f:
+        abi = json.load(f)
+
+contract_instance = w3.eth.contract(address=SetupContract, abi=abi)
+number = contract_instance.functions.isSolved().call()
+
+print(f'The current number stored is: { number } ')
 
