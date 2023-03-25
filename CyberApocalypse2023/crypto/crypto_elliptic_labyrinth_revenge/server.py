@@ -21,14 +21,17 @@ class ECC:
 
 def menu():
     print("1. Get parameters of path")
-    print("2. Get point in path")
-    print("3. Try to exit the labyrinth")
+    print("2. Try to exit the labyrinth")
     option = input("> ")
     return option
 
 
 def main():
     ec = ECC(512)
+
+    A = ec.gen_random_point()
+    print("This is the point you calculated before:")
+    print(json.dumps({'x': hex(A[0]), 'y': hex(A[1])}))
 
     while True:
         choice = menu()
@@ -41,9 +44,6 @@ def main():
                     'b': hex(ec.b >> r)
                 }))
         elif choice == '2':
-            A = ec.gen_random_point()
-            print(json.dumps({'x': hex(A[0]), 'y': hex(A[1])}))
-        elif choice == '3':
             iv = os.urandom(16)
             key = sha256(long_to_bytes(pow(ec.a, ec.b, ec.p))).digest()[:16]
             cipher = AES.new(key, AES.MODE_CBC, iv)
