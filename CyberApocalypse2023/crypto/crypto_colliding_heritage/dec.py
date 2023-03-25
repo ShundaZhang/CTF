@@ -1,8 +1,11 @@
+#!/usr/bin/python3
+
 from pwn import *
 import gmpy2
 from hashlib import md5
 from Crypto.Util.number import isPrime, getPrime, long_to_bytes, bytes_to_long
 
+context.log_level = 'debug'
 
 def H(msg, q):
 	return bytes_to_long(md5(msg).digest()) % q
@@ -29,26 +32,26 @@ y = int(io.recvline().strip())
 io.recvuntil(': ')
 p = int(io.recvline().strip())
 q = (p - 1)//2
-#print g
-#print y
-#print p
+#print(g)
+#print(y)
+#print(p)
 
 io.sendlineafter('>', 'S')
 io.sendlineafter('>', m1)
 buf = io.recvline().split()
-s1 = buf[1][1:-1]
-e1 = buf[2][:-1]
-#print buf
-#print s1
-#print e1
+s1 = int(buf[1][1:-1])
+e1 = int(buf[2][:-1])
+#print(buf)
+#print(s1)
+#print(e1)
 io.sendlineafter('>', 'S')
 io.sendlineafter('>', m2)
 buf = io.recvline().split()
-s2 = buf[1][1:-1]
-e2 = buf[2][:-1]
-#print buf
-#print s2
-#print e2
+s2 = int(buf[1][1:-1])
+e2 = int(buf[2][:-1])
+#print(buf)
+#print(s2)
+#print(e2)
 
 '''
 k = H(msg+x)
@@ -62,8 +65,15 @@ s1 - s2 = (e2 - e1)*x mod q
 x == (s1 - s2)*(e2 - e1)^-1 mod q
 '''
 x = (s1 - s2)*gmpy2.invert(e2 - e1, q)%q
-msg = 'I am the left hand'
+msg = b'I am the left hand'
 s, e = sign(msg, x, g, p, q)
 
-print hex(s)
-print hex(e)
+#print(hex(s))
+#print(hex(e))
+
+io.sendlineafter('>', 'V')
+io.sendlineafter('>', msg.hex())
+io.sendlineafter('>', hex(s)[2:])
+io.sendlineafter('>', hex(e)[2:])
+
+print(io.recvall())
