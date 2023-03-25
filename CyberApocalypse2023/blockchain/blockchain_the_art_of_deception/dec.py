@@ -31,3 +31,4 @@ atk.functions.exploit(target).transact()
 # Checks lastEntrant value (just to be sure)
 hsg = w3.eth.contract(address=target, abi=abihsg)
 print("lastEntrant =", hsg.functions.lastEntrant().call())
+#HTB{H1D1n9_1n_PL41n_519H7}

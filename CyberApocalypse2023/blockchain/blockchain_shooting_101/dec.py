@@ -17,6 +17,7 @@ account_address = Address
 balance = w3.eth.get_balance(account_address)
 print(balance)
 
+#solcjs --abi --bin Setup.sol #generate .abi .bin
 #with open('Setup_sol_Setup.abi','r') as f:
 #	abi = json.load(f)
 
