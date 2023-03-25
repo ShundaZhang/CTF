@@ -1,0 +1,38 @@
+'''
+{"x": "0x97cba2022ce268fe9cb4b159707a96b1b4b1dfcd2fe52b1344533987d776e8ae0a86f574faeca2b50c05c8420082f2d47834bc8e3776f6dc5403daed036ee639", "y": "0x89ce05f72eb376715e5d58af78d2522f901c582b58ba721ee73fe79c4331f4b5548abc018fb2a22dcc309f64e1745ea8fb78a3f29ccc4819eaced83a9a090c76"}
+1. Get parameters of path
+2. Try to exit the labyrinth
+> 1
+{"p": "0xbf00940b2776a9c0ccf70a48d283d340206e57a9ca66a638613bbe2ab929cbf6c89ce34dbdbe807c77ce4ae617931f5d5b2e76166bab11091aceca22bf71f8a3", "a": "0x20ce3daf1cee7a020689ad26ce017df24db1c48b2840c5e15db96e29cb27e3a783af4b634e0fb076db62", "b": "0xbc1fdbb87f2b02490ccb0375ad59300855ee14e5a851ea880f49de16bb4478c53393911fe1f7ba8cc67"}
+1. Get parameters of path
+2. Try to exit the labyrinth
+> 2
+{"iv": "06ed9d1d5e7cfc6c9e5e5308d65f1407", "enc": "5b8dfe3149f5fd61c7200fd711391a6061fc05fafe6be311a88553b344723a442073cedb53bb377b838722d695983d78"}
+'''
+
+#https://chovid99.github.io/posts/cyber-apocalypse-2023-crypto/#elliptic-labyrinth-revenge
+#https://github.com/defund/coppersmith
+
+'''
+f(x) = x^3 - y^2 + (partial_a*2^r + c)*x + (partial_b*2^r + d) mod p
+c and d is small, r is bruteforceable
+bounds = [2^r, 2^r]
+'''
+
+#from dec.sage
+a = 6872680764814585480295284703306369115745820231445914534374980934082345375094443019650296817039331697231535617955432259676788002719283779047619379500316018 
+b = 2463219184129395082584369952106528260823275932161303800479596684045012972197816749263531729758388146808870189090393391275430454249740187279580181570276541
+p = 0xbf00940b2776a9c0ccf70a48d283d340206e57a9ca66a638613bbe2ab929cbf6c89ce34dbdbe807c77ce4ae617931f5d5b2e76166bab11091aceca22bf71f8a3
+
+from hashlib import sha256
+from Crypto.Cipher import AES
+from Crypto.Util.number import long_to_bytes
+
+iv = '06ed9d1d5e7cfc6c9e5e5308d65f1407'.decode('hex')
+enc = '5b8dfe3149f5fd61c7200fd711391a6061fc05fafe6be311a88553b344723a442073cedb53bb377b838722d695983d78'.decode('hex')
+
+key = sha256(long_to_bytes(pow(a, b, p))).digest()[:16]
+cipher = AES.new(key, AES.MODE_CBC, iv)
+
+print cipher.decrypt(enc)
+#HTB{y0u_5h0u1d_h4v3_u53d_c00p325m17h}
