@@ -2,12 +2,13 @@
 #http://jgeralnik.github.io/writeups/2021/08/12/Lattices/
 
 from pwn import *
-from secrets import randbelow
-from hashlib import sha256
-from Crypto.Util.number import isPrime, getPrime, long_to_bytes, bytes_to_long
+#from hashlib import sha256
+#from Crypto.Util.number import isPrime, getPrime, long_to_bytes, bytes_to_long
+import os
 
+'''
 def H(msg, q):
-	return bytes_to_long(2 * sha256(msg).digest()) % q
+	return bytes_to_long(2 * sha256(msg).digest())%q
 
 def sign(msg, x, g, p, q):
 	k = H(msg + long_to_bytes(x), q)
@@ -15,6 +16,7 @@ def sign(msg, x, g, p, q):
 	e = H(long_to_bytes(r) + msg, q)
 	s = (k - x * e) % q
 	return (s, e)
+'''
 
 def Babai_closest_vector(B, target):
 	# Babai's Nearest Plane algorithm
@@ -29,14 +31,11 @@ def Babai_closest_vector(B, target):
 
 context.log_level = 'debug'
 
-ip, port = '139.59.173.68', 31831
+ip, port = '165.232.100.46', 32631
 io = remote(ip, port)
 
-#m1 and m2 can be any value, just reuse the previos data from colliding heritage
-
-m1 = '4dc968ff0ee35c209572d4777b721587d36fa7b21bdc56b74a3dc0783e7b9518afbfa200a8284bf36e8e4b55b35f427593d849676da0d1555d8360fb5f07fea2'.encode()
-
-m2 = '4dc968ff0ee35c209572d4777b721587d36fa7b21bdc56b74a3dc0783e7b9518afbfa202a8284bf36e8e4b55b35f427593d849676da0d1d55d8360fb5f07fea2'.encode()
+m1 = os.urandom(16).hex().encode()
+m2 = os.urandom(16).hex().encode()
 
 io.recvuntil(b': ')
 g = int(io.recvline().strip())
@@ -82,14 +81,18 @@ M = Matrix([
 Y = vector([1, 1, -1, -1, 0, 0])
 res = Babai_closest_vector(M, Y)
 x = int(res[1]*q/2) - 1 # Based on observation, if we're lucky, our recovered x is differed by 1
+print(f'x = {x}, g = {g}, p = {p}, q = {q}')
 
 msg = b'right hand'
-s, e = sign(msg, x, g, p, q)
+
+#s, e = sign(msg, x, g, p, q)
+s, e = os.popen('python3 sign.py '+msg.hex()+' '+str(x)+' '+str(g)+' '+str(p)+' '+str(q)).read().strip().split()
+print(f'recovered s, e = {s, e}')
 
 io.sendlineafter(b'>', b'V')
 io.sendlineafter(b'>', msg.hex().encode())
-io.sendlineafter(b'>', str(s).encode())
-io.sendlineafter(b'>', str(e).encode())
+io.sendlineafter(b'>', s.encode())
+io.sendlineafter(b'>', e.encode())
 
 print(io.recvall())
-
+#HTB{full_s1z3_n0nc3_l4cks_ful1_s1z3_3ntr0py}
