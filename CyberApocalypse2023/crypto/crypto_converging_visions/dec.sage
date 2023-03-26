@@ -112,3 +112,4 @@ io.sendlineafter(b'> ', b'3')
 io.sendlineafter(b'x: ', str(prediction_point[0]).encode())
 io.sendlineafter(b'y: ', str(prediction_point[1]).encode())
 print(io.recvall())
+#HTB{0Racl3_AS_a_f3A7Ur3_0n_W3aK_CURV3_aND_PRN9??_7H3_s3cur17Y_0F_0uR_CRyP70Sys73M_w1LL_c0LLAp53!!!}
