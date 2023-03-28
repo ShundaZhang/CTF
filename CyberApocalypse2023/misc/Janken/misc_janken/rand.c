@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+//gcc -fPIC -shared -o librand3.so rand.c
+
 int rand3(int offset) {
     int random_num;
     
