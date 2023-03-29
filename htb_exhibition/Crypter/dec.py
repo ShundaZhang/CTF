@@ -21,12 +21,12 @@ ret = lib.crypto_secretbox_easy(ctxt, pt, ctypes.c_ulonglong(len_pt), nonce, key
 
 ct = ctxt.raw
 print ct.encode('hex')
-len_ct = len(ct)
+len_ct = len(ct) - 0x10
 print len_ct
 
-io.recvuntil('message: ')
+#io.recvuntil('message: ')
 io.sendline(str(len_ct))
 io.recvuntil('message: ')
 io.sendline(ct)
 
-#io.interactive()
+io.interactive()
