@@ -27,3 +27,6 @@ for lp in mp:
 		p = int(P(root[0]))
 		q = n//p
 		phi = (p-1)*(q-1)
+		d = inverse_mod(3, phi)
+		m = pow(c, d, n)
+		print(bytes.fromhex(hex(int(m))[2:]))

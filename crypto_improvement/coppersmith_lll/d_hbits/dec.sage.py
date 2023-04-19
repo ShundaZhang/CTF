@@ -26,10 +26,13 @@ print(mp)
 
 for lp in mp:
 	R = PolynomialRing(Zmod(n), names=('x',)); (x,) = R._first_ngens(1)
-	p = x*_sage_const_2 **_sage_const_512  + lp
-	root = p.monic().small_roots(X = _sage_const_2 **_sage_const_128 , beta = _sage_const_0p4 )
+	P = x*_sage_const_2 **_sage_const_512  + lp
+	root = P.monic().small_roots(X = _sage_const_2 **_sage_const_128 , beta = _sage_const_0p4 )
 	if root:
-		print(root[_sage_const_0 ])
-		print(p(root[_sage_const_0 ])
-
+		p = int(P(root[_sage_const_0 ]))
+		q = n//p
+		phi = (p-_sage_const_1 )*(q-_sage_const_1 )
+		d = inverse_mod(_sage_const_3 , phi)
+		m = pow(c, d, n)
+		print(bytes.fromhex(hex(int(m))[_sage_const_2 :]))
 
