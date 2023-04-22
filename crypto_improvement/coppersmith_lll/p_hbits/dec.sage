@@ -10,6 +10,7 @@ hp=97522826022187678545924975588711975512906538181361325096919121233043973599759
 
 R.<x> = PolynomialRing(Zmod(n))
 P = hp + x
+#x0 = P.small_roots()[0] #too large, need to limit
 x0 = P.small_roots(X=2^128, beta=0.1)[0]
 print(x0)
 
