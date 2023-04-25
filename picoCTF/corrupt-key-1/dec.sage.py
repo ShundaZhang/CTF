@@ -4,6 +4,8 @@
 from sage.all_cmdline import *   # import sage library
 
 _sage_const_1p0 = RealNumber('1.0'); _sage_const_2 = Integer(2); _sage_const_7 = Integer(7); _sage_const_1 = Integer(1); _sage_const_0 = Integer(0); _sage_const_0p4 = RealNumber('0.4'); _sage_const_256 = Integer(256); _sage_const_0x00b8cb1cca99b6ac41876c18845732a5cbfc875df346ee9002ce608508b5fcf6b60a5ac7722a2d64ef74e1443a338e70a73e63a303f3ac9adf198595699f6e9f30c009d219c7d98c4ec84203610834029c79567efc08f66b4bc3f564bfb571546a06b7e48fb35bb9ccea9a2cd44349f829242078dfa64d525927bfd55d099c024f = Integer(0x00b8cb1cca99b6ac41876c18845732a5cbfc875df346ee9002ce608508b5fcf6b60a5ac7722a2d64ef74e1443a338e70a73e63a303f3ac9adf198595699f6e9f30c009d219c7d98c4ec84203610834029c79567efc08f66b4bc3f564bfb571546a06b7e48fb35bb9ccea9a2cd44349f829242078dfa64d525927bfd55d099c024f); _sage_const_0xe700568ff506bd5892af92592125e06cbe9bd45dfeafe931a333c13463023d4f0000000000000000000000000000000000000000000000000000000000000000 = Integer(0xe700568ff506bd5892af92592125e06cbe9bd45dfeafe931a333c13463023d4f0000000000000000000000000000000000000000000000000000000000000000); _sage_const_18 = Integer(18)
+from tqdm import tqdm
+
 def small_roots(f, X, beta=_sage_const_1p0 , m=None):
 	N = f.parent().characteristic()
 	delta = f.degree()
@@ -39,11 +41,9 @@ def recover(p_high, n, m):
 	return p
 
 def solve(bits, m):
-	for x in range(_sage_const_2 **bits, -_sage_const_1 , -_sage_const_1 ):
+	for x in tqdm(range(_sage_const_2 **bits, -_sage_const_1 , -_sage_const_1 )):
 		_p = _p_high + x * _sage_const_2 **(_sage_const_256 -bits)
-		print(bin(_p))
 		p_high = int(bin(_p)[:_sage_const_256 +bits+_sage_const_2 ], _sage_const_2 )
-		print(bin(p_high))
 		p = recover(p_high, n, m)
 		if p is not None:
 			return p
