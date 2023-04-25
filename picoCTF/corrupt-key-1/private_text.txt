@@ -1,3 +1,5 @@
+openssl rsa -in private.key -text -noout
+
 RSA Private-Key: (1024 bit, 2 primes)
 modulus:
     00:b8:cb:1c:ca:99:b6:ac:41:87:6c:18:84:57:32:
