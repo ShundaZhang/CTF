@@ -9,4 +9,4 @@ q = n//p
 
 #c = pow(3, FLAG, n)
 
-
+print(p, q)
