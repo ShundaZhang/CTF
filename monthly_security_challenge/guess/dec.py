@@ -16,8 +16,8 @@ for i in range(20):
 		print(i)
 
 '''
-i = 0
-while i < 2**32+1: 
+i = 2**32
+while i > 2**31: 
 	with open('log.txt', 'wb') as f:
 		f.write(str(i))
 	buf = os.popen('./guess2 < log.txt').read()
@@ -26,6 +26,6 @@ while i < 2**32+1:
                 print('Found!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
                 print(i)
                 break
-	i +=1 
+	i -= 1 
 
 
