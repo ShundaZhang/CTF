@@ -14,9 +14,9 @@ from z3 import *
   return local_18 + ((local_18 - lVar1 >> 1) + lVar1 >> 0x1c) * -0x1badb105 == 1;
 '''
 
-x = BitVec('x',32)
+x = BitVec('x',64)
 s = Solver()
-s.add(1337*ZeroExt(64, x) - ((((1337*ZeroExt(64, x) - 208*ZeroExt(64, x)) >> 1) + 208*ZeroExt(64, x)) >> 28) * (464367877) == 1)
+s.add(1337*x - ((((1337*x - 208*x) >> 1) + 208*x) >> 28) * (464367877) == 1)
 
 print s.check()
 print s.model()
