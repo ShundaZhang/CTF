@@ -31,7 +31,8 @@ def Babai_closest_vector(B, target):
 
 context.log_level = 'debug'
 
-ip, port = '165.232.100.46', 32631
+#ip, port = '165.232.100.46', 32631
+ip, port = '134.209.180.248', 32003
 io = remote(ip, port)
 
 m1 = os.urandom(16).hex().encode()
