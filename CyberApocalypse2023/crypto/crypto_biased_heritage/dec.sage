@@ -97,3 +97,4 @@ io.sendlineafter(b'>', e.encode())
 
 print(io.recvall())
 #HTB{full_s1z3_n0nc3_l4cks_ful1_s1z3_3ntr0py}
+#HTB{unf027un4731y_7h3_n0nc3_1uck5_3n720py!!}
