@@ -18,7 +18,8 @@ def sign(msg, x, g, p, q):
 	return (s, e)
 
 
-ip, port = '64.227.41.83', 31866
+#ip, port = '64.227.41.83', 31866
+ip, port = '144.126.206.29', 31126
 io = remote(ip, port)
 
 m1 = '4dc968ff0ee35c209572d4777b721587d36fa7b21bdc56b74a3dc0783e7b9518afbfa200a8284bf36e8e4b55b35f427593d849676da0d1555d8360fb5f07fea2'.encode()
@@ -77,3 +78,5 @@ io.sendlineafter(b'>', str(s).encode())
 io.sendlineafter(b'>', str(e).encode())
 
 print(io.recvall())
+
+#HTB{MD5_c0111510n_4nd_5chn022'5}
