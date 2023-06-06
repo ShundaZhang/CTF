@@ -24,9 +24,9 @@ s = Solver()
 s.add(1337*ZeroExt(128,x) - ((((1337*ZeroExt(128,x) - (0x27f850eb97a1c005*1337*ZeroExt(128,x)>>0x40)) >> 1) + (0x27f850eb97a1c005*1337*ZeroExt(128,x)>>0x40)) >> 28) * (464367877) == 1)
 #s.add((1337*ZeroExt(64,x) - ((((1129*ZeroExt(64,x)) >> 1) + 208*ZeroExt(64,x)) >> 28) * (464367877))%2**64 == 1)
 #s.add(1337*x - ((((1129*x)/2) + 208*x)/2**28) * (464367877) == 1)
-print s.check()
+print(s.check())
 while s.check()==sat:
-	print s.model()
+	print(s.model())
 	s.add(x != s.model()[x])
 
 #Please enter the PIN Number: 2518422944
