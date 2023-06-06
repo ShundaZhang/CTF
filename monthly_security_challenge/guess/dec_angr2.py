@@ -19,7 +19,8 @@ def main(argv):
 
   # If found a way to reach the address
   if simulation.found:
-    solution_state = simulation.found[0]
+    #solution_state = simulation.found[0]
+    solution_state = simulation.found[1]
 
     # Print the string that Angr wrote to stdin to follow solution_state
     print(solution_state.posix.dumps(sys.stdin.fileno()))
