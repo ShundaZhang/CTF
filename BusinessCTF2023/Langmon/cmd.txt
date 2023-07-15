@@ -1,0 +1,157 @@
+nmap -T4 -p- -v 10.129.252.149
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-07-15 08:00 UTC
+Initiating Ping Scan at 08:00
+Scanning 10.129.252.149 [4 ports]
+Completed Ping Scan at 08:00, 0.16s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 08:00
+Completed Parallel DNS resolution of 1 host. at 08:00, 6.13s elapsed
+Initiating SYN Stealth Scan at 08:00
+Scanning 10.129.252.149 [65535 ports]
+Discovered open port 22/tcp on 10.129.252.149
+Discovered open port 80/tcp on 10.129.252.149
+Increasing send delay for 10.129.252.149 from 0 to 5 due to max_successful_tryno increase to 5
+SYN Stealth Scan Timing: About 7.26% done; ETC: 08:07 (0:06:36 remaining)
+Increasing send delay for 10.129.252.149 from 5 to 10 due to max_successful_tryno increase to 6
+SYN Stealth Scan Timing: About 14.67% done; ETC: 08:08 (0:07:04 remaining)
+SYN Stealth Scan Timing: About 18.38% done; ETC: 08:10 (0:07:37 remaining)
+Warning: 10.129.252.149 giving up on port because retransmission cap hit (6).
+SYN Stealth Scan Timing: About 21.36% done; ETC: 08:11 (0:08:10 remaining)
+
+root@ubuntu-s-1vcpu-1gb-lon1-01:~/CTF/BusinessCTF2023/Langmon# nmap -T4 -A -p- -Pn -v 10.129.252.149
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-07-15 08:03 UTC
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 08:03
+Completed NSE at 08:03, 0.00s elapsed
+Initiating NSE at 08:03
+Completed NSE at 08:03, 0.00s elapsed
+Initiating NSE at 08:03
+Completed NSE at 08:03, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 08:03
+Completed Parallel DNS resolution of 1 host. at 08:03, 6.15s elapsed
+Initiating SYN Stealth Scan at 08:03
+Scanning 10.129.252.149 [65535 ports]
+Discovered open port 22/tcp on 10.129.252.149
+Discovered open port 80/tcp on 10.129.252.149
+SYN Stealth Scan Timing: About 22.64% done; ETC: 08:06 (0:01:46 remaining)
+Increasing send delay for 10.129.252.149 from 0 to 5 due to max_successful_tryno increase to 5
+Increasing send delay for 10.129.252.149 from 5 to 10 due to max_successful_tryno increase to 6
+SYN Stealth Scan Timing: About 35.06% done; ETC: 08:06 (0:02:04 remaining)
+Warning: 10.129.252.149 giving up on port because retransmission cap hit (6).
+SYN Stealth Scan Timing: About 38.30% done; ETC: 08:07 (0:02:36 remaining)
+SYN Stealth Scan Timing: About 41.94% done; ETC: 08:08 (0:02:56 remaining)
+SYN Stealth Scan Timing: About 45.96% done; ETC: 08:09 (0:03:12 remaining)
+SYN Stealth Scan Timing: About 66.85% done; ETC: 08:12 (0:02:57 remaining)
+SYN Stealth Scan Timing: About 73.79% done; ETC: 08:13 (0:02:28 remaining)
+SYN Stealth Scan Timing: About 79.91% done; ETC: 08:13 (0:01:59 remaining)
+SYN Stealth Scan Timing: About 85.58% done; ETC: 08:13 (0:01:28 remaining)
+SYN Stealth Scan Timing: About 90.83% done; ETC: 08:14 (0:00:57 remaining)
+Completed SYN Stealth Scan at 08:14, 651.50s elapsed (65535 total ports)
+Initiating Service scan at 08:14
+Scanning 2 services on 10.129.252.149
+Completed Service scan at 08:14, 6.63s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against 10.129.252.149
+Retrying OS detection (try #2) against 10.129.252.149
+Retrying OS detection (try #3) against 10.129.252.149
+Retrying OS detection (try #4) against 10.129.252.149
+Retrying OS detection (try #5) against 10.129.252.149
+Initiating Traceroute at 08:14
+Completed Traceroute at 08:14, 0.16s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 08:14
+Completed Parallel DNS resolution of 2 hosts. at 08:15, 6.13s elapsed
+NSE: Script scanning 10.129.252.149.
+Initiating NSE at 08:15
+Completed NSE at 08:15, 13.26s elapsed
+Initiating NSE at 08:15
+Completed NSE at 08:15, 0.90s elapsed
+Initiating NSE at 08:15
+Completed NSE at 08:15, 0.00s elapsed
+Nmap scan report for 10.129.252.149
+Host is up (0.16s latency).
+Not shown: 65406 closed tcp ports (reset), 127 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 3e:ea:45:4b:c5:d1:6d:6f:e2:d4:d1:3b:0a:3d:a9:4f (ECDSA)
+|_  256 64:cc:75:de:4a:e6:a5:b4:73:eb:3f:1b:cf:b4:e3:94 (ED25519)
+80/tcp open  http    Apache httpd 2.4.52 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+| http-robots.txt: 1 disallowed entry 
+|_/wp-admin/
+|_http-title: Did not follow redirect to http://langmon.htb/
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=7/15%OT=22%CT=1%CU=39099%PV=Y%DS=2%DC=T%G=Y%TM=64B2559
+OS:4%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10C%TI=Z%CI=Z%II=I%TS=A)SEQ
+OS:(SP=107%GCD=1%ISR=10E%TI=Z%CI=Z%TS=D)OPS(O1=M53CST11NW7%O2=M53CST11NW7%O
+OS:3=M53CNNT11NW7%O4=M53CST11NW7%O5=M53CST11NW7%O6=M53CST11)WIN(W1=FE88%W2=
+OS:FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M53CNNSN
+OS:W7%CC=Y%Q=)ECN(R=N)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)
+OS:T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%
+OS:S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(
+OS:R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0
+OS:%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)U1(R=N)IE(R=Y%DFI=N%T=40%CD=S)IE(R=N)
+
+Uptime guess: 12.148 days (since Mon Jul  3 04:41:47 2023)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 8888/tcp)
+HOP RTT       ADDRESS
+1   157.04 ms 10.10.14.1
+2   157.26 ms 10.129.252.149
+
+NSE: Script Post-scanning.
+Initiating NSE at 08:15
+Completed NSE at 08:15, 0.00s elapsed
+Initiating NSE at 08:15
+Completed NSE at 08:15, 0.00s elapsed
+Initiating NSE at 08:15
+Completed NSE at 08:15, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 699.49 seconds
+           Raw packets sent: 71531 (3.153MB) | Rcvd: 67981 (2.722MB)
+
+dirb http://10.129.252.149
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Sat Jul 15 08:25:27 2023
+URL_BASE: http://10.129.252.149/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://10.129.252.149/ ----
++ http://10.129.252.149/0 (CODE:200|SIZE:136083)                                                                                                             
++ http://10.129.252.149/admin (CODE:302|SIZE:0)                                                                                                              
++ http://10.129.252.149/dashboard (CODE:302|SIZE:0)                                                                                                          
++ http://10.129.252.149/favicon.ico (CODE:302|SIZE:0)                                                                                                        
++ http://10.129.252.149/index.php (CODE:200|SIZE:136083)                                                                                                     
+==> DIRECTORY: http://10.129.252.149/javascript/                                                                                                             
++ http://10.129.252.149/login (CODE:302|SIZE:0)                                                                                                              
++ http://10.129.252.149/robots.txt (CODE:200|SIZE:111)                                                                                                       
++ http://10.129.252.149/server-status (CODE:403|SIZE:279)                                                                                                    
+==> DIRECTORY: http://10.129.252.149/wordpress/                                                                                                              
+==> DIRECTORY: http://10.129.252.149/wp-admin/                                                                                                               
+==> DIRECTORY: http://10.129.252.149/wp-content/                                                                                                             
+==> DIRECTORY: http://10.129.252.149/wp-includes/                                                                                                            
++ http://10.129.252.149/xmlrpc.php (CODE:405|SIZE:42)                                                                                                        
+                                                                                                                                                             
+---- Entering directory: http://10.129.252.149/javascript/ ----
+==> DIRECTORY: http://10.129.252.149/javascript/jquery/                                                                                                      
+                                                                                                                                                             
+---- Entering directory: http://10.129.252.149/wordpress/ ----
++ http://10.129.252.149/wordpress/index.php (CODE:302|SIZE:0)    
+
+
