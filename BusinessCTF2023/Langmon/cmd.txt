@@ -154,4 +154,111 @@ GENERATED WORDS: 4612
 ---- Entering directory: http://10.129.252.149/wordpress/ ----
 + http://10.129.252.149/wordpress/index.php (CODE:302|SIZE:0)    
 
+wpscan --url http://langmon.htb --enumerate p --enumerate t --enumerate u
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
 
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.24
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[+] URL: http://langmon.htb/ [10.129.252.149]
+[+] Started: Sat Jul 15 09:56:31 2023
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entry: Server: Apache/2.4.52 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] robots.txt found: http://langmon.htb/robots.txt
+ | Interesting Entries:
+ |  - /wp-admin/
+ |  - /wp-admin/admin-ajax.php
+ | Found By: Robots Txt (Aggressive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://langmon.htb/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[+] WordPress readme found: http://langmon.htb/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] Upload directory has listing enabled: http://langmon.htb/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://langmon.htb/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 6.2.2 identified (Latest, released on 2023-05-20).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://langmon.htb/index.php/feed/, <generator>https://wordpress.org/?v=6.2.2</generator>
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - http://langmon.htb/, Match: 'WordPress 6.2.2'
+
+[+] WordPress theme in use: astra
+ | Location: http://langmon.htb/wp-content/themes/astra/
+ | Last Updated: 2023-07-05T00:00:00.000Z
+ | Readme: http://langmon.htb/wp-content/themes/astra/readme.txt
+ | [!] The version is out of date, the latest version is 4.1.6
+ | Style URL: http://langmon.htb/wp-content/themes/astra/style.css
+ | Style Name: Astra
+ | Style URI: https://wpastra.com/
+ | Description: Astra is fast, fully customizable & beautiful WordPress theme suitable for blog, personal portfolio,...
+ | Author: Brainstorm Force
+ | Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 4.1.5 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://langmon.htb/wp-content/themes/astra/style.css, Match: 'Version: 4.1.5'
+
+[+] Enumerating Users (via Passive and Aggressive Methods)
+ Brute Forcing Author IDs - Time: 00:00:03 <================================================================================> (10 / 10) 100.00% Time: 00:00:03
+
+[i] User(s) Identified:
+
+[+] admin
+ | Found By: Wp Json Api (Aggressive Detection)
+ |  - http://langmon.htb/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ | Confirmed By:
+ |  Oembed API - Author URL (Aggressive Detection)
+ |   - http://langmon.htb/wp-json/oembed/1.0/embed?url=http://langmon.htb/&format=json
+ |  Author Sitemap (Aggressive Detection)
+ |   - http://langmon.htb/wp-sitemap-users-1.xml
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[+] Finished: Sat Jul 15 09:56:51 2023
+[+] Requests Done: 52
+[+] Cached Requests: 8
+[+] Data Sent: 12.779 KB
+[+] Data Received: 1.2 MB
+[+] Memory used: 177.234 MB
+[+] Elapsed time: 00:00:19
