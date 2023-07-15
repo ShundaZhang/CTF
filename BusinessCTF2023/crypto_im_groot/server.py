@@ -92,7 +92,7 @@ def main():
 
             # 2. Test if the signatures are different from the provided ones.
             signatures = extract_signatures(mined_blocks[-1]["transactions"])
-            print(signatures)
+            #print(signatures)
             _signatures = evaluate_signatures(_signatures, signatures)
 
             # 3. Test if the signatures you gave generate the same root hash.
