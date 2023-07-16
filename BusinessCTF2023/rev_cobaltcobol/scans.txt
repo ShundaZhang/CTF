@@ -1,0 +1,1119 @@
+    __________________________________________________________________________________
+   / &-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#@'=".{(+|!$*);,%_}?                     \
+12|  x           xxxxxxxxx                        xxxxx                                |
+11|   x                   xxxxxxxxx                    xxxxx                           |
+ 0|    x                           xxxxxxxxx                xxxxx                      |
+ 1|     x        x        x        x                                                   |
+ 2|      x        x        x        x       x          x                               |
+ 3|       x        x        x        x       x    x     x   x                          |
+ 4|        x        x        x        x       x    x     x   x                         |
+ 5|         x        x        x        x       x    x     x   x                        |
+ 6|          x        x        x        x       x    x     x   x                       |
+ 7|           x        x        x        x       x    x         x                      |
+ 8|            x        x        x        x xxxxxxxxxxxxxxxxxxxxx                      |
+ 9|             x        x        x        x                                           |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x    xx     x        x x xx  xx   x  xxx            x      xxxxxx        |
+11|            xx    x xx      x    x x      x            x x  xx      x               |
+ 0|  xxxx    x    x      x    x  x        x              x   x   x    x                |
+ 1|                         x                   x  x   x            x    x             |
+ 2|                                                                                    |
+ 3|               x           x  x                       x            x      xx        |
+ 4|                    x             x              xx         x                       |
+ 5|           x     xx   xx        xx       xx                   xx         x          |
+ 6|      xx     x       x      x        x x               x     x      x  xx           |
+ 7|                                            x x          x                          |
+ 8|                x                       x   x x                          x          |
+ 9|          x x                       x                                               |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|            x x x xx   x   x x   x xx     x        x x x xx   x     x    xxx        |
+11|                    x x x x    x        x   x              x x x xx  xx             |
+ 0|  xxxx       x              x x x    xx  x      x   x   x          x   x            |
+ 1|                 x                                   x       x      x               |
+ 2|      x       x    x  x      xx        x                   x      xx                |
+ 3|           x        x       x                xx    x                      xx        |
+ 4|            x          x         x x    x x     x         x x                       |
+ 5|                     x         x  x   x           x      x       x                  |
+ 6|                  x       x              x x                  xx       x            |
+ 7|       x  x             x       x    x                 x              x x           |
+ 8|          x    xx                x x     xx x    x  x           x       x           |
+ 9|             x           x x        x                                x              |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|             x   x x   xx   x x   x  x              x   x xx  xx   x     xxx        |
+11|                     x   x x   xx   x    x   x              x   x x x xx            |
+ 0|  xxxx        x   x x        x   x x      xx  x  x   x   x           x              |
+ 1|                              x       x x      x          x x     x                 |
+ 2|      x            x x     x x     x                x      x                        |
+ 3|             x                  x        x       xx          x            xx        |
+ 4|           xx         x              x                                              |
+ 5|       x            x   x         x         x                 x x    xxx            |
+ 6|                x      x x     x x            x    x    xx                          |
+ 7|          x      x          x             x  x       x         x x      x           |
+ 8|          x   x     x     x         xx x   x  x       xx x           x  x           |
+ 9|               x                                x                  xx               |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|            x      xx x     x     xx      xxx         xx   x   x  x  x    xx        |
+11|          xx  x  x   x  x  x  xx    x            x x     xx  x     x  x  x          |
+ 0|  xxxx          x        x       x     x        x   x           x   x   x           |
+ 1|             x               x            x   x             x        x              |
+ 2|                       x                                        x                   |
+ 3|                x  x     x                      x                     x x xx        |
+ 4|                                           xx                       x               |
+ 5|       x    x x     x x x   x xx   xx                      x x    x                 |
+ 6|      x          x               x               x     x                 x          |
+ 7|          x                           x x          x     x                          |
+ 8|            x x     xxx xx xx xx  x   x x                  x x     x                |
+ 9|           x                           x              x   x    x                    |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x        xx       x x x       xx  x    x  x  x         xx  x   xx        |
+11|                x  x   x      x       x x      x   x         x   x      x           |
+ 0|  xxxx       x        x x   x   x  x             x  x  x  x   x                     |
+ 1|          x   x  x                                x        x           x            |
+ 2|       x                x       x                             x                     |
+ 3|      x    x        xx      x    x        x        x    x          x      xx        |
+ 4|                      x       x               x     x                               |
+ 5|                               x    x        x x x   x                x x           |
+ 6|                   x                                                                |
+ 7|                x                       x                    x   x                  |
+ 8|           x                     x    x      x x        x             x x           |
+ 9|                       x  x  x           x  x                     x  x              |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          xxx  xxxxx x   xx x x  x    x x  xxx xxx                        xx        |
+11|             x        xx       xx  xxx x xx                                         |
+ 0|  xxxxx       x     x      x x                                                      |
+ 1|       x           x                    x                                           |
+ 2|                             x                                                      |
+ 3|              x   x x            x           x xxx                        xx        |
+ 4|           x             x               x  x                                       |
+ 5|            xx         x   x    x                                                   |
+ 6|                x     x        x     x                                              |
+ 7|                                   x  x                                             |
+ 8|                                 x           x   x                                  |
+ 9|          x    x x   x    x x x     x  x   x                                        |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x  x    xx  xx  x  x     x   xx  x     x  x                    xx        |
+11|             x        x      x     x   x       x   x                                |
+ 0|  xxxx    x     x               x    x     x  x  x  x                               |
+ 1|            x    x               x                x                                 |
+ 2|                            x        x                                              |
+ 3|      x       x         x     x     x    x         x                      xx        |
+ 4|                                             x      x                               |
+ 5|           x x             x x              x  x x   x                              |
+ 6|       x           x                                                                |
+ 7|          x           x                x   x                                        |
+ 8|           x xx            x xx             x  x                                    |
+ 9|                    x  x  x        x    x                                           |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          xx x xx x x  x     x x     xxx  xx x  x                         xx        |
+11|                     xx   xxx x x  xx         xx                                    |
+ 0|  xxxxx     x    x x     x       xx      x  x                                       |
+ 1|           x x                       x                                              |
+ 2|       x           x        x    x       x                                          |
+ 3|            x          x          x        xx   x                         xx        |
+ 4|          x    x                                                                    |
+ 5|                 x    x       x        x  x    x                                    |
+ 6|                     x   xx        x          x                                     |
+ 7|                               x      x                                             |
+ 8|                       x                        x                                   |
+ 9|                x x x      x x      x        x                                      |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|             xx  xx    x   xx   x              x     xx  x    xx   xx    xxx        |
+11|                     xx  xx   xx   xx   x                 x  x   xx   xx            |
+ 0|  xxxx x    x           x    x   xx  xxx   xx   xxx x           x    x              |
+ 1|      x                   x               x               x                         |
+ 2|           x         x         x       x           x              x    x            |
+ 3|             x  x      x     x    x x    x  x           x      x          xx        |
+ 4|              x             x                  x     x       x      xx              |
+ 5|                      x x                        xx   x         x                   |
+ 6|            x  x              x    x x     x  x     x  x      x                     |
+ 7|          x      x  x    x x     x      x    x  x           x      x  x x           |
+ 8|          x x           x       x    xx        x xx x    x      xx      x           |
+ 9|                  x                                                                 |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|            x        x  x     x   xx xx xx  x      x                     xxx        |
+11|             x     x   x                  x  xx xx  x     x   x   x                 |
+ 0|  xxxx     x  xxx x x      x   x    x             x  xxx x xx  xx    xx             |
+ 1|                              x                           x         x               |
+ 2|      x       x    x       xx          x     x                                      |
+ 3|                         x                         x        xx            xx        |
+ 4|            x        xx x          x x  x x     x x  x             x                |
+ 5|           x                      x x                         x      xx             |
+ 6|       x            x  x       x           x           xxx                          |
+ 7|          x      x              x                x               x      x           |
+ 8|          x          x  x x  x     xx         x     x xx x x    x    x  x           |
+ 9|             x x                      x  x  x                     x    x            |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x      x     x      x  x x     x xxx                            xx        |
+11|               x  xxx    x      x   xx xx        xx x x                             |
+ 0|  xxxx        x      xx   x    x  x                x                                |
+ 1|                                                                                    |
+ 2|            xx                                                                      |
+ 3|                 x    x          xx                                       xx        |
+ 4|      x            x x         x       x x       x                                  |
+ 5|          xx   x       x        x    x     xxx xx   x                               |
+ 6|                  x         x x     x   x     x                                     |
+ 7|       x            x                                                               |
+ 8|          x x  x            x              xxx   x  x                               |
+ 9|                         x         x              x                                 |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|             x   xx        x x x    xx  xx  x  x     xxx  x xx x x  x     xx        |
+11|              x x   x       x          x      x   xxx    x        xx                |
+ 0|  xxxx    x        x x  x x   x   x        x            x     x x                   |
+ 1|                                 x           x                                      |
+ 2|                     x        x                                 x                   |
+ 3|      x       x  xx    x  x    x     x   x     x     x              x     xx        |
+ 4|                   x        x                          xx   x                       |
+ 5|           x                 x              x x       x   x   x    x                |
+ 6|             x  x                   x               x             x                 |
+ 7|                                       x   x      x                                 |
+ 8|       x                       x            x xx                    x               |
+ 9|                    x      x            x          x     x   x x x                  |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x  x  x         xx       x x x        xx  x  x       x         xx        |
+11|            x         xx  x   x      x       xx x      x     x x     xx             |
+ 0|  xxxx    x  x  x  x    x    x x   x   x  x               x   x   x                 |
+ 1|           x        x                                 x    x                        |
+ 2|                        x      x       x                       x      x             |
+ 3|      xx    x    x         xx      x    x         x     x       x         xx        |
+ 4|             x               x       x                                              |
+ 5|          x   x                       x    x         x x           x                |
+ 6|                          x                                   x                     |
+ 7|                      x                      x  x            x       x              |
+ 8|                 x                      x            x xx       x                   |
+ 9|                       x      x  x  x         x  x  x                               |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x  x     xx   x   x    xx   x x    xxx xx x  x  xx   x       x  xx        |
+11|           x  x              xx    x x x xxx    x    x       xx     xxx             |
+ 0|  xxxx x    x  x      x  x x    x                     x     x   x  x                |
+ 1|             x   x                                             x                    |
+ 2|               x         x                            x     x                       |
+ 3|              x       x         x              x     x        x           xx        |
+ 4|      x     x                              x x   x        x                         |
+ 5|          x                 x     xx  x       x   x x  x              x             |
+ 6|                    x         x         xx      x                  x x              |
+ 7|                                     x                       x    x    xx           |
+ 8|           x                     x                              x x     x           |
+ 9|                   x    x  x x         x  x                x        x               |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x x xx x x   x x xx x x x  x x        x x  x   xx x     x       xx        |
+11|           x    x       x    x      x x xxx  x               x  x  x x              |
+ 0|  xxxx       x    x  x    x    x            x  x x  x xx   x   x x    x             |
+ 1|               x            x                            x                          |
+ 2|                                                      x               x             |
+ 3|      x      x  x    x    x  x                   x  x  x   x     x x      xx        |
+ 4|                                          x  x                 x                    |
+ 5|           x       x    x       x    x      x        x      x   x                   |
+ 6|                                  x    xx      x          x                         |
+ 7|                                    x                                x              |
+ 8|                                                  x                                 |
+ 9|       x  x x x  xx    x x x  xx      x  x      x            x    x                 |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|                    xx         x  xx         x   xxx         xxx  x       xx        |
+11|              x x     x  x  xx   x     x  x x  x        x x      x  x  x            |
+ 0|  xxxx       x   x x          x          x             x   x          x             |
+ 1|          xx             x                    x  x           x     x                |
+ 2|                                  x xx                                              |
+ 3|             x                           x             x              x   xx        |
+ 4|                            x         x           xx          xx                    |
+ 5|      x              xx       xx   x   x     x x     x            x x               |
+ 6|              x    x         x            x             x              x            |
+ 7|       x        x       x x      x                        x                         |
+ 8|                    x   x x        x x x    xx x                 xx x               |
+ 9|                                                                                    |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x   x              x         xx  x x   xx   x              x  xxx        |
+11|            x x x xx   x                     x  xx  x x   xx   x                    |
+ 0|  xxxxx      x   x  xxx x xx   x   x x         x     x  xx  x x xxxx   x            |
+ 1|                             x               x               x                      |
+ 2|             xx       x     x     x             x     x x     x      x              |
+ 3|                   x       x           xx     x      x     x       xx     xx        |
+ 4|           x                  x                    x                  x             |
+ 5|            x       x    x           x   x     x                                    |
+ 6|                  x       x     xx x  x          x  x     x x   x x                 |
+ 7|       x  x      x     x       x           xx     x            x       xx           |
+ 8|          x    x              x    x x         x       x x      x     x x           |
+ 9|                x       x                                        x                  |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|            x     xx   x  xxx         x x xx x x xx   xx xx xx  xx  xxxxx xx        |
+11|          xx  xx    x            x x   x    x      x    x         x      x          |
+ 0|  xxxx           x              x   x    x    x      x         x                    |
+ 1|             x            x   x            x           x    x       x               |
+ 2|                                                     x                              |
+ 3|                       x        x        x  x            x                xx        |
+ 4|                           xx                                                       |
+ 5|            x xx   xx                  x       x   x  x          xx   x  x          |
+ 6|      x          x               x               x           x x     x x            |
+ 7|       x  x           x x          x                                                |
+ 8|            x xx  x   x x                                 x     x     x             |
+ 9|           x                          x x x  xx   x     x               x           |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|                                x x x     x  x x    x       x             xx        |
+11|                              x  x x xxx    x x xxx  xx  xx   x x  x x              |
+ 0|  xxxx            x   x                 xx             x   x   x  x   x             |
+ 1|          x               x                                                         |
+ 2|                                                                x                   |
+ 3|                    x               x    x          x             x       xx        |
+ 4|      x     xx  xx                x   x x         x      x                          |
+ 5|                        xx xx x xx        x  x        xx   xx                       |
+ 6|       x      x                      x         xx    x    x    x   x                |
+ 7|               x   x x       x         x    x                 x                     |
+ 8|           x                  x                                                     |
+ 9|                       x                      x  x                   x              |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|            x  x x     x xxx                                              xx        |
+11|              x   xx xx        xx x x                       x                       |
+ 0|  xxxx       x  x                x                    x                             |
+ 1|                             x                    x                                 |
+ 2|                                        x              x                            |
+ 3|               xx                          x        x      x              xx        |
+ 4|      x      x       x x       x         x                                          |
+ 5|       x      x    x     xxxx     x    x      x  x          x                       |
+ 6|          x x     x   x                     x        x                              |
+ 7|                                             x  x         x                         |
+ 8|          x              xxx   x  x            x        xx  x                       |
+ 9|                 x            x x     x   x        x                                |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|                xx  x  x    x  xx  x  x       xx  x       x  x            xx        |
+11|               x      x       x      x     x x         x   x                        |
+ 0|  xxxxx   x  x           x              x        x       x  x                       |
+ 1|           x         x    x              x         x      x                         |
+ 2|                                                                                    |
+ 3|             x   x     x        x   x x        x           x              xx        |
+ 4|                                                     x      x                       |
+ 5|       x            x x            x x            x x  x x   x                      |
+ 6|                                                                                    |
+ 7|               x              x            x x   x                                  |
+ 8|                    x xx           x xx           x   xx                            |
+ 9|                x  x        x  x  x           x                                     |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|             xx     x   x         x xxx   xx  x xx  xx     x   x    x    xxx        |
+11|           x   x xx  xx     x   x                 x   x xx  xx     x   x            |
+ 0|  xxxx          x  x   x xx  xx        x                  x   x xxx  x              |
+ 1|      x                    x        x x                                             |
+ 2|                  x       x                    xx        x       x x                |
+ 3|                            x           x        x      x  x              xx        |
+ 4|                 x  x            xx        x      x       x         x x             |
+ 5|           x    x  x           x          x                     x                   |
+ 6|                      x  x   xx        x x         x         x       x x            |
+ 7|          x x x                 x                   xx         x        x           |
+ 8|       x  x  x  x       x    x    x  x     xx         x     x x     x   x           |
+ 9|               x     x x           x          x                                     |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x    xx  xx x   x  xx        x     x  xx    xx  xx     x   x  xxx        |
+11|            xxx   x     xx  xx     x   x           xxx   x   x xx  xx               |
+ 0|  xxxx                x   x     xx  xx     x   x              x  x   x x            |
+ 1|      x                x                           x x                              |
+ 2|       x    x x       x x       x x         x           x      x       x            |
+ 3|                xx                            x  x    xx        x         xx        |
+ 4|               x         x    x    x    xx x                      x                 |
+ 5|                           x                             x    x  x                  |
+ 6|                  x       x x    x  xxx         x                  x                |
+ 7|          x         x                             x       xxx           x           |
+ 8|          xx       x x        x      x xx      x    x         x     x x x           |
+ 9|             x               x x             x               x       x              |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x              x xx  xx    xx  xx x   x            x     x  x xxx        |
+11|              xx   x                x   x     xx  x  x   x   x                      |
+ 0|  xxxx      xx  xxx   xx   x   x   x        x   x  xx xx  xx    xx   x              |
+ 1|      xx                    xx                       x                              |
+ 2|                  x  x        x    x         xx    x  x           x                 |
+ 3|               x       x            x x     x           x                 xx        |
+ 4|             x      x     x            x                      x     x  x            |
+ 5|                                x    x         x         x     xxx                  |
+ 6|              x       x        x xx              xx x     x           x             |
+ 7|          x        x     x x            x x     x      x    x           x           |
+ 8|          xxx           x x    x                    x         x x       x           |
+ 9|                 x                       x x                 x       x              |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          xxxx     x   x x xxxx      x   x        x  x  xxx        x    x xx        |
+11|              x  xx  x  x x    x  xx   xx  x  x xx xx x        x xx  xx             |
+ 0|  xxxx         x                x   x        x                x        x            |
+ 1|          x         x      x              x             x   x                       |
+ 2|                                                 x  x             x                 |
+ 3|           xx  x            xx  x            x                x           xx        |
+ 4|       x                 x        x                      xx          x              |
+ 5|             x     x x xx     x     xx   x x      x   x                xx           |
+ 6|      x                            x          x                x      x             |
+ 7|              x  x             x       x        x  x             x                  |
+ 8|                   x x                   x x      x   x                             |
+ 9|                  x                     x            x             x                |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x x xx x x  x    x x        x x  xxx       x   x x xx x x  x    xx        |
+11|           x    x    x  x x x xxx      x          x x  x  x    x    x               |
+ 0|  xxxx       x    x                  x   x       x          x    x                  |
+ 1|               x       x          xx       x   x      x       x                     |
+ 2|       x                                 x                                          |
+ 3|             x  x                    x           x          x  x          xx        |
+ 4|                                x      x    xx                                      |
+ 5|      x    x       x  x x  x            x            x x  x       x                 |
+ 6|                             xx                   x                                 |
+ 7|                          x                                                         |
+ 8|                     xx x                           xx x                            |
+ 9|          x x x  xx         x  x      x                  x x x  xx  xx              |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|               x   x  xx     x  x    x   x  x  xx  x      x   x     x  x xxx        |
+11|            xx  xx         x                 x   x  xx xx         x                 |
+ 0|  xxxx x      x   x xx  xx        xx  x   x           x  x xxx xx  x                |
+ 1|            x  x            x                x                   x                  |
+ 2|      x      xx      x    x          x              x      xx                       |
+ 3|                    x             x         x x                   x       xx        |
+ 4|                      x    x x                 x          x         x  x            |
+ 5|                   x            x      x         x    xx x           x              |
+ 6|                xxx      x    x     x    xx             x       x                   |
+ 7|          x                           x         x x            x        x           |
+ 8|          xx          x x    x            x           x       x     x x x           |
+ 9|                       x       x x                 x x       x                      |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|             x   x           x     x  xx  x  x   x  x   x                xxx        |
+11|           x  xx  x     x   x              x  xx  x  x   x     x   x                |
+ 0|  xxxx      x   x  xx    x     xx x x    x         x  xx  xx    xx  xx x            |
+ 1|                          x             x                                           |
+ 2|      x                          x    x             x x     x x                     |
+ 3|           x x       x x                   x  x    x                      xx        |
+ 4|       x    x                x     x         x       x         x       x            |
+ 5|              x    x    x      xx x      x  x     x                                 |
+ 6|                         x    x                         x  x     xx  x              |
+ 7|          x      x         x         x    x    x       x  x             x           |
+ 8|          x    xx            x x  x    x x               x x    x  x x  x           |
+ 9|                  x         x       x           xx           x                      |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           xx        x x x      x  xx  x    x  x  x      x  xx  x    x  x xx        |
+11|          x   x       x       xx  x      x   x         xx  x      x   x             |
+ 0|  xxxx       x x  x x   x   x              x  x  x  x               x  x            |
+ 1|                           x            x   x        x               x              |
+ 2|               x x      x      x                        x        x                  |
+ 3|      x    xx       x    x          x        x    x          x        x   xx        |
+ 4|       x     x        x                       x                        x            |
+ 5|                       x               x x x   x                x x x   x           |
+ 6|          x                     x                                                   |
+ 7|                              x   x                    x   x                        |
+ 8|                         x             x x        x             x x                 |
+ 9|              x      x             x  x                  x  x  x                    |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|               x   xx xx xx  x      x   x     x  x  x     x  xx xx  x    xxx        |
+11|                           x  xx xx  x      x      x              x  xx             |
+ 0|  xxxx      xx  x                  x  xx xxx x        xx   x                        |
+ 1|       x       x                                               x                    |
+ 2|      x     x           x     x       x     x                   x    x              |
+ 3|                      x  x          x            x      x    x    x       xx        |
+ 4|                 x  x      x     x x          xx    x     x                         |
+ 5|                   x                                  xx           x                |
+ 6|             xx x           x     x      xx  x       x                              |
+ 7|          x               x             x       x x              x  x x x           |
+ 8|          xx x      x        x x       x     xx     x x     x x         x           |
+ 9|                     x x             x             x       x           x            |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           xx xx xx x x  x  x      x     x  xx  x   x        xx  x    x  xxx        |
+11|                     x xx xx xxx        x  x       x     x  x      x   x            |
+ 0|  xxxx                          xx   x         x      x   x          x  x           |
+ 1|       x   x  x        xx             x          xx    x              x             |
+ 2|            x         x                  x                                          |
+ 3|      x        x                   x         x      x         x        x  xx        |
+ 4|             x               x                                          x           |
+ 5|                  x  x   x    x x               x  x             x x x   x          |
+ 6|                               x x                                                  |
+ 7|          x     x           x     x     x  x   x         x  x                       |
+ 8|          x      x  x     xx     xxx            x  xx            xxx                |
+ 9|                                            x                x  x                   |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x   x     x   x    xx        xx x x x xx   x     x   x    x   xxx        |
+11|            x x x xx   x     x   x        x        x x x xx   x     x               |
+ 0|  xxxx              x x x xxx        x      x              x x x xxx  x             |
+ 1|      x                                 x       x x                 x               |
+ 2|           x  x       x      x    x  x    x          x    x xx                      |
+ 3|                   x x             x         x     x       x           x  xx        |
+ 4|            x       x         xxx        x x                      x  x              |
+ 5|                           x                        x                               |
+ 6|       x     x    x       x      x    x               x  x      xx x                |
+ 7|          x    x         x                    x  x     x      xx        x           |
+ 8|          x     x      xx     xx    x  x       x                   x x  x           |
+ 9|                                            x           x             x             |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x     x      x  x x     x x  x x        x   x x x     x    x    xx        |
+11|           xxx    x      x   xx xx   x  x   x   x      x x xxx    xx                |
+ 0|  xxxx        xx        x  x          x        x              xx    x               |
+ 1|                   x                                x                               |
+ 2|       x                                  xx                                        |
+ 3|          x    x          xx                              x    x          xx        |
+ 4|      x     x x         x       x x           x         x   x x   x                 |
+ 5|                x        x    x     x  x    x   x     xx        x   xx              |
+ 6|           x         x x     x   x                x        x       x                |
+ 7|             x                                               x                      |
+ 8|                     x              x  x  x x   x x                                 |
+ 9|                  x         x        x  xx                                          |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|              x   x     xx  xx     x   x             x   xx  x xx  x     xxx        |
+11|                      x   x   x xx  xx        x                  x  xx x            |
+ 0|  xxxx     xx  x   x           x  x   x xx  x  xx xx  x     x                       |
+ 1|                      x          x        x          x         x    x  x            |
+ 2|      x      xx         x       x       x         x           x                     |
+ 3|       x   x           x x               x             x                  xx        |
+ 4|                x                  x       x x      x     x      x                  |
+ 5|                          x    x  x         x            x  x   x  x                |
+ 6|                  xx        x       xx        x x  x  x           x                 |
+ 7|          x    x x         x                   x                        x           |
+ 8|          x        x         x x       x    x   xx x      xxx        x  x           |
+ 9|                    xx        x       x                 x    x                      |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          xxx                                                             xx        |
+11|                xx x x                       x                     x                |
+ 0|  xxxx x      x   x                                    x   x                        |
+ 1|               x        x     xx          x    x               x                    |
+ 2|                             x           x                                          |
+ 3|             x                       x                   x                xx        |
+ 4|                x                  x       x     xx  xx                             |
+ 5|      x   xxx      x   x  xxx       x        x               xx xx x                |
+ 6|                         x        x   x x          x                                |
+ 7|                                            x       x   x x       x                 |
+ 8|          xxx   x  x             x     x     x  x                  x                |
+ 9|                 x              x                           x                       |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|               x      x        x x  xx xx  xx         x          xx    xx xx        |
+11|          x     xx xx      x    x x   x      x     xx      x x     x x   x          |
+ 0|  xxxx        x      x    x  x     x      x     x    x    x   x x     x             |
+ 1|                        x            x                  x                           |
+ 2|                                   x                          x                     |
+ 3|                          x  x         x                  x           x   xx        |
+ 4|                   x             x                 x                                |
+ 5|          x    x     xx        xx   x       xx  x    xx           xx    x           |
+ 6|      x     x    x  x      x              x         x      x    x    x              |
+ 7|                                               x x           x                      |
+ 8|       x  x x                           x  x   xxx               x     x            |
+ 9|              x x                     x                                  x          |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|             x         xx x x   xx   x     x   x    x         xx xxx x x xxx        |
+11|            x   x        x    x   x x x xx   x     x   x        x                   |
+ 0|  xxxx        x     x      x           x  x x x xx   x     x                        |
+ 1|      x                       x                   x                                 |
+ 2|           x     x                  x       x           x     x       x             |
+ 3|                       x    x  x x                 x       x    x  x      xx        |
+ 4|            xx      x    x               x x        x    x        x                 |
+ 5|       x          x               x    x  x           x        x x                  |
+ 6|               x     x  x xx            x       xx   x      x                       |
+ 7|          x                     x  x                   x               xx           |
+ 8|          x  x  x          x         x x       x    xx            x x   x           |
+ 9|                             x        x      xx           x  x       x              |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x     x  x   x  x x     x xx x         x   x        x x x     x xx        |
+11|           xxx    x      x   xx xx    x  x x  x x  x    x   x  x x xxx              |
+ 0|  xxxx        xx        x  x                x              x          xx            |
+ 1|                                                  x    x                            |
+ 2|                                                                                    |
+ 3|          x    x          xx                                      x    x  xx        |
+ 4|       x    x x         x       x x                       x     x   x x             |
+ 5|      x         x        x    x     xx           x x    x   x xx        x           |
+ 6|           x         x x     x   x                   x             x                |
+ 7|             x                             x                         x              |
+ 8|                     x              xx          xx x x  x   x                       |
+ 9|                  xx        x         xx                                            |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|                xxxxxxx                      x         xx xxxx xx   x    xxx        |
+11|                       x xxxxxxxxx x                          x  xxx   x            |
+ 0|  xxxx       x          x         x xxxxx  xx x                      xx             |
+ 1|                            x            x                                          |
+ 2|      x            x     x        xx x                            x  x              |
+ 3|                     x                                       xx           xx        |
+ 4|                  x            x      x   x  x          xx  x       x xx            |
+ 5|            x   x      xx x             x     x x  x           x                    |
+ 6|                                xx  x       x  x     x x   x                        |
+ 7|          x      x           xx        x         x    x   x     xx x    x           |
+ 8|          xx        x   x                   xx      x                   x           |
+ 9|       x              x    x                                                        |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|             x              x     xx  xx    x   xx   x    x         x    xxx        |
+11|            x  xxx   x                    xx  xx   xx   xx   x                      |
+ 0|  xxxxx    x  x   xxx  xxx   x   x           x    x   xx   xx  xxx   x              |
+ 1|                      x                   x                                         |
+ 2|            x       x           x x               x x  x    x x                     |
+ 3|                 x       x         x x      x            x       x        xx        |
+ 4|                           xx              x     x        x         x               |
+ 5|           x  x           x                  xx    x               x                |
+ 6|                x  x   xx        x  x x               x x       x x                 |
+ 7|          x          x       x           x      x          x x       x  x           |
+ 8|          x  x         x    x    x     x     x       x    x         x   x           |
+ 9|       x       x  x           xx               x                                    |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|            x  x    x   x xx  xx     x   x         x  x    x   x  x  xx  xxx        |
+11|                            x   x xx  xx     x   x                 x   x            |
+ 0|  xxxx        x xx   x              x   x xxx xx        x   x   xx                  |
+ 1|      x                  xx                  x           x                          |
+ 2|                  x               xx x     x      x                x                |
+ 3|           x               xx       x           x          x      x       xx        |
+ 4|            x       x                     x        x    x           x               |
+ 5|              x xx           x                   x               x   x              |
+ 6|                   x          x        x x  x  x      x   x  x         x            |
+ 7|          x    x      x        xx     x x           x          x      x x           |
+ 8|          x xxx x       x                   x      x        x    x      x           |
+ 9|       x             x           x            x                                     |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|                     x        xx    xx  x x x  x  x                 xx   xxx        |
+11|            xx    x                    x   x xx x  x x  x  x                        |
+ 0|  xxxx x   x  xxxx    xx x   x           x       x  x xx x  xxxx x                  |
+ 1|                    x         x        x                  x          x x            |
+ 2|                x  x        x  xx             x  x                                  |
+ 3|      x    x            x           x       x       xx x                  xx        |
+ 4|                     x                                        x     x               |
+ 5|                                   x x   x x x                  x                   |
+ 6|               x  x      xx  x                 x   x    x    x                      |
+ 7|          x   x  x                      x x     x                x      x           |
+ 8|          x          x   x   x   x    x  x                   x      x   x           |
+ 9|            xx        xx   x                      x   x  x x      x   x             |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x   xx   x   x   x x  x x   xxx xx x   xxx  x x x xx   xx x     xx        |
+11|           x x    x     xx  x  x   xx    x    x     xx   x    x x  x  x  x          |
+ 0|  xxxx      x   x   x x   x                 x  x           x                        |
+ 1|                       x                x x                  x       x  x           |
+ 2|            x       x                          x x               x     x            |
+ 3|       x       xx  x  x xx            x    xx              x  x           xx        |
+ 4|                                                                                    |
+ 5|      x    x  x             x                x    x   x  x        x x x  x          |
+ 6|                                  xx               xx                               |
+ 7|             x               x                                  x                   |
+ 8|                          x            x                          xxx xx x          |
+ 9|          x       x        x   xx   x    x    x      x  x x x                       |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|                   x x   x     xx  xx x   x  xx         x xxx   x     xx xxx        |
+11|           x   x    x        x   x     xx   x     x   x             x               |
+ 0|  xxxx            x   x   x          x   x x   xx  xx        x   x                  |
+ 1|      x             x                 x                             x               |
+ 2|            xx               x       x  x  x    xx        x x                       |
+ 3|                   x x          x                                    xxx  xx        |
+ 4|                              xx             x    x     x     x                     |
+ 5|           x      x    x               x  x            x                            |
+ 6|                x       x        x       x  x       xx         xxx                  |
+ 7|       x  x   x  x       x          x          x             x          x           |
+ 8|          x       x   x           x          x        x x        x      x           |
+ 9|               x                   x          x            x      x                 |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|               x  x     x  xxx x xx  xx     x   x        x     x  xxx x  xxx        |
+11|             x   x            x    x   x xx  xx     x   x            x              |
+ 0|  xxxx     x  x      x   x                 x   x xxx xx     x   x                   |
+ 1|      x     x                     x                            x  x    x            |
+ 2|                      x x  x    x        xx      x  x     x xx                      |
+ 3|       x     x     x x           x          x                             xx        |
+ 4|               x  x                x       x      x    x x                          |
+ 5|           x    x                                                  x                |
+ 6|              x           x x       x x      x       x  x       xx   x              |
+ 7|          x      x       x    x      x        x x             x         x           |
+ 8|          x    x  x    x               x       x         x x        x x x           |
+ 9|                    x        x x                      x                             |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|              x   x    xx  x        x  xx xx  x      x   x  xx x  x      xxx        |
+11|           xx  x      x      x              x  xx xx  x             x               |
+ 0|  xxxx       x  xx xxx        x  x   x   x          x  xx xx  x      xx             |
+ 1|                      x                   x          x            x                 |
+ 2|      xx      x x          x      x         x  x  x x  x        x                   |
+ 3|           x x           x          x  x                                  xx        |
+ 4|                       xx        x           x            x x  x                    |
+ 5|                   x                                     x       x x                |
+ 6|            x     x xx    x x  x              x x  x    x  x                        |
+ 7|          x      x                    x x  x          x             x   x           |
+ 8|          x    x     x xx    x       x           x          x  x     x  x           |
+ 9|                              x                              xx       xx            |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x x x     x  x x    x    xx   x  x x  x   x  x           x      xx        |
+11|           x x xxx    x x xxx  xx     xx       x xx   x x    x  x x                 |
+ 0|  xxxx            xx             x   x   x  x x    x     x     x                    |
+ 1|       x                                x                  xx                       |
+ 2|                                     x                    x        x                |
+ 3|              x    x          x        x     x  x              x          xx        |
+ 4|            x   x x         x      x           x x                                  |
+ 5|      x   xx        x  x        xx            x    xx  x     x                      |
+ 6|               x         xx    x           xx     x             x                   |
+ 7|                 x    x               x               x x         x                 |
+ 8|                                         x   x  x      x  x  x                      |
+ 9|                        x  x        x                                               |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x      xx         x  xx         x      x  xx         x x    xxx xx        |
+11|              x    x     xx   x     x  x x  x xx   x     x  x x x  xx               |
+ 0|  xxxx          x     x    x          x         x          x                        |
+ 1|           x x                     x       x                      x   x             |
+ 2|            x                  x xx                 x  x                            |
+ 3|                                      x               x    x              xx        |
+ 4|                         x                    x                        xx           |
+ 5|      x   x   x   xx       xx   x   x     x x   xx   x   x     x x xx               |
+ 6|       x        x     x   x            x       x            x                       |
+ 7|                     x x      x                    x                                |
+ 8|          x x x  x   x x        x x x    xx x        x x x     xxx xx               |
+ 9|                                                        x     x                     |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x x xx x x x x x x x  x x xxx          xx         x  xx         xx        |
+11|           x    x       x x   x            x x     x     xx   x     x  x            |
+ 0|  xxxx       x    x         x  x x        x   x x     x    x          x             |
+ 1|       x       x     x       x  x   x                              x                |
+ 2|                                        x                      x xx                 |
+ 3|             x  x             x  x        x                           x   xx        |
+ 4|                         x     x     xx                  x                          |
+ 5|           x       x   xx  xx     x               xx  x    xx   x   x               |
+ 6|      x                                    x    x         x            x            |
+ 7|                                             x       x x      x                     |
+ 8|                                                 x   x x        x x x               |
+ 9|          x x x  xx                                                                 |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x x    x       x          x      x     x      x  x x     x     xx        |
+11|          x x xxx  xx  xx   x x  x x      x  xxx    x      x   xx xx                |
+ 0|  xxxx               x   x   x  x   x    x      xx   x    x  x                      |
+ 1|                                                                                    |
+ 2|                              x        xx                                           |
+ 3|                  x             x           x    x          xx            xx        |
+ 4|      x         x      x                      x x         x       x x               |
+ 5|           x        xx   xx          xx   x       x        x    x                   |
+ 6|             xx    x    x    x   x           x         x x     x   x                |
+ 7|          x                 x                  x                                    |
+ 8|                                     x x  x            x                            |
+ 9|       x    x  x                   x                x         x                     |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|             xxxxxxxxx                 x            x    x x              xx        |
+11|                      xxxxxxxxx                                                     |
+ 0|  xxxx      x                  xxxxxxxx xx            x   x                         |
+ 1|             x        x                   x            x                            |
+ 2|              x        x       x           x                                        |
+ 3|      x        x        x       x           x       x      x              xx        |
+ 4|                x        x       x     x     x                                      |
+ 5|            x    x        x       x           x                                     |
+ 6|                  x        x       x    x      x         xx                         |
+ 7|       x  x        x        x       x           x  x                                |
+ 8|          x x       x        x       x xx        x xx      x                        |
+ 9|                     x        x       x           x                                 |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x        xx  x   x        xx  x   x     x  xx  x  x     x  xx  xx        |
+11|                x  x       x     x  x       x     x  x      x     x  x              |
+ 0|  xxxx       x   x            x            x   x               x                    |
+ 1|          x   x                x  x             x               x                   |
+ 2|                         x                x                x                        |
+ 3|      x    x         x      x         x      x         x     x     x   x  xx        |
+ 4|                          x                                                         |
+ 5|       x                x  x             x  x             x x                       |
+ 6|                                                                                    |
+ 7|                   x                x                x               x              |
+ 8|           x            x  xx            x  xx            x xx                      |
+ 9|                x   x  x         x   x  x         xx  x  x        x   x             |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          xx   x      x x x x  x xx                                       xx        |
+11|             xx        x x   x                                                      |
+ 0|  xxxx      x   x  x       x  x x                                                   |
+ 1|               x            x  x                                                    |
+ 2|            x                                                                       |
+ 3|              x              x  x x                                       xx        |
+ 4|          x             x     x                                                     |
+ 5|                      xx  xx     x                                                  |
+ 6|      x                                                                             |
+ 7|             x    xxx                                                               |
+ 8|                x xxx             x                                                 |
+ 9|       x   x                                                                        |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|             xx    xx  xx       x x  x xx xx x  xx x    xxx  xx  x  x     xx        |
+11|                      x   x      x    x           x         x      x                |
+ 0|  xxxxx   x     x        x x   x   x     x    x       x                             |
+ 1|           x x     x                                 x  x         x                 |
+ 2|                           x       x         x                                      |
+ 3|              x        xx      x                   x          x     x     xx        |
+ 4|       x                 x       x     x   x                                        |
+ 5|                 x                x   x x x       x              x x                |
+ 6|                    x x                         x        xx                         |
+ 7|                                         x                  x                       |
+ 8|              x                               x    x             x xx               |
+ 9|                          x  x  x    x           x           x  x                   |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|             xx       xx       x x x    xx  xx       x x x    x  xx  x  x xx        |
+11|                   x x   x      x          x   x      x         x      x            |
+ 0|  xxxxx   x     x       x x   x   x   x       x x   x   x                           |
+ 1|           x                         x                     x          x             |
+ 2|                          x       x             x       x                           |
+ 3|       x      x       xx      x    x     x  xx      x    x    x   x     x xx        |
+ 4|                        x       x             x       x                             |
+ 5|                 x               x                     x    x        x x            |
+ 6|             x       x                  x  x                                        |
+ 7|                                                                x                   |
+ 8|              x                    x                     x           x xx           |
+ 9|                   x     x  x  x               x  x  x           x  x               |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           xx     x xx    x  xx         x   x x xx x x   x x     xx   x   xx        |
+11|             x x x x   xx   x     x  x x  x  x    x    xx x  xx    x                |
+ 0|  xxxx x  x     x        x          x          x    x           x                   |
+ 1|                                 x       x       x          x         x             |
+ 2|                             x xx                                                   |
+ 3|                     x              x          x  x                       xx        |
+ 4|                xx     x                                                            |
+ 5|            xx x  x      xx   x   x     x x  x       x   x x xx   xx                |
+ 6|      x   x             x            x                          x                   |
+ 7|                            x                          x             x x            |
+ 8|           x                  x x x    xx x              xxx xx  x   x x            |
+ 9|                   xx                       x x x  xx   x                           |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          xxx       x    x  x x x        xx x      x x  x x    x x  x x  xxx        |
+11|                 x x  xx   x   x   x  x x  x  x  x  x xx x xxx    x     x           |
+ 0|  xxxx          x       x    x       x                          x  x x              |
+ 1|          x   x                   x          x  x                x  x               |
+ 2|                             x   x       x     x                         x          |
+ 3|                x           x        x                            x  x    xx        |
+ 4|           xx         x                              x       x     x                |
+ 5|      xx                xx    x    x      x x x  x xx   x      xx     x             |
+ 6|                 x     x              x                   xx                        |
+ 7|                                        x              x                x           |
+ 8|                              x  x x      xxx xx x                                  |
+ 9|                   xx      x   xx                        x  x                       |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|                x  xx  x x   xx   x         x    x     xx  xx  x x   xx  xxx        |
+11|                        x  xx  x x   xx   x                     x  xx  x            |
+ 0|  xxxxx       xx          x     x  xx  xxx x xx   x   x           x                 |
+ 1|                x                                      x                            |
+ 2|             x          x        x       x           x  x                           |
+ 3|                  x      x x       x  x       x x         x     xx        xx        |
+ 4|                   x          x x           x  x x                 x  x             |
+ 5|               x          x             x                  x      x                 |
+ 6|              x  x  x                x       x        x  x                          |
+ 7|          xxx         x     xx x          x       x         x x      x  x           |
+ 8|       x  x   xx       x  x       x    x    x    x xx x           x x  xx           |
+ 9|                                    x                          x                    |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|                                                        x x x     x       xx        |
+11|                                x                     x  x x xxx                    |
+ 0|  xxxx             x                      x   x                 xx                  |
+ 1|           x      x          x    x               x                                 |
+ 2|                        x                                                           |
+ 3|            x        x x x x                x               x    x        xx        |
+ 4|      x        xx                   xx  xx                x   x x                   |
+ 5|          x      x        x x  xx               xx xx x xx        x                 |
+ 6|                                      x                      x                      |
+ 7|                              x        x   x x       x         x                    |
+ 8|       x                        x  x                  x                             |
+ 9|             xx     x x                        x                                    |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|                   x        x      x  x          xx   x  x x  x x  xx     xx        |
+11|           x x  xx   x   x x  x xx   x  x  x x     x        x     x     x           |
+ 0|  xxxx    x   x   x   x x         x       x   x x         x  x x                    |
+ 1|                                       x                   x  x        x            |
+ 2|                                                                   x xx             |
+ 3|          x             x                 x                 x  x          xx        |
+ 4|                x               x                            x                      |
+ 5|      x           xx        x x   xx  x x         xx     xx     x   x   x           |
+ 6|           x     x       x       x         x    x                                   |
+ 7|             x       x                       x       x x          x                 |
+ 8|                           xx x      xx x        x   x x            x x x           |
+ 9|       x                     x                        x                             |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x x  x x   x xxx xxx    x      xx    x          x     x     x   xx        |
+11|           x xx x xxx     x    xx      x    xx   x x  x x      x xxx    x           |
+ 0|  xxxx                           x    x       x   x  x   x    x     xx   x          |
+ 1|                                    x                                               |
+ 2|                                                   x        xx                      |
+ 3|                     x   x   x        x              x          x    x    xx        |
+ 4|      xx    x       x  x   x   x            x                     x x               |
+ 5|          xx   x        x   x    xx           xx          xx   x      x             |
+ 6|                 xx       x     x      x x   x    x   x          x                  |
+ 7|              x                                  x                 x                |
+ 8|                     x       x                            x x  x                    |
+ 9|                x  x                      x             x               x           |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|          x x xx   x  x x xx         x x   x    x       x  x x        x x xx        |
+11|           x x   xx    x x     xx x x   xx   xx      x x  x x xxx      x            |
+ 0|  xxxx          x   x        xx    x      x    x    x              x x   x          |
+ 1|       x           x                                              x                 |
+ 2|                x            x                                           x          |
+ 3|                  x           x      x x   x        x                x    xx        |
+ 4|      x     x x         x          x         x                  x      x            |
+ 5|          xx          xx            x    xx    xx x        x            x           |
+ 6|                           x   x        x     x      x       xx                     |
+ 7|                 x              x                         x                         |
+ 8|                    x                x     x                                        |
+ 9|               x          x       x                    xx   x  x      x             |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x      x  xx         x   xxx            x xx x     x        x  xx        |
+11|          x  x xx   x     x  x x  x        x x  xx     x  x  x  xx x xx  x          |
+ 0|  xxxx           x          x             x   x   x        x      x                 |
+ 1|            x            x          x                          x        x           |
+ 2|       x             x  x        x                       x                          |
+ 3|                       x    x           x x          x     x      x       xx        |
+ 4|               x                     xx         x                                   |
+ 5|           x x   xx   x   x     x x               xx  x x x   x xx     x x          |
+ 6|      x         x            x             x     x                 x                |
+ 7|                    x                        x                       x              |
+ 8|          xx x        x x x    xx x                   xxx xx xx xx     x x          |
+ 9|                                                                      x             |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|              x    x         x  xx xx  xx          xx           x        xxx        |
+11|                  x   x              x   x xxx xx    xx        x                    |
+ 0|  xxxx     x x xx   x     x   xx  x           x  xx    xxxxxxx   x x                |
+ 1|                 x              x    x             x                                |
+ 2|      x                x     x                                x     x x             |
+ 3|                  x       x           x                x                  xx        |
+ 4|            x      x               x       xx                   x x                 |
+ 5|                     x  x      x         x    x  x      x                           |
+ 6|               x                 xx x                x    xxxx     x                |
+ 7|          x     x     x    xx x           x         x x                 x           |
+ 8|       x  x   x    x           x  x     x     xx  x      xx  x  x  x    x           |
+ 9|           x x           x             x     x  x              x x   x              |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|               x     xx  xxx x xx   x              x         xx  xxx   x xxx        |
+11|           x                  x  xxx x xx   x                        xx             |
+ 0|  xxxxx       x x           x         x  xxx x xxx  x   x           x               |
+ 1|                     x                                               x              |
+ 2|           x   x                   x       x           x     x                      |
+ 3|            x       x x    x            x       x           x      x      xx        |
+ 4|                              x xx       x    x    x          x                     |
+ 5|              x          x  x                        xx             x x             |
+ 6|       x     x  x  x                  xx  x    x        x  x     x                  |
+ 7|          x             x      x            x       x           x      xx           |
+ 8|          x   x xx        x x       xx    x  x     x    x           x   x           |
+ 9|                  x          x    x               x      x        x                 |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x   xx     x   x        x         xx x x   xx   x x   x  xx   xxx        |
+11|             x   x xx  xx     x   x   x        x    x   x x   xx                    |
+ 0|  xxxx      x        x   x xxx xx        xx x    x          x   x xx  xx            |
+ 1|      x             x         x     x                        x                      |
+ 2|                   x  x    x           x            x     x x     xx                |
+ 3|           x x       x      x    x                x                       xx        |
+ 4|       x                           x         x       x x            x               |
+ 5|            x x x                 x      xx x  x               x x                  |
+ 6|                       xx x  x x        x  x            x     x x     x             |
+ 7|          x    x x       x           x        x x     x                xx           |
+ 8|          x x                x  x  x     x  x            x          x   x           |
+ 9|                  x                   x                    x         x              |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|              xx         x  x          xx         x  xx         x   xxx   xx        |
+11|          x     x  x  xx   x  x  x x     x     xx   x     x  x x  x                 |
+ 0|  xxxx     x x          x       x   x x     x    x          x                       |
+ 1|                                                                 x  x               |
+ 2|                                                     x xx                           |
+ 3|                                x                           x             xx        |
+ 4|                      x                        x         x           xx             |
+ 5|      x        xx       xx  x x         xx       xx   x   x     x x     x           |
+ 6|             x         x         x    x         x            x                      |
+ 7|          x       x x              x       xxx      x                               |
+ 8|       x      x   x x      xx x        x   x x        x x x    xx x                 |
+ 9|                   x         x                                                      |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           x x          x    x  x x         x xxx  xxx       x xxx      xxxx        |
+11|          x   x   x  x x  xx   x   x   x  x  x   x        x x         x             |
+ 0|  xxxx      x       x       x    x       x               x           x              |
+ 1|               x x                  x x            x           x   x                |
+ 2|            x   x                x   x                 x                            |
+ 3|       x   x        x   x       x        x   x           x           x    xx        |
+ 4|      x                   x                         xx          xx                  |
+ 5|             x    x         xx    x    x      x  x                                  |
+ 6|                     x     x              x x  x          x           x x           |
+ 7|                                                                                    |
+ 8|             x  x x               x  x x      x  x                                  |
+ 9|          x   x        x       x   x            x           xx           x          |
+  |____________________________________________________________________________________|
+
+    __________________________________________________________________________________
+   /                                                                                  \
+12|           xx         x  xx         x      x  xx         x   xxx          xx        |
+11|             x     xx   x     x  x x  x xx   x     x  x x  x        x x             |
+ 0|  xxxx    x     x    x          x         x          x             x   x            |
+ 1|                             x       x            x          x                      |
+ 2|                         x xx                 x  x        x                         |
+ 3|       x                        x               x    x           x x      xx        |
+ 4|                   x                    x                     xx                    |
+ 5|            xx       xx   x   x     x x   xx   x   x     x x                        |
+ 6|      x   x         x            x       x            x             x               |
+ 7|               x x      x                    x                        x             |
+ 8|           x   xxx        x x x    xx x        x x x    xx x                        |
+ 9|                                                                                    |
+  |____________________________________________________________________________________|
