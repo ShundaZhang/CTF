@@ -6,7 +6,7 @@ def cobol_match(x):
 	elif x == '12,':
 		return '&'
 	elif x == '11,':
-		return '_'
+		return '-'
 	elif x == '0,':
 		return '0'
 	elif x == '1,':
