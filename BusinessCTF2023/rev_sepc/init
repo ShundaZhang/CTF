@@ -1,0 +1,8 @@
+#!/bin/sh
+
+insmod checker.ko
+mount -t proc none /proc
+mount -t sysfs none /sys
+mknod /dev/checker c 137 0
+chmod 0666 /dev/checker
+exec /checker
