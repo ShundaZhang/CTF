@@ -1,0 +1,152 @@
+@font-face {
+	font-family: orbitron;
+	src: url("/static/fonts/orbitron.ttf");
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	scroll-behavior: smooth !important;
+}
+
+body {
+	font-family: orbitron;
+	color: rgb(var(--foreground-rgb));
+	background: #ffffff;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #b9b9b9;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: #797979;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+	box-shadow: inset 0 -1px 0 #ddd;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}
+
+.main {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.header {
+	height: 75vh;
+	background-image: url("/static/img/bg.png");
+	background-position: center;
+	background-repeat: none;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.headerText {
+	color: #e2e2e2;
+	margin: 0;
+	text-align: center;
+}
+
+.footer {
+	color: #e2e2e2;
+	text-align: center;
+	background-color: black;
+	padding: 1em;
+	margin-top: auto;
+}
+
+.info-card {
+	border-radius: 15%;
+	background-color: #e6e6e6;
+	padding: 2em;
+	color: #000;
+	transition: 0.3s;
+}
+
+.info-card:hover {
+	transform: translateY(10px);
+	box-shadow: 10px 10px 26px -10px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 10px 10px 26px -10px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 26px -10px rgba(0, 0, 0, 0.75);
+}
+
+.banner-1 {
+	background-color: #e6e6e6;
+}
+
+.banner-2 {
+	color: #e2e2e2;
+	padding: 2em;
+	background-color: rgb(255, 166, 0);
+}
+
+.join-btn {
+	border: none;
+	color: #e2e2e2;
+	border-radius: 15px;
+	padding: 0.5em;
+	background-color: #f01c00;
+}
+
+.blue-btn {
+	border: none;
+	border-radius: 15px;
+	color: #e2e2e2;
+	padding: 0.7em;
+	background-color: #0038f0;
+}
+
+.login-container {
+	color: #e2e2e2;
+	padding: 2.5em;
+	background-color: #000;
+	border-radius: 15px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	include header.pug
+</head>
+
+<body>
+	<script src="/static/js/chart.js"></script>
+	<script src="/static/js/dashboard.js"></script>
+	<nav class="navbar navbar-dark sticky-top navbar-expand-lg bg-black">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/">Arodor Elections Data Panel</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="/"><i class="las la-home"></i> Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/logout"><i class="las la-sign-out-alt"></i> Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col-6">
+				<h3><i class="las la-landmark"></i> Parties</h3>
+				<canvas id="partyBar"></canvas>
+			</div>
+			<div class="col-6">
+				<h3><i class="las la-map-marker"></i> Regions</h3>
+				<canvas id="regionBar"></canvas>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<h3><i class="las la-vote-yea"></i> Votes</h3>
+			<hr>
+			<table id="dataTable" class="table">
+				<thead>
+					<tr>
+						<th scope="col">Id</th>
+						<th scope="col">Party</th>
+						<th scope="col">Region</th>
+						<th scope="col">Verified</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div class="row mb-5">
+			<nav>
+				<ul id="pagination" class="pagination justify-content-center"></ul>
+			</nav>
+		</div>
+	</div>
+</body>
+
+</html>

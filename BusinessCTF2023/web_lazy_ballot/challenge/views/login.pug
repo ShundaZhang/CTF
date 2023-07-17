@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	include header.pug
+</head>
+
+<body>
+	<script src="/static/js/login.js"></script>
+	<div class="container center">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="login-container">
+					<h1>Login</h1>
+					<div class="form-group">
+						<input id="usernameInput" class="form-control" type="text" name="username" placeholder="Username" required>
+					</div>
+					<div class="form-group mt-3">
+						<input id="passwordInput" class="form-control" type="password" name="password" placeholder="Password" required>
+					</div>
+					<button id="loginBtn" class="btn btn-outline-light btn-block mt-3">Submit</button>
+					<span id="messageText"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
