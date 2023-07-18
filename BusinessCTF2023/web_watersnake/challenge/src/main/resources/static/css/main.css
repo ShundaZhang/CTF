@@ -1,0 +1,33 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat.ttf);
+}
+
+body {
+    font-family: Montserrat;
+    margin: 0;
+}
+
+.wrap {
+    font-family: Roboto;
+    text-align: center;
+}
+
+.tank {
+    margin: 0 50px;
+    display: inline-block;
+}
+
+#chartContainer {
+    height: 300px;
+}
+
+#updateBtn {
+    border: none;
+    background-color: #8bd0ec;
+    border-radius: 15px;
+}
+
+#configData {
+    border-radius: 15px;
+}
