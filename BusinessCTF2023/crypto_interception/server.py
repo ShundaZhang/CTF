@@ -8,7 +8,7 @@ from Crypto.Util.Padding import pad, unpad
 from Crypto.Cipher import AES
 from pool import GREET, ANS
 #from secret import RESTRICTED
-RESTRICTED = "HTB{th3y_d3f1n1t3ly_d0nt_h4v3_a_sUp3r_c0mPut3r!}"
+RESTRICTED = ["HTB{th3y_d3f1n1t3ly_d0nt_h4v3_a_sUp3r_c0mPut3r!}", "ABCDEFG", "XXXXXXXXXXXXX", "1111225555000000077777777"]
 
 class GRAS:
     def __init__(self, m, p, q):
@@ -20,8 +20,15 @@ class GRAS:
     def generate_key(self):
         ct = 0x1337
         # this loop runs in milliseconds in our super computer
-        for _ in range(self.m>>2040):
+        '''
+        for _ in range(self.m):
             ct = pow(ct, self.a, self.m)
+        '''
+        #Fermat’s little theorem       
+        phi = (self.p-1)*(self.q-1)
+        an = pow(self.a, self.m, phi)
+        ct = pow(ct, an, self.m)
+
         return long_to_bytes(ct)[:16]
 
 class OumaraSystem:
