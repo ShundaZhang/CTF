@@ -7,7 +7,8 @@ from Crypto.Util.number import isPrime, getPrime, long_to_bytes, bytes_to_long
 from Crypto.Util.Padding import pad, unpad
 from Crypto.Cipher import AES
 from pool import GREET, ANS
-from secret import RESTRICTED
+#from secret import RESTRICTED
+RESTRICTED = "HTB{th3y_d3f1n1t3ly_d0nt_h4v3_a_sUp3r_c0mPut3r!}"
 
 class GRAS:
     def __init__(self, m, p, q):
@@ -19,7 +20,7 @@ class GRAS:
     def generate_key(self):
         ct = 0x1337
         # this loop runs in milliseconds in our super computer
-        for _ in range(self.m):
+        for _ in range(self.m>>2040):
             ct = pow(ct, self.a, self.m)
         return long_to_bytes(ct)[:16]
 
@@ -95,7 +96,8 @@ def print_plans(plans):
 
 
 def main():
-    crypto = PopperSystem(2048)
+    #crypto = PopperSystem(2048)
+    crypto = OumaraSystem(2048)
     encrypted_plans = crypto.encrypt_plans()
 
     show_banner()
@@ -134,5 +136,5 @@ def main():
             exit(0)
 
 if __name__ == '__main__':
-    signal.alarm(900)
+    #signal.alarm(900)
     main()
