@@ -32,6 +32,7 @@ def verify(message, r, s):
     u1 = (m * w) % q
     u2 = (r * w) % q
     v = ((pow(g, u1, p) * pow(y, u2, p)) % p) % q
+    print(f'r = {r}, v = {v}')
     return r == v
 
 menu = """Vitalium Storage Panel Menu:
@@ -56,6 +57,7 @@ def panel():
             elif option == 1:
                 username = input("Enter username > ")
                 message = json.dumps({"username": username, "admin": False})
+                print(message)
                 r, s = sign(message.encode())
                 print(json.dumps({
                     'r': r,
