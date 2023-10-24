@@ -53,6 +53,12 @@ constraints:
 
 '''
 
-io.recvuntil(b'Enter your name:')
-io.sendline(payload)
-print(io.recvall())
+#io.recvuntil(b'Enter your name:')
+#io.sendline(payload)
+#print(io.recvall())
+
+'''
+It is a questionnaire!
+
+HTB{pwn_101_w1th_s0m3_b0f}
+'''
