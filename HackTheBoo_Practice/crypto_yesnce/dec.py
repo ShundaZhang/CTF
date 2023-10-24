@@ -4,7 +4,7 @@ pt = [
     'Hm, I have heard that AES-CTR is a secure encryction mode!\x06\x06\x06\x06\x06\x06',
     'I think it is not possible to break it, right?\x02\x02',
     'HTB{?????????????????????????????????????????????}',
-    'This is why I used it to encryct my secret information above, hehe.',
+    'This is why I used it to encrypt my secret information above, hehe.',
 ]
 
 ct = ['983641d252da35432cdd8aaa490b24bc5ac0583f5881adbe95c5b16d4309878a37c0d38d523f2b45390294e7ed7fe276a1ac966868a34e1284f6215389342b35',
