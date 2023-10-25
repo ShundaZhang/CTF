@@ -49,4 +49,6 @@ io.interactive()
 
 
 '''
+Change to cloud (London), got the flag before EOF, seems network issue...
+HTB{4br4_k4d4br4_sh3llc0d3}
 '''
