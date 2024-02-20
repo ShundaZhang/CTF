@@ -8,11 +8,14 @@ key = os.urandom(16)
 Flag = '0xL4ugh{Fak3_Fl@g}'
 max_retries=19
 def evilRSA(seed):
+    '''
     d = 1
     while d.bit_length() != int(seed[6:9]): 
         d = getPrime(int(seed[6:9]))
         while not isPrime(d>>333):
             d = getPrime(int(seed[6:9]))
+    '''
+    d = 206350931733134559046038012666264262159605459477114266661676711718071821567491611833459104662994828663089430087604498122614530857038303243536416583794909145512825702038109758926420015132996412362948521
     print("d = "+str(d))
     return d 
 
