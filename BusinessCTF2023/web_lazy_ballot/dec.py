@@ -1,5 +1,5 @@
 '''
-NoSQL injectioin
+NoSQL injection
 
 See Dockerfile, found couchdb, it is a NoSQL DB
 https://book.hacktricks.xyz/pentesting-web/nosql-injection
