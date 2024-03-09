@@ -8,8 +8,8 @@ cyclic -l raaa
 
 from pwn import *
 
-context.arch = 'amd64'
-context.log_level = 'debug'
+#context.arch = 'amd64'
+#context.log_level = 'debug'
 
 offset = 72
 
