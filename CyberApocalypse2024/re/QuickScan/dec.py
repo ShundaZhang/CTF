@@ -14,6 +14,6 @@ with open('a.out', 'wb') as f:
 	f.write(decoded_data)
 
 proc = subprocess.Popen(["python3", "dec_angr.py"], stdout=subprocess.PIPE)
-buf = proc.stdout.read()
+buf = proc.stdout.read().strip().split(' ')[-1].split('>')[0]
 print(buf)
 
