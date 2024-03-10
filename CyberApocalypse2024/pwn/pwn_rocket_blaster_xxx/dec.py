@@ -1,4 +1,7 @@
 '''
+segment fault!
+add ret in rop!
+
 cyclic 1024
 gdb-pwndbg ./rocket_blaster_xxx
 cyclic -l jaaa
