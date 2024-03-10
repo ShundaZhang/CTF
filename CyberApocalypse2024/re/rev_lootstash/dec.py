@@ -1,0 +1,5 @@
+'''
+strings stash |grep HTB
+HTB{n33dl3_1n_a_l00t_stack}
+
+'''
