@@ -12,6 +12,7 @@ cyclic -l jaaa
 '''
 
 from pwn import *
+#context.log_level = 'debug'
 
 offset = 40
 
