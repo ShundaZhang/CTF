@@ -18,5 +18,5 @@ for _ in range(129):
     buf = proc.stdout.read().strip().decode().split(' ')[-1].split('>')[0].split('0x')[-1]
     print(buf)
     io.recvuntil('?')
-    io.sendline(buf.encode())
+    io.sendline(buf.zfill(48).encode())
 print(io.recvall())
