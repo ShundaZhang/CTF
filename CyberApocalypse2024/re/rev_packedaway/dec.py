@@ -1,0 +1,4 @@
+'''
+upx -d 
+strings
+'''
