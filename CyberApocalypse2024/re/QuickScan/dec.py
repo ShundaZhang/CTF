@@ -5,7 +5,12 @@ import subprocess
 ip, port = '94.237.51.233', 52391
 io = remote(ip, port)
 
-for _ in range(129):
+io.recvuntil('Expected bytes:')
+buf = io.recvline().strip()
+io.recvuntil('?')
+io.sendline(buf)
+
+for _ in range(128):
     io.recvuntil('ELF:')
     base64_buf = io.recvline().strip().decode()
     #print(base64_buf)
