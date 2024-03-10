@@ -13,7 +13,7 @@ decoded_data = base64.b64decode(base64_buf)
 with open('a.out', 'wb') as f:
 	f.write(decoded_data)
 
-proc = subprocess.Popen(["python", "dec_angr.py"], stdout=subprocess.PIPE)3
+proc = subprocess.Popen(["python3", "dec_angr.py"], stdout=subprocess.PIPE)
 buf = proc.stdout.read()
 print(buf)
 
