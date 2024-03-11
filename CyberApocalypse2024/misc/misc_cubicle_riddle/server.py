@@ -1,6 +1,7 @@
 import signal
 import socketserver
-from secret import flag
+#from secret import flag
+flag='HTB{F4k3_f149_4_7347!!!}'
 from riddler.riddler import Riddler
 from exceptions import WrongFormatException
 import typing

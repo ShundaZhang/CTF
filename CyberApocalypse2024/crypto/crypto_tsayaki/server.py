@@ -1,6 +1,10 @@
-from tea import Cipher as TEA
-from secret import IV, FLAG
+#from tea import Cipher as TEA
+#from secret import IV, FLAG
+from tea import tea as TEA
 import os
+
+IV = os.urandom(16)
+FLAG = 'HTB{F4k3_f149_4_7347!!!}'
 
 ROUNDS = 10
 
