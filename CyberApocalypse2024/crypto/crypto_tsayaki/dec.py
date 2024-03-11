@@ -193,26 +193,26 @@ if __name__ == '__main__':
     pt = bytes.fromhex(buf)
     for _ in range(10):
         k = os.urandom(16).hex()
-	k0 = k[:8]
-	k1 = k[8:16]
-	k2 = k[16:24]
-	k3 = k[24:32]
-	key1 = k
-	key2 = msb_map[k0[0]]+k0[1:]+msb_map[k1[0]]+k1[1:]+k2+k3
-	key3 = k0+k1+msb_map[k2[0]]+k2[1:]+msb_map[k3[0]]+k3[1:]
-	key4 = msb_map[k0[0]]+k0[1:]+msb_map[k1[0]]+k1[1:]+msb_map[k2[0]]+k2[1:]+msb_map[k3[0]]+k3[1:]
-	cipher = Cipher(bytes.fromhex(key1), iv)
-	ct = cipher.encrypt(pt)
+        k0 = k[:8]
+        k1 = k[8:16]
+        k2 = k[16:24]
+        k3 = k[24:32]
+        key1 = k
+        key2 = msb_map[k0[0]]+k0[1:]+msb_map[k1[0]]+k1[1:]+k2+k3
+        key3 = k0+k1+msb_map[k2[0]]+k2[1:]+msb_map[k3[0]]+k3[1:]
+        key4 = msb_map[k0[0]]+k0[1:]+msb_map[k1[0]]+k1[1:]+msb_map[k2[0]]+k2[1:]+msb_map[k3[0]]+k3[1:]
+        cipher = Cipher(bytes.fromhex(key1), iv)
+        ct = cipher.encrypt(pt)
 
         io.recvuntil('Enter your target ciphertext (in hex) :')
         io.sendline(ct)
         io.recvuntil('Enter your encryption key (in hex) :')
-	io.sendline(key1)
+        io.sendline(key1)
         io.recvuntil('Enter your encryption key (in hex) :')
-	io.sendline(key2)
+        io.sendline(key2)
         io.recvuntil('Enter your encryption key (in hex) :')
-	io.sendline(key3)
+        io.sendline(key3)
         io.recvuntil('Enter your encryption key (in hex) :')
-	io.sendline(key4)
+        io.sendline(key4)
 
     print(io.recvall())
