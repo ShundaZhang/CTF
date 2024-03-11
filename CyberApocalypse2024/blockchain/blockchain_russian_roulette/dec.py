@@ -16,6 +16,8 @@ target = '0x47c32e2979505AC19b52B296be25dC0fF721a271'
 
 w3 = Web3(Web3.HTTPProvider("http://83.136.249.138:50663")) # blockchain gateway from tcp interface
 contract = w3.eth.contract(address=target, abi=abi)
-for _ in range(256):
-	contract.functions.pullTrigger().transact() # calls update sensor with value of 10
+for i in range(256):
+    print(i)
+    contract.functions.pullTrigger().transact() # you can stop at about 20+
 
+#HTB{99%_0f_g4mbl3rs_quit_b4_bigwin}
