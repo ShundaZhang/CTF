@@ -20,6 +20,8 @@ from Crypto.Util.number import bytes_to_long as b2l, long_to_bytes as l2b
 from enum import Enum
 from pwn import *
 
+context.log_level = 'debug'
+
 class Mode(Enum):
     ECB = 0x01
     CBC = 0x02
@@ -205,7 +207,7 @@ if __name__ == '__main__':
         ct = cipher.encrypt(pt)
 
         io.recvuntil('Enter your target ciphertext (in hex) :')
-        io.sendline(ct)
+        io.sendline(ct.hex())
         io.recvuntil('Enter your encryption key (in hex) :')
         io.sendline(key1)
         io.recvuntil('Enter your encryption key (in hex) :')
@@ -216,3 +218,4 @@ if __name__ == '__main__':
         io.sendline(key4)
 
     print(io.recvall())
+#HTB{th1s_4tt4ck_m4k3s_T34_1n4ppr0pr14t3_f0r_h4sh1ng!}
