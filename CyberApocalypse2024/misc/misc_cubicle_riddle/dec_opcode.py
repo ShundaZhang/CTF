@@ -15,7 +15,7 @@ def find_max_min(arr):
         elif num < min_val:
             min_val = num
 
-    return max_val, min_val
+    return min_val, max_val
 
 
 dis.dis(find_max_min)

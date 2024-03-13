@@ -14,10 +14,14 @@ def find_max_min(arr):
         elif num < min_val:
             min_val = num
 
-    return max_val, min_val
+    return min_val, max_val
 
 input_array = [5, -3, 8, 0, -2, 11, 4, 6, -1, 9]
 result = find_max_min(input_array)
-print("Max:", result[0])
-print("Min:", result[1])
+print("Max:", result[1])
+print("Min:", result[0])
 
+if find_max_min(input_array) == (min(input_array), max(input_array)):
+	print('OK!')
+else:
+	print('Fail!')
