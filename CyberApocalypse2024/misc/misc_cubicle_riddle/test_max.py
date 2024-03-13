@@ -25,3 +25,11 @@ if find_max_min(input_array) == (min(input_array), max(input_array)):
 	print('OK!')
 else:
 	print('Fail!')
+
+a = 0
+
+def test():
+    a += 1
+    print("The number is now ", a)
+
+test()
