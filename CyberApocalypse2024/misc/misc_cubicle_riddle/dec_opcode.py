@@ -25,6 +25,7 @@ for i in find_max_min.__code__.co_code:
 
 print('')
 
+'''
 co_code_start = b"d\x01}\x01d\x02}\x02"
 co_code_end = b"|\x01|\x02f\x02S\x00"
 
@@ -42,3 +43,4 @@ for i in find_max_min.__code__.co_code[8:-8]:
     print(i, end=',')
 
 print('')
+'''
