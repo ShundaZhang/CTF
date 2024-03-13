@@ -73,8 +73,9 @@ class RiddlerChallenge:
                 self.req.sendall(str(wfe).encode())
             except Exception:
                 pass
-        except Exception:
+        except Exception as e:
             try:
+                print(repr(e))
                 self.req.sendall(b"\nUnexpected error occured...\n")
             except Exception:
                 pass

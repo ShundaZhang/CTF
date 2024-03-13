@@ -16,6 +16,7 @@ class Riddler:
         self.co_code_start = b"d\x01}\x01d\x02}\x02"
         self.co_code_end = b"|\x01|\x02f\x02S\x00"
         self.num_list = [randint(self.min_int, self.max_int) for _ in range(10)]
+        print(self.num_list)
 
     def ask_riddle(self) -> str:
         return """ 'In arrays deep, where numbers sprawl,
@@ -34,8 +35,11 @@ class Riddler:
 
     def _construct_answer(self, answer: bytes) -> types.CodeType:
         co_code: bytearray = bytearray(self.co_code_start)
+        print(co_code)
         co_code.extend(answer)
+        print(co_code)
         co_code.extend(self.co_code_end)
+        print(co_code)
 
         code_obj: types.CodeType = types.CodeType(
             1,
@@ -57,4 +61,5 @@ class Riddler:
             (),
             (),
         )
+        print(code_obj)
         return code_obj
