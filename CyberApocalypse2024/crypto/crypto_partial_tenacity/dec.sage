@@ -1,3 +1,5 @@
+#Failed to solve with Branch and prune...
+
 import itertools
 
 # Branch and prune for the case with p and q bits known.
