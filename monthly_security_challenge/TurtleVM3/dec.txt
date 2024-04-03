@@ -1,0 +1,486 @@
+'''
+ binwalk C1AC3E13-F1CB-4670-870F-D9E01E62ED12.VMRS
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+16391         0x4007          XML document, version: "1.0"
+24583         0x6007          XML document, version: "1.0"
+53255         0xD007          XML document, version: "1.0"
+61447         0xF007          XML document, version: "1.0"
+90119         0x16007         XML document, version: "1.0"
+98311         0x18007         XML document, version: "1.0"
+192519        0x2F007         XML document, version: "1.0"
+1112372       0x10F934        QNX6 Super Block
+62895180      0x3BFB44C       MySQL MISAM index file Version 6
+100410568     0x5FC24C8       COBALT boot rom data (Flat boot rom or file system)
+122642439     0x74F6007       XML document, version: "1.0"
+124186973     0x766F15D       Encrypted Hilink uImage firmware header
+126578979     0x78B7123       GPG key trust database version 72
+165026575     0x9D61B0F       Nagra Constant_KEY IDEA_Key: 10192431 EC141404 A615F8B9
+175128583     0xA704007       XML document, version: "1.0"
+190029831     0xB53A007       XML document, version: "1.0"
+190038023     0xB53C007       XML document, version: "1.0"
+
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl pkcs12 -in TurtleVM3-encryption.pfx -passin pass:turtlevm3 -info
+MAC: sha1, Iteration 2000
+MAC length: 20, salt length: 20
+PKCS7 Data
+Shrouded Keybag: pbeWithSHA1And3-KeyTripleDES-CBC, Iteration 2000
+Bag Attributes
+    Microsoft Local Key set: <No Values>
+    localKeyID: 01 00 00 00
+    friendlyName: aba652ad-5771-4048-aa7c-2d94d7c83e69
+    Microsoft CSP Name: Microsoft Software Key Storage Provider
+Key Attributes
+    X509v3 Key Usage: 90
+Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIFLTBXBgkqhkiG9w0BBQ0wSjApBgkqhkiG9w0BBQwwHAQIZBQ9Wnq6zCwCAggA
+MAwGCCqGSIb3DQIJBQAwHQYJYIZIAWUDBAEqBBDg/jQgfAddINl/xRMsMxwyBIIE
+0Nbh/B6rOEm1VR59LeFler4Ov9ODjd1xi0QD+HiaaOPNlul5RNXAqX9Swetjf7GB
+RmlvBhlPBx5wG0Z5mA80+ugpvEe31fQAd/7gSPmN3AA68W/IZKD+mPSBde4nnZdy
+ItOCE9rHLt6KrBqGc2Jm6pyNnpUY3EiZbuCnHxzxwX4WXcXBptzFMbpDP9NoBnYN
+2mzGkvV8gkEcUAbcnBhsyzAuBUdWfdiKReb1U/XFk+6WXmmPfvyV5l24xEzFYlBt
+/F4BK7xXNDtUnFKVCeJ+9mdXtbEjErfcWzQ3i9qYOdyQxmARq8BLu/qVWcDSUMgT
+RbA5N8lhFjMkJh0fYb8kzG5pUmUonCMfwo/uAlzMu1L+sWRrO5dnf4Pe2Uw8EdS+
+Ba3Cof61i56djdmqNVKDePULpvy28FWTvKv0BOwpQyLbcT73fhZ0NTc2aiWopd24
+THQfR/ucAi7DWqiPhof7aD53oe6zrCC1DNq710NkLkxAe1Goa6MMCVWWU9BDKes7
+p+4tCJW6AsjC1H7CBSQn1kuM3O7ycYkwD2RoVRgZXIf5/H426ubnm7/wbTsb3KDv
+Fml5XUJelEhQh/oq/JnpAdz+GlFiolSVdEbX2gs1miCg1BIQQ85dDC1+6inkbkRk
+ndLPJdnwJkySXqJCq5eipK7LwjTd4QkgIY4l8gm398MuHj8nNaQCBKkZu4X8aLkg
+SF7XqtRjDxd1wphXjaYjYkc5/w/5UoW/UxWPP8gyt4xb+Jx/ppyFBAnRQ1BvaxVk
+incSXLL89YKiYHyoRf+LVxQHHKD7GBkf5Wit2veRyChJwRVRI6d+CoiQ6hk+Zm4Z
+d9MhNX6Eb/g4FPJ0SRuhjNsYb+C1N8P5bWkk2+46O+kZAwjZ4lnQCBX8sN1/DfZq
+nuOSgX3GI5A86AD0mcaW2oM+l23Ey3dHWp2lnnGCCLeBSS7LoDwmAT82/dZF96Df
+MF1oWi7B/NFnW1BXJFU+gYgMGAtF7frtgN7zS3+/Yts/NRU746z9OAQ2WpYGuT7p
+tyY+b79ReH/Zio6aPuUIu+ri2ce8aCUh4AHwi9YkRu1g5C9XPV6VIM3bmQdonv3V
+uNfPdYaU32tJi6yRelW2qMX9sb89tuF6YWVJ/mHxgxYZxQT62Z4gRJP/XmXLeTTe
+bCnKK7EXCYsRgwH+PjGu6Y2iNdzoLRwfjur3owKemiUQ97YeQ6lc37fcDqva9wKg
+RCVkiUzwvc9RgzHFv/8XM54DzPiaBCxhxnaH5+g+vuoHqh847+cvaWohbha7fqI5
+d3oBS/ajTQ9u3rNbIrdNB8/SNfGvQLTBuNRFnSgRrf8TeDLvtbwj7PARFxkiHtyT
+Dtmh5wDt4AixuKaowmtrdf3EFHNgIf2dEjO/Efb/KA0476pOVH2n04Y5djn64v2z
+8noYS/ISNvM1YFArKIhqxmsBdDI7oFqWzC6UFflNQ3gPaaZQ7n4htDYCrNpIJdtx
+4SdMBiFgkUr+uB+LLGsvmGLtoNUOKa0/bBqjCzegMsPHdytsHzI/MvvDW4llolza
+k+Opob993KnGkrxFSbaR9aZ11cfe1dSZMKN01FviO7/VX8YFIsVEfHUwnB/dIfaZ
+LMUGJ9EzqytsQ/6lcxWwtmB0lPdJG7gxU9EafozmXh2H
+-----END ENCRYPTED PRIVATE KEY-----
+PKCS7 Encrypted data: pbeWithSHA1And3-KeyTripleDES-CBC, Iteration 2000
+Certificate bag
+Bag Attributes
+    localKeyID: 01 00 00 00
+subject=CN = Shielded VM Encryption Certificate (TurtleVM3) (aT0M4nti)
+issuer=CN = Shielded VM Encryption Certificate (TurtleVM3) (aT0M4nti)
+-----BEGIN CERTIFICATE-----
+MIIDEDCCAfigAwIBAgIQN4khV9qZEqhLfJt1KZczgjANBgkqhkiG9w0BAQsFADBE
+MUIwQAYDVQQDEzlTaGllbGRlZCBWTSBFbmNyeXB0aW9uIENlcnRpZmljYXRlIChU
+dXJ0bGVWTTMpIChhVDBNNG50aSkwHhcNMjMxMjI0MDAwMzAyWhcNMzMxMjI0MDAw
+MzAyWjBEMUIwQAYDVQQDEzlTaGllbGRlZCBWTSBFbmNyeXB0aW9uIENlcnRpZmlj
+YXRlIChUdXJ0bGVWTTMpIChhVDBNNG50aSkwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDALUjjMzwI0rNW0/QVXKIN5Xm/MknxsNnKXauYvij/IOt9FN6Q
+mk1RpY2tXMR51/ns8mR/mM+r3zxoMQg7LCIgX2H7bZ/FgzOe6Q1rG4ruViXwdFuU
+2MXsXgZBarRuoTW/+cFYURVUrIlYZ8MHfN2CHUxiVmrswI6MH8m4WoPuNBpYYYfy
+hNIa0923W71WVhEas+vQGMGdpTyUw35VmwidQe3++BVuzN+bgBZGE0IHPp4tP080
+w9+HsyXCGh7EKkvRPBAcaKJ7Rk/eDCQHS6uhfjtOTlACVOOy1wj/cK1WJ0U2sshq
+X13lslntrtY7IlOfeVZvKYTzWURrdDc/x5udAgMBAAEwDQYJKoZIhvcNAQELBQAD
+ggEBAEcENQbKyo3ksrtbhDrO2LxW4XniyZnMDc2bqjttEJKAjYOuOaazYDfPvjSM
+LXoiePCQ4jBp1kT+ZaSZ+r5yTx4nN9AewzV33SzX/HjzH2s/knIAL5cVovTiNiii
+kOfQC0sY2D9djC+Q7IhhDv+K5iek01WThe/K0TVqyU+MmOm4aUqLlsFcAXOr8QDI
+Zw/KDo4V+kRUdBx29AuW10CiG/1b8JVGfEgVXK0vttBhv89PhMtrRznfjTcBLaTK
+6muXz74fhD1vA8MN1hmAAUzBTnrAI+d4IRKUwF/e99K90L9YM8feHa9cEoXhzZrn
++1bktJHGVgEdLHDodprNdTIJDWs=
+-----END CERTIFICATE-----
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl pkcs12 -in TurtleVM3-signing.pfx -passin pass:turtlevm3 -info
+MAC: sha1, Iteration 2000
+MAC length: 20, salt length: 20
+PKCS7 Data
+Shrouded Keybag: pbeWithSHA1And3-KeyTripleDES-CBC, Iteration 2000
+Bag Attributes
+    Microsoft Local Key set: <No Values>
+    localKeyID: 01 00 00 00
+    friendlyName: f9dcdb12-4daa-49f2-bf73-f0b21c3cbf43
+    Microsoft CSP Name: Microsoft Software Key Storage Provider
+Key Attributes
+    X509v3 Key Usage: 90
+Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIFLTBXBgkqhkiG9w0BBQ0wSjApBgkqhkiG9w0BBQwwHAQIyR6u8/bkYzgCAggA
+MAwGCCqGSIb3DQIJBQAwHQYJYIZIAWUDBAEqBBDhK8fkFKGg89kVDRhYT8ODBIIE
+0IWWQ24RmmvtnfCnlNS1y9wg9FC6Y17xjrqhvTdxkt6/7rulboH3YNSTQZhwDPWd
+M+6G/o3B7EI2UStQex7QnWxJcVmRHhNlhuW9HpWxMOqIeLyljQiZqmDXy7Rx99KW
+8yitAGJ99n5M7OXvPcCeqUj7FQ7MBuIY6fu9C1OSqlekc/0a4Jbzx544TR4PL2BD
+HWPunAdszWCur1S9d2wUvPCGr6yrcBCPWunONQr3XsVKJuvBQeuISTB8BxvAEHII
+Bf/6xKa0DfAdVL1v76SISKIkxyidgYbxc8oeZxa7i8f9zgfrdtg3LEMgTf/2I6jC
+GMyjoaQiC2SnkXTLXjdOEBp87YT09aTUGvLSl1ZLIjkIXqxCGQEeHC8cxTmrjBLP
+Ub+hBqhdtE1LDPJ2e4SRTMFnLE9/d3uTiN8j266nHY8NQJWBhftN16nGZX5KHa+i
+rifkA89p8g2LQq9vhCwgvAYAiPM4XGbh+VJSYZ2/D+nmVvjc88UYl2wYE1/jrItU
+vEYTTN4GhK1IpyXDpaMGBCPC174QmROkzmkUtIR2N9jmrAipvrOHkmEnNqsC3Qkc
+AlKc9p/ayyIvnqzs0+eK62zQARSQf66fkpQDkX0Gf4Yq7QWUONy4mSxf/J3v6S31
+iOkOuMwRHUW5DwQwbTVWPodoktzRq/QRytPUGfHn/TBwFUNrA/NsSrUbCuVOH3Ka
+pVnMb9wIo7t8zRGFiaGgJNjEBBgGc6CjAoUcjyMghFKvWTpdGNFNWO/oMlh5JSz0
+9sJ9dsOI1eA3q0+DQpLcAdZ5Tg1yT4OQb5VoxQFeMgn65AUeB5CVwNUAzsyIaWsG
+8siJKcwVf3a2TjhUabP4TQGQSMFXdNSWstWVWMjHxget+QNjnLy8NzLH79yspL1J
+RVEAK/dgP8XRriRG97UgLEHeXLiJQdDHOu+7G6t4aj7hbJlqeVg20XwoiUBHYxea
+4oGrYlIfVWmleC+9ns3w4R2DkNnSc4JBIoUV4sPu4UryEPErVmen7lDakFE7bqdA
+TK63FSx8aqRZ+7Rh4hZ6BiNbXULeoKp//CW7bSFccM06vBgOZSY3v3n5vqMWUBUk
+JTQICggdSA/+JS5YaTwdgturbL+pGhHavfR34xm1BGENnfoY2y771AWnm0z9pZAh
+LJmBaIjzYU175cgEd9f3vUGD63cQYMogHEaBOxfF8UQXRk6M84G+baq7zVr1Avp1
+TNw04K3mHUJGqDTEK3OoiRFTkP8sTCy54k64qi++maDeRKT4i4KoDasALzURcQXj
+I5TKMjr56T61ldhgO8t1aBSv0UgdknPMUviPKfBMyRaAJG3HqsRfvE8u/8BeD2cc
+SSqW0RK+uwlNy3mFlMu7ehDAf5eiZo4Nx0nvkottzan5dpCmftERpjXRFNVOGpqW
+jFbXvxGOnhr3AS4CHGtBq5LLYKB0BM+R3TWNno8DciBlLUkaYhfkhIGOEa9+PnxT
+A9mvIUaqllXAhwCOnCnXl0sA+qEyXP3Ca0zcDlD9EkqWtlxf/G1u86S8LP/9u7e9
+IGw8asOWf1SeMowHQ6t4mlzMxiZ/WY+G8dK2LaQE5vNVW/NzLdqvL6Nuj8EeyfnD
+9PMNRiva1YlsPJ6EWmklNBrUHZB03CutJeZQcv6LmBKj
+-----END ENCRYPTED PRIVATE KEY-----
+PKCS7 Encrypted data: pbeWithSHA1And3-KeyTripleDES-CBC, Iteration 2000
+Certificate bag
+Bag Attributes
+    localKeyID: 01 00 00 00
+subject=CN = Shielded VM Signing Certificate (TurtleVM3) (aT0M4nti)
+issuer=CN = Shielded VM Signing Certificate (TurtleVM3) (aT0M4nti)
+-----BEGIN CERTIFICATE-----
+MIIDCjCCAfKgAwIBAgIQF05piwr3rJVHxuKw4AI7qTANBgkqhkiG9w0BAQsFADBB
+MT8wPQYDVQQDEzZTaGllbGRlZCBWTSBTaWduaW5nIENlcnRpZmljYXRlIChUdXJ0
+bGVWTTMpIChhVDBNNG50aSkwHhcNMjMxMjI0MDAwMzAyWhcNMzMxMjI0MDAwMzAy
+WjBBMT8wPQYDVQQDEzZTaGllbGRlZCBWTSBTaWduaW5nIENlcnRpZmljYXRlIChU
+dXJ0bGVWTTMpIChhVDBNNG50aSkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQDbMVKh9gH8cmUT1WLfJDzK6vK27MVHZOEnXlJwqy5jN99c5M9xQroXn4sh
++PBvikD3ucwKU4z1Nxh2gRHAaSP6u3mMV/yzrRCOzk0JiPBUHIKWpafwC6plyFFs
+EkhmIGSQIhXiy31MicDEZFuic3OqNLscIIDgrFJLv+76mPkdpUDHLqtbOwXh7U9q
+DQzJOx+vBVDFAgoj4zRmmgnSyHaf+IpWnhc94EntCb1AWZSFiZTLXPULJQm979ty
+3HtA7gmxECSEc+Frc0SFeDI+DTUyUV1cKX78KEOq7xIrshfmNdyLeBuXoFtosEOY
+3Z1a4ZKzYIM3qnDfzUoz/AJFxpg9AgMBAAEwDQYJKoZIhvcNAQELBQADggEBACWU
+0LbKlIjg7RhKLoaLI3ii4wdNpDPqXURVyIA7rra6q0PTVwatebWiHIV3GkUO9xSK
+T9BdnIPFia0Uu/MJGXeoOODIDDqvYI5eAV9s6QnR+MXpMrf5QJ4fdtidS4WMpS5m
+zvT1lxBNc/vK6yUOmoXUstMuUZjqoINlDtioFCrjK/rot5XHbzR1NaQDUknfKOYP
+c6NcYhpZ+euR/QEY9dLL4i/MoQ+tr/vwY9Gs8ZoHyhd33dp0l1TlnaVSo4cLdvse
+ZFPXH2v8qoxm+9unQfUVJOYFCn1pUPfmQvSO+wAdCK0N4E9V4dXC4e65IaXvhUS1
+G8OTRseat2WrJsrjIgk=
+-----END CERTIFICATE-----
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# ls
+README.txt  TurtleVM3  TurtleVM3-encryption.pfx  TurtleVM3-signing.pfx  TurtleVM3.ps1
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# diff *.pfx
+Binary files TurtleVM3-encryption.pfx and TurtleVM3-signing.pfx differ
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3#
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3#
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# echo V2GbyxiLrQt8NpQ51c2/lq14NNRC4ObXrm0NuppIcsE=|base64 -d |xxd
+00000000: 5761 9bcb 188b ad0b 7c36 9439 d5cd bf96  Wa......|6.9....
+00000010: ad78 34d4 42e0 e6d7 ae6d 0dba 9a48 72c1  .x4.B....m...Hr.
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl pkcs12 -in  -clcerts -nokeys -out certificate.pem
+README.txt                TurtleVM3/                TurtleVM3-encryption.pfx  TurtleVM3-signing.pfx     TurtleVM3.ps1
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl pkcs12 -in TurtleVM3-encryption.pfx -clcerts -nokeys -out enc_certificate.pem
+Enter Import Password:
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl pkcs12 -in TurtleVM3- -clcerts -nokeys -out enc_certificate.pem
+TurtleVM3-encryption.pfx  TurtleVM3-signing.pfx
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl pkcs12 -in TurtleVM3-signing.pfx -clcerts -nokeys -out sig_certificate.pem
+Enter Import Password:
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl pkcs12 -in  -nocerts -out privatekey.pem
+README.txt                TurtleVM3/                TurtleVM3-encryption.pfx  TurtleVM3-signing.pfx     TurtleVM3.ps1             enc_certificate.pem       sig_certificate.pem
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl pkcs12 -in TurtleVM3-encryption.pfx -nocerts -out enc_privatekey.pem
+Enter Import Password:
+Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl pkcs12 -in TurtleVM3 -nocerts -out sig_privatekey.pem
+TurtleVM3/                TurtleVM3-encryption.pfx  TurtleVM3-signing.pfx     TurtleVM3.ps1
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl pkcs12 -in TurtleVM3-signing.pfx -nocerts -out sig_privatekey.pem
+Enter Import Password:
+Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# ls
+README.txt  TurtleVM3  TurtleVM3-encryption.pfx  TurtleVM3-signing.pfx  TurtleVM3.ps1  enc_certificate.pem  enc_privatekey.pem  sig_certificate.pem  sig_privatekey.pem
+
+openssl rsa -in sig_privatekey.pem -text -noout
+Enter pass phrase for sig_privatekey.pem:
+Private-Key: (2048 bit, 2 primes)
+modulus:
+    00:db:31:52:a1:f6:01:fc:72:65:13:d5:62:df:24:
+    3c:ca:ea:f2:b6:ec:c5:47:64:e1:27:5e:52:70:ab:
+    2e:63:37:df:5c:e4:cf:71:42:ba:17:9f:8b:21:f8:
+    f0:6f:8a:40:f7:b9:cc:0a:53:8c:f5:37:18:76:81:
+    11:c0:69:23:fa:bb:79:8c:57:fc:b3:ad:10:8e:ce:
+    4d:09:88:f0:54:1c:82:96:a5:a7:f0:0b:aa:65:c8:
+    51:6c:12:48:66:20:64:90:22:15:e2:cb:7d:4c:89:
+    c0:c4:64:5b:a2:73:73:aa:34:bb:1c:20:80:e0:ac:
+    52:4b:bf:ee:fa:98:f9:1d:a5:40:c7:2e:ab:5b:3b:
+    05:e1:ed:4f:6a:0d:0c:c9:3b:1f:af:05:50:c5:02:
+    0a:23:e3:34:66:9a:09:d2:c8:76:9f:f8:8a:56:9e:
+    17:3d:e0:49:ed:09:bd:40:59:94:85:89:94:cb:5c:
+    f5:0b:25:09:bd:ef:db:72:dc:7b:40:ee:09:b1:10:
+    24:84:73:e1:6b:73:44:85:78:32:3e:0d:35:32:51:
+    5d:5c:29:7e:fc:28:43:aa:ef:12:2b:b2:17:e6:35:
+    dc:8b:78:1b:97:a0:5b:68:b0:43:98:dd:9d:5a:e1:
+    92:b3:60:83:37:aa:70:df:cd:4a:33:fc:02:45:c6:
+    98:3d
+publicExponent: 65537 (0x10001)
+privateExponent:
+    7b:f6:81:0d:27:dc:27:b1:6a:88:b4:fd:9d:c5:18:
+    bc:89:f3:8a:90:8d:61:bb:23:ba:e8:15:27:b3:28:
+    20:e4:d0:65:f0:e1:80:e4:83:ea:28:48:bf:85:d2:
+    34:c2:b3:cb:66:40:86:f6:89:99:84:f7:48:cd:e6:
+    04:33:72:2d:b3:29:22:be:00:24:7d:94:07:af:94:
+    d1:f7:a8:33:69:8c:51:36:8e:ab:ab:6d:4a:f2:e7:
+    59:7f:5d:82:a4:7f:3b:24:8b:cc:1f:d9:55:17:f2:
+    f5:1e:ec:d4:0b:07:37:13:6b:5e:94:e3:4e:2d:26:
+    bd:c0:66:9f:43:34:60:16:b1:61:ec:8c:82:18:78:
+    4c:90:19:97:d3:a0:f3:ad:83:87:5d:a1:5b:a4:55:
+    d9:07:91:10:62:73:a4:32:72:ed:af:f5:31:45:12:
+    be:cd:a8:c2:26:a7:8d:84:2c:e2:04:3e:95:3d:f6:
+    b1:e2:85:3a:9a:68:12:31:76:63:0b:a4:92:7c:09:
+    c2:d5:d5:99:e6:b2:31:ab:9c:2f:66:09:48:fe:fd:
+    ad:f6:f5:d4:a5:51:71:f4:b8:f5:09:8c:f1:00:13:
+    4d:a8:38:0e:1d:af:cf:d5:8b:43:25:02:a6:71:82:
+    66:8f:d7:6d:3f:70:45:be:5c:5b:6c:ce:78:dc:70:
+    e1
+prime1:
+    00:f4:6e:07:69:ee:f7:f5:18:84:dd:92:56:51:ee:
+    83:4a:1f:f0:b7:06:33:2b:6d:63:64:fc:f8:e6:ea:
+    69:a3:cf:bf:a3:9a:1a:ce:69:54:02:e3:ba:56:32:
+    38:00:d4:fc:a7:c3:b9:30:30:b4:fa:10:c6:fa:04:
+    4b:42:9b:c4:49:f3:ef:56:9f:6f:f0:f1:f3:9b:9f:
+    6e:8d:66:5d:86:bb:6a:f5:16:f3:4f:b8:8b:51:24:
+    2b:57:14:9b:aa:f8:d8:a5:93:4b:2d:2b:00:96:01:
+    28:5a:4c:14:9b:17:f5:90:a0:90:42:3e:2f:35:03:
+    80:21:06:43:59:84:ed:15:7f
+prime2:
+    00:e5:91:79:27:cb:28:31:d9:a6:82:79:a1:e4:a1:
+    ec:fe:e9:6a:68:64:a5:87:42:dd:e5:75:c2:ec:d2:
+    56:27:84:ff:cd:5d:91:58:d3:e1:d1:02:e7:90:b0:
+    72:66:48:2a:1f:da:d9:e4:75:eb:49:a8:da:2d:8a:
+    e7:23:d6:7e:12:6a:13:12:4f:1b:f8:fc:5e:b2:f3:
+    dd:e5:6a:6e:24:b7:ef:25:99:00:ab:ba:ff:c2:04:
+    51:7f:3c:6c:55:a5:9b:83:75:86:cb:04:51:19:e8:
+    59:b2:34:86:a9:71:08:20:a1:23:0a:75:0a:87:78:
+    4c:43:22:f0:3b:bf:f2:08:43
+exponent1:
+    00:ef:30:8c:c8:b9:34:a3:ff:ae:65:34:c2:8b:c2:
+    9f:6f:75:fa:14:e0:58:4a:72:ed:04:f2:18:8f:bf:
+    6c:49:05:0f:3f:85:9a:1d:cb:2c:8e:f7:52:6c:ef:
+    0f:a6:a0:c5:ed:55:b6:6e:d5:fb:03:8a:4f:6c:71:
+    af:44:2b:31:d6:3c:83:45:7d:18:09:ec:7a:bb:1b:
+    35:0f:e1:d0:3b:fc:43:1a:3b:af:35:a0:1d:94:f5:
+    94:03:cf:02:d6:38:55:a9:11:8e:4b:50:fd:6d:cd:
+    0c:33:f0:a7:69:6d:f4:bb:e6:a3:c4:6f:1d:ba:ff:
+    05:ef:4b:35:b4:f0:43:20:f9
+exponent2:
+    03:08:93:13:45:89:f8:6e:a9:d6:9b:88:da:1e:91:
+    a5:24:ac:75:48:af:2f:44:60:ee:41:4a:1c:1b:03:
+    6c:6e:43:7b:11:3b:74:73:08:4e:dc:bc:f6:9a:7e:
+    48:7f:b7:9e:c8:23:8c:f3:49:f2:a5:3a:8c:d3:83:
+    0e:64:2d:32:4d:18:87:6b:68:31:38:14:80:44:dc:
+    af:c5:62:43:35:f3:01:0a:2e:8a:16:64:7e:c9:d3:
+    d1:dc:98:89:e1:30:56:e2:5c:af:9e:14:fc:44:a7:
+    ba:c5:1a:ea:6e:45:ef:38:71:e0:17:7f:d6:1e:6e:
+    d3:8c:48:a4:61:7a:ef:45
+coefficient:
+    1e:a4:6c:47:48:86:b0:e9:67:dd:c6:65:15:55:44:
+    24:fc:4c:50:85:39:a6:29:5a:a6:e5:a2:96:fd:86:
+    d3:8b:c2:d8:e4:d4:0e:e8:76:ae:e1:c9:a0:fa:9f:
+    40:ff:61:87:bb:96:7f:e9:5a:6a:7b:65:69:99:5e:
+    a2:c4:66:77:fa:3f:1c:a6:2e:54:0b:fc:e5:14:51:
+    41:18:ee:46:3c:a2:90:ce:9d:b6:f9:ff:75:f0:90:
+    b2:26:aa:e9:a0:7f:f1:27:e7:9f:3b:31:3e:0c:2d:
+    cb:4c:f0:15:d5:28:bc:84:fa:3e:a2:f4:f3:d4:79:
+    10:5a:d6:9d:81:3b:d2:32
+
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl x509 -in sig_certificate.pem -text -noout
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            17:4e:69:8b:0a:f7:ac:95:47:c6:e2:b0:e0:02:3b:a9
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN = Shielded VM Signing Certificate (TurtleVM3) (aT0M4nti)
+        Validity
+            Not Before: Dec 24 00:03:02 2023 GMT
+            Not After : Dec 24 00:03:02 2033 GMT
+        Subject: CN = Shielded VM Signing Certificate (TurtleVM3) (aT0M4nti)
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:db:31:52:a1:f6:01:fc:72:65:13:d5:62:df:24:
+                    3c:ca:ea:f2:b6:ec:c5:47:64:e1:27:5e:52:70:ab:
+                    2e:63:37:df:5c:e4:cf:71:42:ba:17:9f:8b:21:f8:
+                    f0:6f:8a:40:f7:b9:cc:0a:53:8c:f5:37:18:76:81:
+                    11:c0:69:23:fa:bb:79:8c:57:fc:b3:ad:10:8e:ce:
+                    4d:09:88:f0:54:1c:82:96:a5:a7:f0:0b:aa:65:c8:
+                    51:6c:12:48:66:20:64:90:22:15:e2:cb:7d:4c:89:
+                    c0:c4:64:5b:a2:73:73:aa:34:bb:1c:20:80:e0:ac:
+                    52:4b:bf:ee:fa:98:f9:1d:a5:40:c7:2e:ab:5b:3b:
+                    05:e1:ed:4f:6a:0d:0c:c9:3b:1f:af:05:50:c5:02:
+                    0a:23:e3:34:66:9a:09:d2:c8:76:9f:f8:8a:56:9e:
+                    17:3d:e0:49:ed:09:bd:40:59:94:85:89:94:cb:5c:
+                    f5:0b:25:09:bd:ef:db:72:dc:7b:40:ee:09:b1:10:
+                    24:84:73:e1:6b:73:44:85:78:32:3e:0d:35:32:51:
+                    5d:5c:29:7e:fc:28:43:aa:ef:12:2b:b2:17:e6:35:
+                    dc:8b:78:1b:97:a0:5b:68:b0:43:98:dd:9d:5a:e1:
+                    92:b3:60:83:37:aa:70:df:cd:4a:33:fc:02:45:c6:
+                    98:3d
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        25:94:d0:b6:ca:94:88:e0:ed:18:4a:2e:86:8b:23:78:a2:e3:
+        07:4d:a4:33:ea:5d:44:55:c8:80:3b:ae:b6:ba:ab:43:d3:57:
+        06:ad:79:b5:a2:1c:85:77:1a:45:0e:f7:14:8a:4f:d0:5d:9c:
+        83:c5:89:ad:14:bb:f3:09:19:77:a8:38:e0:c8:0c:3a:af:60:
+        8e:5e:01:5f:6c:e9:09:d1:f8:c5:e9:32:b7:f9:40:9e:1f:76:
+        d8:9d:4b:85:8c:a5:2e:66:ce:f4:f5:97:10:4d:73:fb:ca:eb:
+        25:0e:9a:85:d4:b2:d3:2e:51:98:ea:a0:83:65:0e:d8:a8:14:
+        2a:e3:2b:fa:e8:b7:95:c7:6f:34:75:35:a4:03:52:49:df:28:
+        e6:0f:73:a3:5c:62:1a:59:f9:eb:91:fd:01:18:f5:d2:cb:e2:
+        2f:cc:a1:0f:ad:af:fb:f0:63:d1:ac:f1:9a:07:ca:17:77:dd:
+        da:74:97:54:e5:9d:a5:52:a3:87:0b:76:fb:1e:64:53:d7:1f:
+        6b:fc:aa:8c:66:fb:db:a7:41:f5:15:24:e6:05:0a:7d:69:50:
+        f7:e6:42:f4:8e:fb:00:1d:08:ad:0d:e0:4f:55:e1:d5:c2:e1:
+        ee:b9:21:a5:ef:85:44:b5:1b:c3:93:46:c7:9a:b7:65:ab:26:
+        ca:e3:22:09
+
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl rsa -in enc_privatekey.pem -text -noout
+Enter pass phrase for enc_privatekey.pem:
+Private-Key: (2048 bit, 2 primes)
+modulus:
+    00:c0:2d:48:e3:33:3c:08:d2:b3:56:d3:f4:15:5c:
+    a2:0d:e5:79:bf:32:49:f1:b0:d9:ca:5d:ab:98:be:
+    28:ff:20:eb:7d:14:de:90:9a:4d:51:a5:8d:ad:5c:
+    c4:79:d7:f9:ec:f2:64:7f:98:cf:ab:df:3c:68:31:
+    08:3b:2c:22:20:5f:61:fb:6d:9f:c5:83:33:9e:e9:
+    0d:6b:1b:8a:ee:56:25:f0:74:5b:94:d8:c5:ec:5e:
+    06:41:6a:b4:6e:a1:35:bf:f9:c1:58:51:15:54:ac:
+    89:58:67:c3:07:7c:dd:82:1d:4c:62:56:6a:ec:c0:
+    8e:8c:1f:c9:b8:5a:83:ee:34:1a:58:61:87:f2:84:
+    d2:1a:d3:dd:b7:5b:bd:56:56:11:1a:b3:eb:d0:18:
+    c1:9d:a5:3c:94:c3:7e:55:9b:08:9d:41:ed:fe:f8:
+    15:6e:cc:df:9b:80:16:46:13:42:07:3e:9e:2d:3f:
+    4f:34:c3:df:87:b3:25:c2:1a:1e:c4:2a:4b:d1:3c:
+    10:1c:68:a2:7b:46:4f:de:0c:24:07:4b:ab:a1:7e:
+    3b:4e:4e:50:02:54:e3:b2:d7:08:ff:70:ad:56:27:
+    45:36:b2:c8:6a:5f:5d:e5:b2:59:ed:ae:d6:3b:22:
+    53:9f:79:56:6f:29:84:f3:59:44:6b:74:37:3f:c7:
+    9b:9d
+publicExponent: 65537 (0x10001)
+privateExponent:
+    23:f9:56:27:91:b3:af:43:21:e7:23:0e:11:e1:a1:
+    44:50:ac:95:a9:e8:45:a2:01:62:ec:5d:ee:dd:c9:
+    f6:d8:46:bc:c7:67:52:52:50:1e:f4:8a:ac:e5:2c:
+    b2:52:47:aa:9f:45:48:cd:66:32:9a:3b:48:95:c5:
+    20:ae:86:44:e1:16:0a:66:de:fd:ae:2d:bf:95:88:
+    b9:80:12:65:c3:22:9e:fc:69:18:57:eb:d4:ef:54:
+    e4:72:01:0c:a4:88:d7:42:fd:7a:76:d3:33:62:88:
+    e3:4f:a9:26:81:ad:45:6a:0e:9e:69:e6:e2:22:b9:
+    8c:69:76:ed:57:a4:52:b6:82:f0:20:40:a8:06:e6:
+    00:34:7c:74:5f:15:71:5e:b6:6f:00:46:e7:91:21:
+    31:b1:df:d5:a0:bf:c1:1a:9b:d3:54:73:19:db:6c:
+    c2:c5:d1:6b:1d:76:a2:74:e9:62:22:c3:2f:66:00:
+    74:6c:e0:3c:6e:78:c9:55:4a:5d:80:60:90:a6:16:
+    b6:12:bb:0f:9a:52:7f:7f:d2:66:40:41:74:57:3c:
+    86:d0:81:27:4a:0a:dd:71:b3:6e:5f:34:c0:e4:c8:
+    42:53:0f:e8:47:04:c5:2e:09:21:aa:2d:60:81:7b:
+    44:da:d7:6d:9b:fc:37:d6:12:fe:03:82:5f:55:bc:
+    51
+prime1:
+    00:cf:ca:81:a5:29:e7:ae:f2:c6:54:54:21:5a:33:
+    eb:79:9c:9a:c7:91:bd:0f:00:18:63:8b:d0:2c:7c:
+    29:b1:aa:ce:5f:0f:fa:68:49:d6:57:74:ae:90:e5:
+    be:60:57:f0:09:7c:61:9d:9f:68:f7:60:c3:fa:20:
+    09:1a:af:f4:bf:94:36:32:ef:57:2d:5e:2a:ec:89:
+    e7:a8:b2:c4:62:ac:d5:64:62:bf:98:4b:5e:59:a9:
+    2f:27:6c:cf:41:c0:88:39:c1:2a:1d:f1:d0:f2:df:
+    02:d1:e4:2c:a2:24:8b:ab:24:f8:5e:c1:ab:59:5b:
+    cf:c4:37:39:1f:bd:e1:1a:53
+prime2:
+    00:ec:c3:65:2b:7a:bf:11:25:54:78:c2:64:80:56:
+    d4:ef:84:4d:45:22:3a:76:0a:94:94:19:8c:74:f3:
+    84:ef:7d:01:27:a2:50:41:97:18:55:37:49:03:2a:
+    80:df:88:d3:1a:32:4d:4b:88:8e:7a:1c:c7:29:cd:
+    02:7f:a3:77:f2:37:60:06:27:f2:4c:bf:d7:d1:4d:
+    95:60:3e:2f:d0:bf:64:4b:11:03:7d:df:f6:93:e5:
+    d5:f0:18:4b:0c:42:b4:4e:2b:6d:68:8b:46:9c:da:
+    63:71:56:fb:81:13:05:ed:60:15:5e:ab:55:bb:a9:
+    da:3d:6d:45:84:75:76:14:4f
+exponent1:
+    00:a3:c2:03:b4:67:b7:18:50:6a:6f:51:32:4b:c5:
+    79:41:89:63:0d:fe:d4:51:7b:10:bd:7b:15:5f:c9:
+    a6:8e:47:7f:86:b9:af:ed:fa:aa:fa:97:91:6f:ce:
+    2f:df:fb:cd:c7:9c:07:ce:52:30:46:2d:33:a5:ef:
+    13:5d:bd:e8:14:07:b9:43:21:0e:c2:49:61:68:b3:
+    32:27:e8:63:0f:25:08:b3:a9:83:37:81:c6:64:c1:
+    09:d1:77:56:4b:8a:71:91:9a:a3:17:a0:58:bc:df:
+    76:78:75:eb:9b:09:54:2d:57:e0:89:c4:f5:c6:61:
+    ad:f7:04:52:77:aa:8c:39:d3
+exponent2:
+    00:d8:60:82:77:48:08:92:2c:e1:94:33:64:11:fe:
+    49:40:54:53:21:d9:74:40:28:cf:3c:c2:54:a1:15:
+    64:ea:51:fd:da:30:f6:d3:da:b8:7c:38:b8:5b:52:
+    5e:d0:eb:84:b2:2e:42:81:c3:5d:22:b0:66:3c:07:
+    86:3f:0c:30:34:86:f3:14:ed:30:fd:7f:5e:47:84:
+    75:fd:ad:17:99:d9:30:59:82:45:04:a6:c7:fc:c6:
+    51:cc:c9:06:dd:3f:a0:f4:c7:af:87:99:b1:80:eb:
+    fd:71:b9:a2:c4:85:94:27:2a:66:9d:4c:4c:5f:e3:
+    8c:f6:12:85:33:d6:fd:80:f5
+coefficient:
+    00:9a:12:d5:bc:da:90:41:ab:73:d2:86:7e:bf:f5:
+    ad:6d:12:cb:a1:e8:02:42:d9:46:9f:34:90:53:2e:
+    98:15:a9:7d:27:da:08:f4:71:93:78:14:8c:12:81:
+    3a:61:e9:ca:21:33:9c:6f:a5:5b:52:30:93:65:2e:
+    10:68:a1:20:c5:38:9f:42:75:c4:74:ea:52:59:9d:
+    d5:7f:6c:53:14:00:c3:cb:32:a9:c2:5e:19:c6:50:
+    5c:7a:fe:44:95:52:3e:08:e8:5b:18:64:b2:f3:8f:
+    c6:4f:8d:2b:5d:1a:18:e4:df:6c:ea:ad:83:64:a0:
+    f0:9a:22:07:7c:38:26:ef:9b
+
+root@szhan21-mobl1:/mnt/c/Users/szhan21/Downloads/TurtleVM3# openssl x509 -in enc_certificate.pem -text -noout
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            37:89:21:57:da:99:12:a8:4b:7c:9b:75:29:97:33:82
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN = Shielded VM Encryption Certificate (TurtleVM3) (aT0M4nti)
+        Validity
+            Not Before: Dec 24 00:03:02 2023 GMT
+            Not After : Dec 24 00:03:02 2033 GMT
+        Subject: CN = Shielded VM Encryption Certificate (TurtleVM3) (aT0M4nti)
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c0:2d:48:e3:33:3c:08:d2:b3:56:d3:f4:15:5c:
+                    a2:0d:e5:79:bf:32:49:f1:b0:d9:ca:5d:ab:98:be:
+                    28:ff:20:eb:7d:14:de:90:9a:4d:51:a5:8d:ad:5c:
+                    c4:79:d7:f9:ec:f2:64:7f:98:cf:ab:df:3c:68:31:
+                    08:3b:2c:22:20:5f:61:fb:6d:9f:c5:83:33:9e:e9:
+                    0d:6b:1b:8a:ee:56:25:f0:74:5b:94:d8:c5:ec:5e:
+                    06:41:6a:b4:6e:a1:35:bf:f9:c1:58:51:15:54:ac:
+                    89:58:67:c3:07:7c:dd:82:1d:4c:62:56:6a:ec:c0:
+                    8e:8c:1f:c9:b8:5a:83:ee:34:1a:58:61:87:f2:84:
+                    d2:1a:d3:dd:b7:5b:bd:56:56:11:1a:b3:eb:d0:18:
+                    c1:9d:a5:3c:94:c3:7e:55:9b:08:9d:41:ed:fe:f8:
+                    15:6e:cc:df:9b:80:16:46:13:42:07:3e:9e:2d:3f:
+                    4f:34:c3:df:87:b3:25:c2:1a:1e:c4:2a:4b:d1:3c:
+                    10:1c:68:a2:7b:46:4f:de:0c:24:07:4b:ab:a1:7e:
+                    3b:4e:4e:50:02:54:e3:b2:d7:08:ff:70:ad:56:27:
+                    45:36:b2:c8:6a:5f:5d:e5:b2:59:ed:ae:d6:3b:22:
+                    53:9f:79:56:6f:29:84:f3:59:44:6b:74:37:3f:c7:
+                    9b:9d
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        47:04:35:06:ca:ca:8d:e4:b2:bb:5b:84:3a:ce:d8:bc:56:e1:
+        79:e2:c9:99:cc:0d:cd:9b:aa:3b:6d:10:92:80:8d:83:ae:39:
+        a6:b3:60:37:cf:be:34:8c:2d:7a:22:78:f0:90:e2:30:69:d6:
+        44:fe:65:a4:99:fa:be:72:4f:1e:27:37:d0:1e:c3:35:77:dd:
+        2c:d7:fc:78:f3:1f:6b:3f:92:72:00:2f:97:15:a2:f4:e2:36:
+        28:a2:90:e7:d0:0b:4b:18:d8:3f:5d:8c:2f:90:ec:88:61:0e:
+        ff:8a:e6:27:a4:d3:55:93:85:ef:ca:d1:35:6a:c9:4f:8c:98:
+        e9:b8:69:4a:8b:96:c1:5c:01:73:ab:f1:00:c8:67:0f:ca:0e:
+        8e:15:fa:44:54:74:1c:76:f4:0b:96:d7:40:a2:1b:fd:5b:f0:
+        95:46:7c:48:15:5c:ad:2f:b6:d0:61:bf:cf:4f:84:cb:6b:47:
+        39:df:8d:37:01:2d:a4:ca:ea:6b:97:cf:be:1f:84:3d:6f:03:
+        c3:0d:d6:19:80:01:4c:c1:4e:7a:c0:23:e7:78:21:12:94:c0:
+        5f:de:f7:d2:bd:d0:bf:58:33:c7:de:1d:af:5c:12:85:e1:cd:
+        9a:e7:fb:56:e4:b4:91:c6:56:01:1d:2c:70:e8:76:9a:cd:75:
+        32:09:0d:6b
+
+'''
