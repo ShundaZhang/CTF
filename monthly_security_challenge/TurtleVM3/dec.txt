@@ -1,4 +1,21 @@
 '''
+nmap 10.165.154.144
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2024-04-04 07:53 CST
+Nmap scan report for turtlevm3.jf.intel.com (10.165.154.144)
+Host is up (0.20s latency).
+Not shown: 992 closed ports
+PORT     STATE    SERVICE
+20/tcp   filtered ftp-data
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+513/tcp  filtered login
+911/tcp  filtered xact-backup
+912/tcp  filtered apex-mesh
+1080/tcp filtered socks
+
+
  binwalk C1AC3E13-F1CB-4670-870F-D9E01E62ED12.VMRS
 
 DECIMAL       HEXADECIMAL     DESCRIPTION

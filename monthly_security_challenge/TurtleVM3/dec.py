@@ -29,7 +29,8 @@ private_key = rsa.RSAPrivateNumbers(
 ).private_key(backend=default_backend())
 
 # Assuming `ciphertext` is the encrypted data you have
-ciphertext = base64.b64decode('XLEgTRg5LhXf3vv7Ox1jZ8QlnwrK8rE929zBfaHd2zGVEN9qd3ryBvc0yqTA3y6+gVibDcjutpR+Sl2Ymj9ed584HjbjzEsvHFG+sVGG1+AyPGpk3dxuKZhLtl6dgFPllWUaT1g9cll2R5G2jiguHpOUjQTJCZT2GalIjsWzmZQcWbFh1Ah+wgkfa9uonWRccqKq66iZv0ZQGAqiUgi9Qh/7Zhg+0HCVimn8WDfY5cCdqRydwu4Zgk8UM8Y1w6zkWmRoAQ32C7gsOqZp7LRmAaGhqp0BKNoeLa5APmxAXR/LsECvxXxaiGMz/4KyNdtGxLoUXQa6gur84HTuMis4aQ==')
+#ciphertext = base64.b64decode('XLEgTRg5LhXf3vv7Ox1jZ8QlnwrK8rE929zBfaHd2zGVEN9qd3ryBvc0yqTA3y6+gVibDcjutpR+Sl2Ymj9ed584HjbjzEsvHFG+sVGG1+AyPGpk3dxuKZhLtl6dgFPllWUaT1g9cll2R5G2jiguHpOUjQTJCZT2GalIjsWzmZQcWbFh1Ah+wgkfa9uonWRccqKq66iZv0ZQGAqiUgi9Qh/7Zhg+0HCVimn8WDfY5cCdqRydwu4Zgk8UM8Y1w6zkWmRoAQ32C7gsOqZp7LRmAaGhqp0BKNoeLa5APmxAXR/LsECvxXxaiGMz/4KyNdtGxLoUXQa6gur84HTuMis4aQ==')
+ciphertext = base64.b64decode('vdE2QX5nTAVqdAIQIHWrDhSXXDt4vXC/C9sGTc8L1blo8iJ6qPuZFZFa5SzeXk1eS04jILxsbnMkQAXcVLI7v8SDJLTw8kAj/WBhDh+Bkrcgw+uvnst+BDZO2borW3H8VzKowI17CqvlY8DoSz+zLVhKA74tDHrtc4307waaJczo1BKd3xS+HAYuNlQly/F0bkOyY1SYdf2QhTxb0LUXAFvs7ZPyZvcfBKfUHryk5QMcVKZ6u2tcHWG8hUG+kkMQHQ8AmX9TLWa+wvCS+CHAJ8p6Ov0EsuJ2pcXNx1hHybWdUw3+jfmlfT+chnf3qvfIa+fa6kpRXwlwXHsXmP5v6w==')
 
 # Decrypt the data
 decrypted_data = private_key.decrypt(
@@ -41,17 +42,21 @@ decrypted_data = private_key.decrypt(
     )
 )
 
+#transport key
 print(decrypted_data)
+print(len(decrypted_data))
 
-import hashlib
+#hash
+#import hashlib
 
 # Create a sha256 hash object
-hash_object = hashlib.sha256(decrypted_data)
+#hash_object = hashlib.sha256(decrypted_data)
 #hash_object = hashlib.sha224(decrypted_data)
 #hash_object = hashlib.sha1(decrypted_data)
 #hash_object = hashlib.md5(decrypted_data)
 
 # Get the hexadecimal representation of the digest
-hex_dig = hash_object.hexdigest()
+#hex_dig = hash_object.hexdigest()
+#print("SHA-256 Hash:", hex_dig)
 
-print("SHA-256 Hash:", hex_dig)
+
