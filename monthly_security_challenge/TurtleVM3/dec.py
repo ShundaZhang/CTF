@@ -30,7 +30,7 @@ private_key = rsa.RSAPrivateNumbers(
 
 # Assuming `ciphertext` is the encrypted data you have
 #ciphertext = base64.b64decode('XLEgTRg5LhXf3vv7Ox1jZ8QlnwrK8rE929zBfaHd2zGVEN9qd3ryBvc0yqTA3y6+gVibDcjutpR+Sl2Ymj9ed584HjbjzEsvHFG+sVGG1+AyPGpk3dxuKZhLtl6dgFPllWUaT1g9cll2R5G2jiguHpOUjQTJCZT2GalIjsWzmZQcWbFh1Ah+wgkfa9uonWRccqKq66iZv0ZQGAqiUgi9Qh/7Zhg+0HCVimn8WDfY5cCdqRydwu4Zgk8UM8Y1w6zkWmRoAQ32C7gsOqZp7LRmAaGhqp0BKNoeLa5APmxAXR/LsECvxXxaiGMz/4KyNdtGxLoUXQa6gur84HTuMis4aQ==')
-ciphertext = base64.b64decode('tHJa29O2/3qAsXc0zDOssLycWjOXh9d77EqEdQO2BN0A1b8vYEDXcjUm5c6OHXeald2pu+NPAnItEhctEa+eER4MUDhceC8i6DNqTN9wKj0D1x27zH6qdwjxxpLpTP6vDxv+LpdhdeeDmXmNtgk7AwuyrD9cVgJJpnoHdpHpNnVO+uBvHdNU5r2Y1mZoGxC/fXMyxts+p7Y9vYZFmrbxHkko1VnjBJZhYlFLz9rb5f32zPKiw68P07CPUwdPfm857/MbLetGqBGUb6c81j1FYgC/DnnvTqrUMo1pVyGzW0bJTG3Qops+TxzFG7m1gvU3E4B55qqdc0OsG6uAIqUQEg==')
+ciphertext = base64.b64decode('vdE2QX5nTAVqdAIQIHWrDhSXXDt4vXC/C9sGTc8L1blo8iJ6qPuZFZFa5SzeXk1eS04jILxsbnMkQAXcVLI7v8SDJLTw8kAj/WBhDh+Bkrcgw+uvnst+BDZO2borW3H8VzKowI17CqvlY8DoSz+zLVhKA74tDHrtc4307waaJczo1BKd3xS+HAYuNlQly/F0bkOyY1SYdf2QhTxb0LUXAFvs7ZPyZvcfBKfUHryk5QMcVKZ6u2tcHWG8hUG+kkMQHQ8AmX9TLWa+wvCS+CHAJ8p6Ov0EsuJ2pcXNx1hHybWdUw3+jfmlfT+chnf3qvfIa+fa6kpRXwlwXHsXmP5v6w==')
 
 # Decrypt the data
 decrypted_data = private_key.decrypt(
@@ -59,4 +59,71 @@ print(len(decrypted_data))
 #hex_dig = hash_object.hexdigest()
 #print("SHA-256 Hash:", hex_dig)
 
+'''
+#GCM
+from Crypto.Cipher import AES
 
+# Example usage
+key = decrypted_data
+#combined_data = b'nonce || ciphertext || tag'  # Replace this with your actual combined data
+with open('1.enc', 'rb') as f:
+    combined_data = f.read()
+
+nonce = combined_data[:12]  # Assuming nonce is 12 bytes
+ciphertext = combined_data[12:-16]  # Assuming ciphertext is everything between nonce and tag
+tag = combined_data[-16:]  # Assuming tag is 16 bytes
+
+cipher = AES.new(key, AES.MODE_GCM, nonce) # nonce
+try:
+    dec = cipher.decrypt_and_verify(ciphertext, tag) # ciphertext, tag
+    print(dec) 
+except ValueError:
+    print("Decryption failed")
+
+#CTR
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
+
+def aes_ctr_decrypt(key, ciphertext, nonce):
+    cipher = Cipher(algorithms.AES(key), modes.CTR(nonce), backend=default_backend())
+    decryptor = cipher.decryptor()
+    plaintext = decryptor.update(ciphertext) + decryptor.finalize()
+    return plaintext
+
+key = decrypted_data
+#combined_data = b'nonce || ciphertext || tag'  # Replace this with your actual combined data
+with open('1.enc', 'rb') as f:
+    combined_data = f.read()
+
+nonce = combined_data[:16]  # Assuming nonce is 12 bytes
+ciphertext = combined_data[16:]  # Assuming ciphertext is everything between nonce and tag
+
+# Decrypt
+decrypted_plaintext = aes_ctr_decrypt(key, ciphertext, nonce)
+print(f"Decrypted: {decrypted_plaintext}")
+'''
+
+#XTS
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
+
+def aes_xts_decrypt(key, ciphertext, tweak):
+    assert len(key) in [32, 64], "Key must be 32 bytes (AES-128-XTS) or 64 bytes (AES-256-XTS)."
+    assert len(tweak) == 16, "Tweak must be 16 bytes."
+
+    cipher = Cipher(algorithms.AES(key), modes.XTS(tweak), backend=default_backend())
+    decryptor = cipher.decryptor()
+    plaintext = decryptor.update(ciphertext) + decryptor.finalize()
+    return plaintext
+
+# Example usage
+key = decrypted_data
+with open('1.enc', 'rb') as f:
+    combined_data = f.read()
+
+tweak = b'0'*16 
+ciphertext = combined_data[:]
+
+# Decrypt
+decrypted_plaintext = aes_xts_decrypt(key, ciphertext, tweak)
+print(f"Decrypted: {decrypted_plaintext}")
