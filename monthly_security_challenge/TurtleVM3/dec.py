@@ -122,7 +122,7 @@ with open('1.enc', 'rb') as f:
     combined_data = f.read()
 
 tweak = b'0'*16 
-ciphertext = combined_data[:]
+ciphertext = combined_data[7:]
 
 # Decrypt
 decrypted_plaintext = aes_xts_decrypt(key, ciphertext, tweak)
