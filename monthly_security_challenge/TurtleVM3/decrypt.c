@@ -138,8 +138,7 @@ int dis_aes_crypt_xts(
 
 	//dst, src
 	//anubis_ecrypt2( t_buf.u8, iv );
-	AES_ECB_encrypt(&ctx1, iv);
-	memcpy(t_buf.u8, iv, 16);
+	AES_ECB_encrypt(&ctx1, t_buf.u8, iv);
 
 	goto first;
 
@@ -155,8 +154,7 @@ first:
 		/* CC <- E(Key2,PP) */
 		//dst, src
 		//anubis_decrypt1( outbuf->u8, scratch.u8 );
-		AES_ECB_decrypt(&ctx2, scratch.u8);
-		memcpy(outbuf->u8, scratch.u8, 16);
+		AES_ECB_decrypt(&ctx2, outbuf->u8, scratch.u8);
 
 		/* C <- T xor CC */
 		outbuf->u64[0] = (uint64_t)( outbuf->u64[0] ^ t_buf.u64[0] );

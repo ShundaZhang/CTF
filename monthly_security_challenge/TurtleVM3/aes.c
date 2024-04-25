@@ -467,16 +467,18 @@ static void InvCipher(state_t* state, const uint8_t* RoundKey)
 #if defined(ECB) && (ECB == 1)
 
 
-void AES_ECB_encrypt(const struct AES_ctx* ctx, uint8_t* buf)
+void AES_ECB_encrypt(const struct AES_ctx* ctx, uint8_t* dst, uint8_t* src)
 {
   // The next function call encrypts the PlainText with the Key using AES algorithm.
-  Cipher((state_t*)buf, ctx->RoundKey);
+  memcpy(dst, src, 16);
+  Cipher((state_t*)dst, ctx->RoundKey);
 }
 
-void AES_ECB_decrypt(const struct AES_ctx* ctx, uint8_t* buf)
+void AES_ECB_decrypt(const struct AES_ctx* ctx, uint8_t* dst, uint8_t* src)
 {
   // The next function call decrypts the PlainText with the Key using AES algorithm.
-  InvCipher((state_t*)buf, ctx->RoundKey);
+  memcpy(dst, src, 16);
+  InvCipher((state_t*)dst, ctx->RoundKey);
 }
 
 
