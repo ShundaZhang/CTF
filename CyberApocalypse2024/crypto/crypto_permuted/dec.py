@@ -1,3 +1,5 @@
+#!/usr/bin/python3.9
+
 #https://github.com/hackthebox/cyber-apocalypse-2024/tree/main/crypto/%5BHard%5D%20Permuted
 #DLP
 
@@ -147,3 +149,5 @@ cipher = AES.new(key, AES.MODE_CBC, iv)
 
 decrypted = cipher.decrypt(c)
 print('Flag:', decrypted)
+
+#HTB{w3lL_n0T_aLl_gRoUpS_aRe_eQUaL_!!}
