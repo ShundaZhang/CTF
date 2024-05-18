@@ -39,7 +39,7 @@ for _ in range(index*2+80):
 	inp = io.recvline().decode().strip().split(' ')[-1]
 	hs = io.recvline().decode().strip().split(' ')[-1]
 	hs0 = hs[:64]
-	if hs0 == keyed_hash(bytes.fromhex(hsx), bytes.fromhex(inp)).hex():
+	if hs0 == keyed_hash(hsx, bytes.fromhex(inp)).hex():
 		my_bit = '0'
 	else:
 		my_bit = '1'
