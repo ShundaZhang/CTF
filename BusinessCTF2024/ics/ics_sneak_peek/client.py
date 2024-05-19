@@ -14,10 +14,10 @@ import time
 logging.basicConfig()
 logging.getLogger().setLevel(logging.DEBUG)
 
-HOST_IP = 'localhost' # CHANGE IP
-HOST_PORT = 502       # CHANGE PORT
+HOST_IP = '94.237.63.135' # CHANGE IP
+HOST_PORT = 48131       # CHANGE PORT
 
-CUSTOM_FUNCTION_CODE = 0x00 # CHANGE FUNCTION CODE
+CUSTOM_FUNCTION_CODE = 0x64 # CHANGE FUNCTION CODE
 
 
 #Class templates for custom Modbus Request and Response 
@@ -123,6 +123,6 @@ if __name__ == "__main__":
     client = ModbusTcpClient(HOST_IP, port=HOST_PORT, framer=ModbusSocketFramer)
     client.framer.decoder.register(CustomProtocolResponse)
 
-
+    DATA = [0x22]
     send_packet(client, DATA)
     
