@@ -8,6 +8,8 @@ from py_ecc.optimized_bls12_381.optimized_curve import add, curve_order, G1, mul
 from eth_typing import BLSPubkey, BLSPrivateKey
 from Crypto.Util.number import long_to_bytes
 
+context.log_level = 'debug'
+
 def generate_keys() -> (BLSPubkey, BLSPrivateKey):
 	sk = BLSPrivateKey(random.randint(1, curve_order - 1))
 	pk_point = multiply(G1, sk)
@@ -32,16 +34,17 @@ io = remote(ip, port)
 io.recvuntil('>')
 io.sendline('{"cmd":"join","pk":"'+pk+'"}')
 idx = io.recvline().decode().strip().split(' ')[-1][1:-2]
-
+print("Joined ID ", idx)
 io.recvuntil('>')
 io.sendline('{"cmd":"verify","robot_id":"'+idx+'"}')
-io.recvline()
+print(io.recvline())
 
 for _ in range(64):
 	io.recvuntil('Take a random value x and send me C = x * pk (hex):')
 	io.sendline(pk)
-	buf = io.recvline().decode()
-	if 'Give me x (hex):' in buf:
+	buf = io.recvuntil(':')
+	print(buf)
+	if b'Give me x (hex)' in buf:
 		io.sendline('01')
 	else:
 		sk_x = (sk + sk) % curve_order
