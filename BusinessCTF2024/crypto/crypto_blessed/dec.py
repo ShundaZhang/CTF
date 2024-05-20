@@ -56,5 +56,5 @@ print(io.recvline())
 sig = bls.Sign(sk, b'list').hex()
 
 io.recvuntil('>')
-io.sendline('{"cmd":"verify","robot_id":"'+idx+'","sig":"'+sig+'"}')
+io.sendline('{"cmd":"list","robot_id":"'+idx+'","sig":"'+sig+'"}')
 print(io.recvall())
