@@ -51,6 +51,10 @@ for _ in range(64):
 		sk_x_hex = hex(sk_x)[2:]
 		io.sendline(sk_x_hex)
 
+print(io.recvline())
+
+sig = bls.Sign(sk, b'list').hex()
+
+io.recvuntil('>')
+io.sendline('{"cmd":"verify","robot_id":"'+idx+'","sig":"'+sig+'"}')
 print(io.recvall())
-
-
