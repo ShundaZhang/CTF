@@ -57,4 +57,9 @@ sig = bls.Sign(sk, b'list').hex()
 
 io.recvuntil('>')
 io.sendline('{"cmd":"list","robot_id":"'+idx+'","sig":"'+sig+'"}')
+
+sig = bls.Sign(sk, b'unveil_secrets').hex()
+io.recvuntil('>')
+io.sendline('{"cmd":"unveil_secrets","sig":"'+sig+'"}')
+
 print(io.recvall())
