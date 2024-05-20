@@ -10,11 +10,10 @@ from py_ecc.optimized_bls12_381.optimized_curve import add, curve_order, G1, mul
 def generate_keypair() -> (BLSPubkey, BLSPrivateKey):
     # 生成随机私钥 sk
     sk = BLSPrivateKey(random.randint(1, curve_order - 1))
-    pk_bytes =  bls.SkToPk(sk)
     # 计算公钥 pk = sk * G1
-    #pk =  multiply(G1, sk)
-    #print(pk)
-    #pk_bytes=long_to_bytes(compress_G1(pk))
+    pk =  multiply(G1, sk)
+    print(pk)
+    pk_bytes=long_to_bytes(compress_G1(pk))
     return pk_bytes, sk
 
 def verify_keypair(pk: BLSPubkey, sk: BLSPrivateKey) -> bool:
@@ -24,7 +23,7 @@ def verify_keypair(pk: BLSPubkey, sk: BLSPrivateKey) -> bool:
     #pk_point = bls.SkToPk(sk)
     # 验证公钥是否等于 sk * G1
     #return pk_point == pk
-    return pk == multiply(G1, sk)
+    return normalize(pk) == normalize(multiply(G1, sk))
 
 # 生成密钥对
 public_key, private_key = generate_keypair()
