@@ -58,9 +58,9 @@ sig = bls.Sign(sk, b'list').hex()
 io.recvuntil('>')
 io.sendline('{"cmd":"list","robot_id":"'+idx+'","sig":"'+sig+'"}')
 
-sig = bls.Sign(sk, b'unveil_secrets').hex()
-aggregated_signature = bls.Aggregate([sig])
+sig = bls.Sign(sk, b'unveil_secrets')
+aggregated_signature = bls.Aggregate([sig]).hex()
 io.recvuntil('>')
-io.sendline('{"cmd":"unveil_secrets","sig":"'+aggregated_signature+'"}')
+io.sendline('{"cmd":"unveil_secrets","sig":"'+aggregated_signaturae+'"}')
 
 print(io.recvall())
