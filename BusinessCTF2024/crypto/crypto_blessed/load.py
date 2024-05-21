@@ -1,0 +1,14 @@
+import json
+
+# 给定的 JSON 格式字符串
+data = '[{"robot_id": "924000193c77f872c85ca44dd2c167d566f8434000eed368765e4726", "pk": "aed5bcdd7c34bd69c793514ea82f17b620f59cbdc68edec9c363b8f29881384d2da1ec9c1d8d0bbde17464a1ce4bf7ce"}, {"robot_id": "8c8b8bba66243d88933843898a613353dcd97d1e0335b6918f6df22b", "pk": "a4ca6ba341506b7712daf67f85bbd222801ef5d9f9335345e91468011742405ac47e8218ecbda291fbb7e41c7885189a"}, {"robot_id": "217f0d62a26dd0c5b7d5b9b23e7e381a4ab5ac5b8fb9bbfec4685401", "pk": "b08f063bdd70febf8669ff700dff8c3ea8f288ad654cd8274c180111d84cced56a16585ae23507e943e4807949d895a4"}, {"robot_id": "353b50cedc1aa8247be8db24337e03578909b22a3c7e439c14578d6a", "pk": "b58c4a6960aa536d72ea49d9cd7c6b4e5c1bde23231fcb097f2d5889096bb1c54bddaf2a2582a0e84d866aca0664593b"}, {"robot_id": "7fe458cae8f1180787655021276b60997f507c2f2cea7e411af835a7", "pk": "b498bc551c3c667c527a02c7f04c0e2dd9ee08095a89d775ac315419fcaaee48a9cba3f3f0c2036ce81973359a381180"}]'
+
+# 解析 JSON 字符串
+robots = json.loads(data)
+
+# 提取所有 pk 值
+pk_list = [robot['pk'] for robot in robots]
+
+# 输出 pk 列表
+print(pk_list)
+

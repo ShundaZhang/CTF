@@ -7,7 +7,7 @@ from secrets import randbelow
 from Crypto.Util.number import long_to_bytes
 from py_ecc.optimized_bls12_381.optimized_curve import add, curve_order, G1, multiply, neg, normalize
 
-sk = randbelow(curve_order)
+sk = 1 #randbelow(curve_order)
 pk = multiply(G1, sk)
 
 print("私钥 sk:", sk)
