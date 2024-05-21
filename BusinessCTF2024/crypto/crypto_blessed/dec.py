@@ -1,5 +1,6 @@
 from pwn import *
 
+import json
 import random
 from py_ecc.bls.ciphersuites import G2ProofOfPossession as bls
 from py_ecc.bls.g2_primitives import pubkey_to_G1
@@ -37,6 +38,7 @@ io.recvuntil('>')
 io.sendline('{"cmd":"create"}')
 buf = io.recvline()
 sk1 = int(json.loads(buf)["sk"],16)
+idx = json.loads(buf)["robot_id"]
 
 sig = bls.Sign(sk1, b'list').hex()
 
@@ -65,7 +67,7 @@ print(normalize(C))
 
 x = 4002409555221667393417789825735904156556882819939007885332058136124031650490837864442687629129030796414117214202538
 print(normalize(multiply(pk0, x)) == normalize(C))
-pk = pk0
+pk = long_to_bytes(compress_G1(pk0)).hex()
 
 io.recvuntil('>')
 io.sendline('{"cmd":"join","pk":"'+pk+'"}')
@@ -77,7 +79,7 @@ print(io.recvline())
 
 for _ in range(64):
 	io.recvuntil('Take a random value x and send me C = x * pk (hex):')
-	io.sendline(C)
+	io.sendline(long_to_bytes(compress_G1(C)).hex())
 	buf = io.recvuntil(':')
 	print(buf)
 	if b'Give me x (hex)' in buf:
@@ -94,3 +96,5 @@ io.recvuntil('>')
 io.sendline('{"cmd":"unveil_secrets","sig":"'+aggregated_signature+'"}')
 
 print(io.recvall())
+#I did it!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#HTB{uNv31leD_5eCre7s_0f_BLS_r0gu3_k3y_4t7aCk_w1th_cu5t0m_zkp_4nd_ec-lcg!!_ec165df8e9d46d4cc6aa2193f2ad6935}
