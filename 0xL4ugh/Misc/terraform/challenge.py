@@ -29,11 +29,13 @@ def get_terraform_commands():
         for command in user_input.split(" "):
             for blacklist in BLACKLIST:
                 if blacklist in command:
+                    print('OK1!')
                     print(monkey)
                     exit(1337)
         commands.append(user_input)
         
         if len(commands) > 1:
+            print('OK2!')
             print(monkey)
             exit(1337)
 
@@ -43,7 +45,9 @@ def execute_terraform_commands(commands):
     for command in commands:
         cmd = f"echo '{command}' | terraform console"
         output = os.popen(cmd).read()
+        print(output)
         if "0xL4ugh{F4k3_Fl4G_F0r_T4stIng}" in output:
+            print('OK3!')
             print(monkey)
             exit(1337)
         else:
