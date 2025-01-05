@@ -73,9 +73,8 @@ Each challenge typically includes:
 
 Solutions are organized in their respective directories. Each solution typically contains:
 - Challenge files
-- Solution script(s)
+- Solution script(s): **Includes a `dec.py` (decrypt/solution) file**
 - Any necessary additional resources
-- Sometimes includes a `dec.py` (decrypt/solution) file
 
 ## Contributing
 
